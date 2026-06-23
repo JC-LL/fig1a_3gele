@@ -1,0 +1,531 @@
+\documentclass[a4paper,11pt]{article}
+
+% --- Encodage et Langue ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% --- Mise en page et Typographie ---
+\usepackage{geometry}
+\geometry{margin=2.5cm, headheight=15pt}
+\usepackage{microtype}
+\usepackage{lmodern}
+
+% --- Mathématiques ---
+\usepackage{amsmath, amssymb}
+\usepackage{centernot}
+
+% --- Images et Sous-figures ---
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{hyperref}
+
+% --- Cartes de Karnaugh ---
+\usepackage{karnaugh-map}
+
+% --- Couleurs et Boîtes ---
+\usepackage{xcolor}
+\definecolor{primary}{RGB}{0, 85, 150}      % Bleu technique
+\definecolor{secondary}{RGB}{240, 248, 255} % Bleu très clair pour les fonds
+\definecolor{solcolor}{RGB}{245, 250, 245}  % Vert très clair pour les solutions
+\definecolor{solframe}{RGB}{60, 120, 60}    % Vert foncé pour les bordures de solution
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{caption} % Pour \captionof à l'intérieur des boîtes
+
+% --- Tableaux professionnels ---
+\usepackage{booktabs}
+\usepackage{array}
+
+% --- Affichage de code / chronogrammes ---
+\usepackage{listings}
+\lstset{
+    basicstyle=\ttfamily\small,
+    backgroundcolor=\color{gray!5},
+    frame=single,
+    framerule=0.5pt,
+    rulecolor=\color{gray!50},
+    numbers=none,
+    breaklines=true,
+    keepspaces=true,
+    columns=fullflexible
+}
+
+% --- Titres ---
+\usepackage{titlesec}
+\titleformat{\section}
+  {\color{primary}\Large\bfseries}
+  {\thesection}{1em}{}[\titlerule]
+\titleformat{\subsection}
+  {\color{primary}\large\bfseries}
+  {\thesubsection}{1em}{}
+
+% --- Commande personnalisée (conservée de l'original) ---
+\newcommand{\op}{
+\mathop{
+\vphantom{\bigoplus}
+\mathchoice
+{\vcenter{\hbox{\resizebox{\widthof{$\displaystyle\bigoplus$}}{!}{$\boxplus$}}}}
+{\vcenter{\hbox{\resizebox{\widthof{$\bigoplus$}}{!}{$\boxplus$}}}}
+{\vcenter{\hbox{\resizebox{\widthof{$\scriptstyle\oplus$}}{!}{$\boxplus$}}}}
+{\vcenter{\hbox{\resizebox{\widthof{$\scriptscriptstyle\oplus$}}{!}{$\boxplus$}}}}
+}\displaylimits
+}
+
+% --- Gestion des solutions (Mettre \solutionsfalse pour cacher les solutions) ---
+\newif\ifsolutions
+\solutionstrue % <--- Changez en \solutionsfalse pour la version étudiant
+
+\newtcolorbox{notebox}{
+  colback=secondary,
+  colframe=primary,
+  fonttitle=\bfseries,
+  title=Notes et Conseils,
+  arc=4pt,
+  boxrule=0.8pt
+}
+
+\newtcolorbox{solbox}{
+  colback=solcolor,
+  colframe=solframe,
+  fonttitle=\bfseries,
+  title=Solution,
+  arc=4pt,
+  boxrule=0.8pt
+}
+
+% --- Titre du document ---
+\title{\textcolor{primary}{\Huge\bfseries TD 5 -- Électronique Numérique}\\[0.5em] \Large Automates (1)}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\vspace{-2em}
+
+\begin{notebox}
+\textbf{Remarque :} Tous les exercices ne seront pas forcément résolus en séance de TD.\\
+Ce TD aborde plusieurs points relatifs aux \textit{automates}, aussi appelés \textit{machines d'états finis}\footnote{Ce nom quelque peu étrange signifie que le \textit{nombre} d'états est \textit{fini}. Il existe également des automates dont le nombre d'états est infini...} (\textit{finite state machines}, FSM) :
+\begin{itemize}
+    \item Diagrammes états-transitions : machines de Mealy et de Moore.
+    \item Causalité des machines d'états finis.
+    \item Conception d'un automate matériel à partir d'un diagramme états-transitions.
+\end{itemize}
+\end{notebox}
+
+\vspace{1em}
+
+\section{Diagramme états-transitions : Moore et Mealy}
+
+On rappelle que le diagramme à bulle (ou \textit{state transition diagram} ou diagramme \textit{états-transitions}) est une représentation graphique pratique des automates. Elle consiste à décrire l'enchaînement des transitions d'un état à l'autre par une flèche, les états étant représentés par des cercles ou \textit{bulles}.
+
+On distingue deux grands types de FSM (voir figure \ref{fig:example})\footnote{Attention ! Les deux automates représentés l'un à côté de l'autre ne sont pas équivalents en terme de fonctionnement. Il existe des algorithmes pour transformer Mealy en Moore (et réciproquement), de manière à obtenir des comportements identiques. Voir par exemple \url{https://fr.wikipedia.org/wiki/Machine_de_Mealy}.}. Dans le cas des automates de Moore, les sorties ne dépendent que des états, alors que dans le cas des automates de Mealy, les sorties dépendent à la fois des états et des entrées.
+
+Sur les transitions, on ajoute les \textit{conditions} booléennes $c_i(s)$ qui autorisent à passer d'un état à un autre, ainsi que d'éventuelles sorties (généralement après une ou deux barres verticales) dans le cas des automates de Mealy. Lorsqu'on a affaire à un automate de Moore, les sorties sont annotées en conséquence dans les bulles (ou juste à côté).
+
+\begin{figure}[H]
+\centering
+\subfloat[Automate de Moore]{\includegraphics[width=5cm]{./figures/moore.png}}%
+\qquad
+\subfloat[Automate de Mealy]{\includegraphics[width=5cm]{./figures/mealy.png}}%
+\caption{FSM de Moore et Mealy}
+\label{fig:example}
+\end{figure}
+
+\section{Causalité d'une FSM}
+
+Pour qu'une FSM soit considérée comme \textit{causale}, correcte ou \textit{consistante}, elle doit vérifier les deux propriétés suivantes :
+\begin{itemize}
+    \item \textbf{Réactivité} (exhaustivité) : il doit exister une condition vraie sur au moins une des transitions sortant d'un état.
+    $$ \forall s \in S : \sum_i c_i(s)=1 $$
+    \item \textbf{Déterminisme} (exclusivité) : deux conditions sur les transitions sortant d'un état ne peuvent être vraies en même temps.
+    $$ \forall s \in S, \forall (i,j) \text{ avec } i \neq j, \quad c_i(s) \cdot c_j(s)=0 $$
+\end{itemize}
+
+Une autre manière de résumer ces deux propriétés est qu'il existe -- à tout instant discret -- \textit{un, et un seul, état suivant}. Notons qu'un état peut avoir comme état suivant lui-même : dans ce cas, le système décrit ne change pas d'état.
+
+Observez la figure \ref{fig2}.
+\begin{itemize}
+    \item Vérifier la consistance de la machine d'état suivante.
+    \item Est-ce un automate de Moore ou de Mealy ?
+\end{itemize}
+
+\ifsolutions
+\begin{solbox}
+Il y a plusieurs manières de procéder. Par exemple, on calcule les formules :
+\begin{itemize}
+    \item \textbf{Exhaustivité :}
+    \begin{itemize}
+        \item Pour S0 : $\overline{e_1} + e_1 = 1$
+        \item Pour S1 : $\overline{e_2} + \overline{e_1}e_2 + e_1e_2 = 1$
+        \item Pour S2 : $1 = 1$
+    \end{itemize}
+    \item \textbf{Exclusivité :}
+    \begin{itemize}
+        \item Pour S0 : $\overline{e_1} \cdot e_1 = 0$
+        \item Pour S1 : $\overline{e_2}\overline{e_1}e_2 + \overline{e_2}e_1e_2 + \overline{e_1}e_2e_1e_2 = 0 + 0 + 0 = 0$
+        \item Pour S2 : une seule transition. Il n'y a pas de problème d'exclusivité.
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.5em}
+\centering
+\includegraphics[scale=0.3]{./figures/ex-fsm-1.png}
+\captionof{figure}{FSM de l'exercice 1 et 2}
+\label{fig2}
+
+\vspace{0.5em}
+C'est un automate de \textbf{Mealy}, car les sorties dépendent des transitions, et non pas seulement des états.
+\end{solbox}
+\fi
+
+\subsection{Équations logiques de l'automate}
+
+On cherche les équations logiques de la fonction \textit{état suivant}, ainsi que de la fonction de sortie de l'automate précédent. Ces deux ensembles nous permettront de réaliser concrètement le circuit. On suggère ici de procéder en 2 étapes. La première consiste à conserver le nom \textit{symbolique} des états tandis que la seconde fait apparaître l'\textit{encodage} de ces états.
+
+Dans la FSM à réaliser, en choisissant un encodage \textit{one-hot}, trois bits seraient nécessaires pour encoder les états. On va se limiter toutefois ici à un encodage \textit{dense} où 2 bits seuls sont nécessaires. On s'appuie sur les tableaux génériques suivants \ref{tab1} et \ref{tab2}, qui permettent de procéder de manière systématique.
+
+\begin{table}[H]
+\centering
+\caption{Encodage symbolique (nom des états préservé)}\label{tab1}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{c c c c c c c c}
+\toprule
+\textbf{État courant} & \textbf{Entrée 1} & \dots & \textbf{Entrée n} & \textbf{État suivant} & \textbf{Sortie 1} & \dots & \textbf{Sortie n} \\
+\midrule
+$\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ \\
+$\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+
+\caption{Encodage binaire (états encodés)}\label{tab2}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{c c c c c c c c c c}
+\toprule
+$Q_1$ & $Q_0$ & \textbf{Entrée 1} & \dots & \textbf{Entrée n} & $D_1$ & $D_0$ & \textbf{Sortie 1} & \dots & \textbf{Sortie n} \\
+\midrule
+$\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ \\
+$\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ & $\sim$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\ifsolutions
+\begin{solbox}
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[H]
+\centering
+\begin{tabular}{c c c c c}
+\toprule
+\textbf{État courant} & $e_1$ & $e_2$ & \textbf{État suivant} & $o_1$ \\
+\midrule
+S0 & 0 & X & S0 & 0 \\
+S0 & 1 & X & S1 & 1 \\
+S1 & X & 0 & S1 & 0 \\
+S1 & 0 & 1 & S0 & 1 \\
+S1 & 1 & 1 & S2 & 1 \\
+S2 & X & X & S0 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Puis encodons les états symboliques S0, S1 et S2 par 00, 01, 10 :
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c c c c c c c}
+\toprule
+$Q_1$ & $Q_0$ & $e_1$ & $e_2$ & $D_1$ & $D_0$ & $o_1$ \\
+\midrule
+0 & 0 & 0 & X & 0 & 0 & 0 \\
+0 & 0 & 1 & X & 0 & 1 & 1 \\
+0 & 1 & X & 0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 1 & 0 & 0 & 1 \\
+0 & 1 & 1 & 1 & 1 & 0 & 1 \\
+1 & 0 & X & X & 0 & 0 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textit{Attention :} ne pas chercher les équations directement à partir de ce tableau ! Il manque des combinaisons. Utilisons plutôt le tableau de Karnaugh réorganisé :
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{c|c c c c}
+\toprule
+& $\overline{e_1}\overline{e_2}$ & $\overline{e_1}e_2$ & $e_1e_2$ & $e_1\overline{e_2}$ \\
+\midrule
+$\overline{Q_1}\overline{Q_0}$ & 00 & 00 & 01 & 01 \\
+$\overline{Q_1}Q_0$ & 01 & 00 & 10 & 01 \\
+$Q_1Q_0$ & xx & xx & xx & xx \\
+$Q_1\overline{Q_0}$ & 00 & 00 & 00 & 00 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+À partir de ce dernier tableau, on peut déterminer les équations de $D_1$, $D_0$ et $o_1$ :
+\begin{align*}
+    D_1 &= Q_0 \cdot e_1 \cdot e_2 \\
+    D_0 &= \overline{Q_1}\overline{Q_0}e_1 + Q_0\overline{e_2} \\
+    o_1 &= \overline{Q_1}\overline{Q_0}e_1 + Q_0e_2 + Q_1
+\end{align*}
+\end{solbox}
+\fi
+
+\section{Application}
+
+Soit le diagramme états-transitions de la figure \ref{exo1}. On suppose que les entrées A et B proviennent de deux capteurs. Les sorties sont S1, S2 et S3.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{./figures/exo1}
+\caption{Diagramme états-transitions (à modifier).}
+\label{exo1}
+\end{figure}
+
+\begin{enumerate}
+    \item Cette machine est-elle causale ? Si non, proposer une modification afin de la rendre causale.
+    \item Proposer un encodage \textit{one-hot} pour cette FSM, et un encodage dense.
+    \item Établir les équations de la fonction de transition. On rappelle que ces équations déterminent les entrées D des bascules d'état de l'automate.
+    \item Établir les équations de sortie.
+    \item Dessiner la structure globale du circuit, en faisant apparaître, sous forme de nuage logique, les fonctions précédentes.
+    \item Tenter de dessiner le circuit complet.
+    \item Dessiner à part la connectique qui permet d'initialiser le système dans l'état voulu.
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+C'est une solution proposée. Il en existe plusieurs.
+\begin{enumerate}
+    \item La machine n'est pas causale, car les conditions sont \textit{incomplètes}. On peut proposer de compléter ces conditions de manière totalement \textit{ad hoc}, pour que la FSM devienne causale. \textbf{Attention !} : ce \textit{patch} sauvage est \textbf{dangereux} ! Cela signifie probablement que l'ingénieur qui a écrit la FSM initiale n'a pas une formulation robuste de son problème. Dans un cas réel, le \textit{patch} doit être soigneusement discuté afin de vérifier qu'il respecte le comportement attendu du système visé.
+
+    \vspace{0.5em}
+    \centering
+    \includegraphics[scale=0.5]{./figures/correction_automate.png}
+    \captionof{figure}{Diagramme états-transitions corrigé pour assurer la causalité}
+    \label{solution}
+
+    \item \textbf{Encodage one-hot :}
+    \begin{center}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{c c}
+    \toprule
+    \textbf{État} & \textbf{Code} \\
+    \midrule
+    one & 0001 \\
+    two & 0010 \\
+    three & 0100 \\
+    four & 1000 \\
+    \bottomrule
+    \end{tabular}
+    \end{center}
+
+    \textbf{Encodage dense (exemple) :}
+    \begin{center}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{c c}
+    \toprule
+    \textbf{État} & \textbf{Code} \\
+    \midrule
+    one & 00 \\
+    two & 01 \\
+    three & 10 \\
+    four & 11 \\
+    \bottomrule
+    \end{tabular}
+    \end{center}
+
+    \item Appelons $Q_3, Q_2, Q_1, Q_0$ les (sorties des) bascules qui stockent chacun des bits d'états dans le cas de l'encodage \textit{one-hot}. On conserve l'ordre indiqué dans les codes précédents : on a ainsi $(Q_3,Q_2,Q_1,Q_0) = (0,0,0,1)$ pour l'état \textit{one}. On trouve les équations de transitions, à la simple lecture du diagramme, du fait de l'encodage one-hot :
+    \begin{align*}
+        D_0 &= Q_0(\overline{A} + A \cdot B) + Q_1 \cdot A \cdot B \\
+        D_1 &= Q_1\overline{A} + Q_0 A \overline{B} + Q_2 A B \\
+        D_2 &= Q_2\overline{A} + Q_1 A \overline{B} + Q_3 \overline{A} \\
+        D_3 &= Q_3 A + Q_2 A \overline{B}
+    \end{align*}
+
+    \item Les équations des sorties sont :
+    \begin{align*}
+        S_1 &= Q_0 + Q_3 \\
+        S_2 &= Q_1 \\
+        S_3 &= Q_2 + Q_3
+    \end{align*}
+\end{enumerate}
+
+\vspace{0.5em}
+Le circuit ressemble à la figure ci-dessous. Le dessin à la main d'un tel circuit est très fastidieux... Il faut passer par des logiciels de synthèse automatique pour obtenir un tel schéma détaillé.
+
+\vspace{0.5em}
+\centering
+\includegraphics[scale=0.3]{./figures/circuit_template}
+\captionof{figure}{Schéma du circuit présentant les fonctions \textit{état suivant} et \textit{sortie} sous forme de nuage combinatoire.}
+\label{circuit_template}
+\end{solbox}
+\fi
+
+\newpage
+
+\section{Automate \textit{détecteur de séquence}}
+
+Il est fréquent de devoir détecter une séquence particulière dans un flux de données. Les automates se prêtent très bien à ce genre de détection. On peut citer :
+\begin{itemize}
+    \item L'analyse de paquets réseaux, détection de paquets interdits (entrants ou sortants) dont on connaît une certaine signature numérique (travail de filtrage d'un proxy, etc.).
+    \item L'analyse de flux multimédia : par exemple \textit{start codes} de séquences, dans un film (stocké en numérique, dans un format de compression).
+    \item L'analyse génomique : il existe des accélérateurs FPGA dédiés à la reconnaissance de séquence du génome, etc.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{./figures/exo2}
+\caption{Schéma de principe du détecteur de séquence. Chronogramme associé.}
+\label{exo2}
+\end{figure}
+
+On considère le détecteur de séquence de la figure \ref{exo2}. Son rôle est de détecter les séquences \textit{0-1-1-0} sur son unique entrée $x$. Lorsque cette séquence est détectée, il émet un \textit{1} sur sa sortie $y$. Un chronogramme est fourni à titre d'exemple. Notez que dans le flux \textit{0-1-1-0-1-1-0}, la séquence apparaît deux fois !
+
+\begin{enumerate}
+    \item Proposer un diagramme états-transitions pour ce détecteur. On choisira une machine de Moore.
+    \item Proposer un encodage dense des états.
+    \item Réaliser le circuit.
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+\centering
+\includegraphics[scale=0.3]{./figures/fsm_detect}
+\captionof{figure}{Diagramme états-transitions pour le détecteur de séquences.}
+\label{fsm_detect}
+
+\vspace{0.5em}
+L'automate solution est décrit sur la figure \ref{fsm_detect}. On choisit l'encodage dense suivant :
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{c c}
+\toprule
+\textbf{État} & \textbf{Code} \\
+\midrule
+wait & 000 \\
+un & 001 \\
+deux & 010 \\
+trois & 011 \\
+quatre & 100 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+On a alors la table de séquencement suivante :
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{c c c c c c c c}
+\toprule
+$Q_2$ & $Q_1$ & $Q_0$ & $e$ & $D_2$ & $D_1$ & $D_0$ & $s$ \\
+\midrule
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 1 & 1 & 0 & 1 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 1 & 0 & 1 & 1 & 0 \\
+0 & 1 & 1 & 0 & 1 & 0 & 0 & 1 \\
+0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+1 & 0 & 0 & 1 & 0 & 1 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Cherchons maintenant les équations, en passant par des tableaux de Karnaugh.
+
+\vspace{1em}
+\begin{karnaugh-map}[4][4][1][$Q_2Q_1$][$Q_0E$]
+   \minterms{0,1,2,5,8}
+   \maxterms{4,6,9,12,13}
+   \terms{3,7,10,11,14,15}{X}
+   \implicant{1}{7}
+   \implicantcorner
+\end{karnaugh-map}
+On obtient la formule : $D_0 = Q_1\overline{Q_0} + \overline{Q_1}\overline{E}$
+
+\vspace{1em}
+\begin{karnaugh-map}[4][4][1][$Q_2Q_1$][$Q_0E$]
+   \minterms{5,6,8,12}
+   \maxterms{0,1,2,4,9,12,13}
+   \terms{3,7,10,11,14,15}{X}
+   \implicant{5}{7}
+   \implicant{7}{14}
+   \implicantedge{12}{12}{14}{14}
+\end{karnaugh-map}
+On obtient la formule : $D_1 = Q_1\overline{Q_0}E + \overline{Q_1}Q_0E + Q_2E$
+
+\vspace{1em}
+\begin{karnaugh-map}[4][4][1][$Q_2Q_1$][$Q_0E$]
+   \minterms{9}
+   \maxterms{0,1,2,4,5,6,8,12,13}
+   \terms{3,7,10,11,14,15}{X}
+   \implicant{9}{11}
+\end{karnaugh-map}
+On obtient la formule : $D_2 = Q_1Q_0\overline{E}$
+
+\vspace{1em}
+\begin{karnaugh-map}[4][4][1][$Q_2Q_1$][$Q_0E$]
+   \minterms{2,6}
+   \maxterms{0,1,4,5,8,9,12,13}
+   \terms{3,7,10,11,14,15}{X}
+   \implicant{3}{10}
+\end{karnaugh-map}
+On obtient la formule : $S = Q_2$ \textit{(Note : l'original indiquait $D_3$, mais il s'agit de la sortie $S$ ou $y$)}.
+\end{solbox}
+\fi
+
+\newpage
+
+\section{Automate \textit{serrure numérique}}
+
+L'accès à un local est protégé par une serrure codée associée à un automatisme commandant la gâche électrique de la porte. La combinaison secrète est : \textbf{A, D, C}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{./figures/porte.png}
+\caption{Schéma de principe de la a serrure numérique.}
+\label{porte}
+\end{figure}
+
+Un capteur permet de connaître l'état de la porte : $F$ indique son état. $F$ vaut 1 si la porte est Fermée, et 0 si elle est ouverte.\\
+$G$ commande l'ouverture de la porte : si $G=1$ la porte peut être ouverte. Lorsque la porte se referme, on a $G=0$.\\
+À l'initialisation, la porte est fermée, le contact de porte $F=1$.\\
+On précise qu'on ne peut appuyer que sur un seul bouton à la fois.
+
+\begin{enumerate}
+    \item Proposer un automate de contrôle du dispositif.
+    \item Discuter de la robustesse de la solution, et de son réalisme. Proposer des alternatives.
+    \item Optionnel : construire le circuit complet.
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+Dans ce type de dispositifs, les \textit{spécifications} du dispositif sont ambiguës et sujettes à interprétations. Cela est une constante dans ce type de systèmes !
+\begin{itemize}
+    \item Par exemple, est-il réaliste de ne pas prendre en compte un temps limite d'attente entre deux actions d'appui sur un bouton ? On pourrait donc, dans un état donné, déclencher un \textit{autre automate} dédié au décomptage du temps (timer).
+    \item Ce timer est-il à déclencher \textit{entre} deux appuis, ou dès qu'on commence la séquence ?
+    \item De même, le sujet stipule que la porte \textit{peut être ouverte} : cela ne signifie pas que le retrait de la gâche entraîne forcément l'ouverture de la porte : on devra donc là aussi attendre une action de l'utilisateur, probablement sur la poignée de la porte.
+    \item S'il y a une poignée d'un côté de la porte, peut-on supposer qu'un \textit{autre} utilisateur puisse ouvrir la porte, de manière inopinée pendant la tentative du premier utilisateur ? Etc.
+\end{itemize}
+
+Nous proposons ici une solution à peu près réaliste : dès que la lettre A est correctement entrée, un timer se déclenche. Si la porte est par ailleurs ouverte (de l'intérieur), le dispositif se remet à l'état d'attente initial.
+
+\vspace{0.5em}
+\centering
+\includegraphics[scale=0.5]{./figures/my_solution.png}
+\captionof{figure}{Diagramme état-transition pour la serrure numérique. On fait appel à un autre dispositif numérique : un timer.}
+\label{my_solution}
+\end{solbox}
+\fi
+
+\end{document}

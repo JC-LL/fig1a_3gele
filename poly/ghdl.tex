@@ -1,0 +1,41 @@
+\chapter*{Utilisation de GHDL}
+
+
+\section{Introduction}
+GHDL est un simulateur open source développé par Tristan Gingold, un ingénieur français.
+A la différence d'outils professionnels comme Modelsim de la société Mentor Graphics, GHDL s'utilise
+uniquement en ligne de commande. GHDL peut être être utilisé en synergie avec un second outil appelé GTKWave dans le but de visualiser des chronogrammes.
+Nous rappelons ici les commandes utiles qui permettent de simuler un circuit simple.
+D'autres commandes sont disponibles mais ne seront pas traitées ici.
+
+\section{Commandes essentielles}
+
+
+GHDL s'utilise en ligne de commande comme n'importe quel compilateur.
+Le 'G' de GHDL fait référence au projet GNU lié à l'Open source dont le fer de lance est GCC, le compilateur pour le langage C (et bien d'autres langages !).
+D'ailleurs GHDL utilise le même backend que GCC : il génère les mêmes fichiers binaires "*.o". A la date de rédaction (2017), une version de GHDL génère un bitcode
+LLVM, alternative à GCC.
+
+Les options les plus utiles sont les suivantes, utilisée dans cet ordre :
+\begin{itemize}
+  \item \textbf{ghdl \-a nom\_fichier.vhd} : Analyse le fichier et génère un binaire (faites ls -a nom\_fichier.o pour le voir si vous le souhaitez). Généralement il faut compiler plusieurs fichiers avant de passer à l'étape suivante.
+ \item \textbf{ghdl \-e nom\_de\_l'entité\_simulable}  : Elaboration (ou Edition de lien), qui crée le simulateur compilé : c'est un exécutable comme un autre. Il embarque un moteur de simulation à événement discret.
+\item \textbf{ghdl \-r nom\_de\_l'entité\_simulable}  : Run de l'exécutable précédent. Il est tout à fait possible de lancer l'exécutable sans passer par cette commande.
+\end{itemize}
+
+Généralement, on cherche à enregistrer les formes d'ondes (waveforms ou chronogrammes) dans un fichier, pour une visualisation post-mortem (c'est un désavantage de ghdl par rapport à Modelsim, qui permet d'arrêter une simulation et de la reprendre etc). La manière de faire consiste à modifier la dernière commande précédente :
+
+    \textbf{ghdl -r <nom\_de\_l'entité\_simulable> --wave=<file.ghw>}
+
+Le fichier au format ghw est ensuite lisible par le logiciel Gtkwave.
+
+    \textbf{gtkwave file.ghw}
+
+Le logiciel Gtkwave permet de naviguer dans la hiérarchie de votre design, et de sélectionner les signaux que vous souhaitez visualiser.
+Cette sélection peut être enregistrée pour une visualisation future, en sauvant un fichier .sav (passer par le menu de gtkwave). On pourra alors
+relancer la simulation en demandant à GTKWave d'afficher automatiquement ces signaux.
+
+   \textbf{gtkwave file.ghw signaux.sav}
+
+Au final, il est possible d'automatiser le processus de compilation-simulation-visualisation en copiant les commandes précédentes dans un script.
+N'oubliez pas de rendre ce script exécutable, en lui donnant les bons droits (chmod +x nom\_script).

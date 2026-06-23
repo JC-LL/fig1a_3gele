@@ -1,0 +1,88 @@
+\documentclass{book}
+\usepackage[a4paper,vdivide={*,22cm,4cm}]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\fancyplain{}{\leftmark }}
+\rhead{}
+% \fancypagestyle{plain}{
+% %\fancyhf{} % clear all header and footer fields
+% \fancyfoot[C]{\bfseries \thepage} % except the center
+% }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfig}
+\usepackage{wrapfig}
+
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage[french]{minitoc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[]{lipsum}
+\usepackage{lmodern}
+\usepackage{graphicx}
+
+
+\usepackage{microtype}
+\usepackage{lettrine}
+\usepackage[french, english]{babel}
+\usepackage{pageGardeEnsta}
+
+\DeclareFontFamily{U}{wncy}{}
+\DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
+\DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
+\DeclareMathSymbol{\Sh}{\mathord}{mcy}{"58}
+
+
+\usepackage[english]{babel}
+\usepackage{xcolor,listings}
+%\usepackage[russian]{babel}
+
+\definecolor{myblue}{RGB}{0,82,155}
+\definecolor{myred}{RGB}{140,41,18}
+
+\def\siecle#1{\textsc{\romannumeral #1}\textsuperscript{e}~siècle}
+
+\title{Electronique Numérique}
+\author{Jean-Christophe \textsc{Le Lann}\\
+  \texttt{lelannje@ensta-bretagne.fr}}
+\date{\today}
+\doctype{Polycopié}
+\promo{UE 1.2}
+\etablissement{\textsc{Ensta} Bretagne\\2, rue François Verny\\
+  29806 \textsc{Brest} cedex\\\textsc{France}\\Tel +33 (0)2 98 34 88 00\\} % \url{www.ensta-bretagne.fr}}
+\logoEcole{\includegraphics[height=4.2cm]{page_garde/imgs/logo_ENSTA_Bretagne_Vertical_CMJN}}
+
+%.....Minitoc parameters.....
+\setcounter{minitocdepth}{2}
+%\undotted
+%==============================
+\newcommand{\barre}[1] {\overline{#1}}
+
+\begin{document}
+\selectlanguage{french}
+%\mtcselectlanguage{french}
+\dominitoc % preparation minitoc
+
+\maketitle
+
+\include{avant_propos}
+\tableofcontents
+%\include{introduction_simple}
+\include{transistor}
+\include{representations}
+\include{logique_booleenne}
+\include{combinatoire}
+\include{sequentiel}
+\include{automate}
+\include{hdl}
+\include{reconfigurable}
+%\part{Annexes}
+%\include{ghdl}
+%\include{themes_avances}
+
+\bibliographystyle{plain}
+\bibliography{biblio}
+\newpage
+\end{document}

@@ -1,0 +1,509 @@
+\documentclass[a4paper,11pt]{article}
+
+% --- Encodage et Langue ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% --- Mise en page et Typographie ---
+\usepackage{geometry}
+\geometry{margin=2.5cm, headheight=15pt,bottom=3cm}
+\usepackage{microtype}
+\usepackage{lmodern}
+
+% --- Mathématiques ---
+\usepackage{amsmath, amssymb}
+\usepackage{centernot}
+
+% --- Couleurs et Boîtes ---
+\usepackage{xcolor}
+\definecolor{primary}{RGB}{0, 85, 150}      % Bleu technique
+\definecolor{secondary}{RGB}{240, 248, 255} % Bleu très clair pour les fonds
+\definecolor{solcolor}{RGB}{245, 250, 245}  % Vert très clair pour les solutions
+\definecolor{solframe}{RGB}{60, 120, 60}    % Vert foncé pour les bordures de solution
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{caption} % <-- AJOUTÉ pour permettre \captionof à l'intérieur des boîtes
+
+% --- Tableaux professionnels ---
+\usepackage{booktabs}
+\usepackage{array}
+
+% --- Affichage de code / binaire ---
+\usepackage{listings}
+\lstset{
+    basicstyle=\ttfamily\small,
+    backgroundcolor=\color{gray!5},
+    frame=single,
+    framerule=0.5pt,
+    rulecolor=\color{gray!50},
+    numbers=none,
+    breaklines=true,
+    keepspaces=true,
+    columns=fullflexible
+}
+
+% --- Titres ---
+\usepackage{titlesec}
+\titleformat{\section}
+  {\color{primary}\Large\bfseries}
+  {\thesection}{1em}{}[\titlerule]
+\titleformat{\subsection}
+  {\color{primary}\large\bfseries}
+  {\thesubsection}{1em}{}
+
+% --- Gestion des solutions (Mettre \solutionsfalse pour cacher les solutions) ---
+\newif\ifsolutions
+\solutionstrue % <--- Changez en \solutionsfalse pour la version étudiant
+%\solutionsfalse % <--- Changez en \solutionsfalse pour la version étudiant
+
+\newtcolorbox{notebox}{
+  colback=secondary,
+  colframe=primary,
+  fonttitle=\bfseries,
+  title=Notes et Conseils,
+  arc=4pt,
+  boxrule=0.8pt
+}
+
+\newtcolorbox{solbox}{
+  colback=solcolor,
+  colframe=solframe,
+  fonttitle=\bfseries,
+  title=Solution,
+  arc=4pt,
+  boxrule=0.8pt
+}
+
+% --- Titre du document ---
+\title{\textcolor{primary}{\Huge\bfseries TD 2 -- Électronique Numérique}\\[0.5em] \Large Logique Combinatoire}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\vspace{-2em}
+
+\begin{notebox}
+L'objectif de la séance est multiple. Nous commençons par la construction d'opérateurs matériels élémentaires (additionneurs, multiplexeurs, comparateurs), ainsi que la manipulation algébrique d'expressions booléennes : minimisation, mise en forme canonique, etc. Les tableaux de Karnaugh constituent une autre technique tabulée de minimisation astucieuse qu'il est intéressant de connaître pour de petits circuits. Enfin, forts de la constitution des opérateurs précédents, nous pourrons aborder la conception de circuits qui en font usage, et qui dépassent la seule logique booléenne.
+\end{notebox}
+
+\vspace{1em}
+
+\section{Équations logiques de circuits de base}
+
+\subsection{Additionneur}
+\begin{enumerate}
+    \item Établir la table de vérité d'un \textit{demi-additionneur} logique, puis les deux équations logiques associées : ce circuit additionne simplement 2 entrées booléennes $a$ et $b$ (donc \textit{sans retenue entrante}). Il calcule deux sorties : la somme $s$ et la retenue sortante $c_o$. Dessiner le circuit.
+
+    \ifsolutions
+    \begin{solbox}
+    \begin{center}
+      \renewcommand{\arraystretch}{1.2}
+      \begin{tabular}{c c c c}
+        \toprule
+        $a$ & $b$ & $s$ & $c_o$ \\
+        \midrule
+        0 & 0 & 0 & 0 \\
+        0 & 1 & 1 & 0 \\
+        1 & 0 & 1 & 0 \\
+        1 & 1 & 0 & 1 \\
+        \bottomrule
+      \end{tabular}
+    \end{center}
+    \vspace{0.5em}
+    On trouve les équations suivantes :
+    \begin{align*}
+        s &= a \oplus b \\
+        c_o &= a \cdot b
+    \end{align*}
+    \vspace{0.5em}
+    \centering
+    \fbox{\includegraphics[scale=0.2]{./images/ha.png}}
+    \captionof{figure}{Circuit (netlist) du demi-additionneur 1 bit}
+    \end{solbox}
+    \fi
+
+    \item Établir la table de vérité d'un \textit{additionneur complet} pour deux opérandes 1 bit. Ce dernier tient désormais compte d'une retenue entrante $c_i$. Établir les équations simplifiées des sorties, puis dessiner le circuit correspondant. Au préalable, on démontrera que : $\overline{x \oplus y} = x \oplus \overline{y}$.
+
+    \ifsolutions
+    \begin{solbox}
+    Table de vérité :
+    \begin{center}
+      \renewcommand{\arraystretch}{1.2}
+      \begin{tabular}{c c c c c}
+        \toprule
+        $a$ & $b$ & $c_i$ & $s$ & $c_o$ \\
+        \midrule
+        0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 1 & 1 & 0 \\
+        0 & 1 & 0 & 1 & 0 \\
+        0 & 1 & 1 & 0 & 1 \\
+        1 & 0 & 0 & 1 & 0 \\
+        1 & 0 & 1 & 0 & 1 \\
+        1 & 1 & 0 & 0 & 1 \\
+        1 & 1 & 1 & 1 & 1 \\
+        \bottomrule
+      \end{tabular}
+    \end{center}
+    \vspace{0.5em}
+    Formes brutes :
+    \begin{align*}
+        s &= \overline{a}\overline{b}c_i + \overline{a}b\overline{c_i} + a\overline{b}\overline{c_i} + abc_i \\
+        c_o &= \overline{a}bc_i + a\overline{b}c_i + ab + \overline{c_i} + abc_i \quad \text{(Note: forme brute à simplifier)}
+    \end{align*}
+    Simplification :
+    \begin{align*}
+        s &= \overline{a}(b \oplus c_i) + a(b \oplus \overline{c_i}) \\
+        c_o &= a \cdot b + c_i(a \oplus b)
+    \end{align*}
+    Démontrons que $\overline{x \oplus y} = x \oplus \overline{y}$ :
+    \begin{align*}
+        \overline{x \oplus y} &= \overline{x\overline{y} + \overline{x}y} \\
+        &= (\overline{x} + y)(x + \overline{y}) \quad \text{(De Morgan)} \\
+        &= \overline{x}x + \overline{x}\overline{y} + xy + y\overline{y} \\
+        &= 0 + \overline{x}\overline{y} + xy + 0 \\
+        &= x \oplus \overline{y}
+    \end{align*}
+    En posant $\alpha = b \oplus c_i$, on a pour la somme $s$ :
+    \begin{align*}
+        s &= \overline{a}\alpha + a\overline{\alpha} = a \oplus \alpha = a \oplus b \oplus c_i
+    \end{align*}
+    En résumé :
+    \begin{align*}
+        s &= a \oplus b \oplus c_i \\
+        c_o &= a \cdot b + c_i(a \oplus b)
+    \end{align*}
+    \end{solbox}
+    \fi
+
+    \item Montrer qu'un additionneur complet ``1 bit'' peut réutiliser le demi-additionneur de la question 1.
+    \ifsolutions
+    \begin{solbox}
+    \centering
+    \fbox{\includegraphics[scale=0.3]{./images/full_adder.png}}
+    \fbox{\includegraphics[scale=0.4]{./images/full_adder_ha.png}}
+    \captionof{figure}{Circuit de l'additionneur 1 bit complet (full-adder) et sa réalisation avec deux demi-additionneurs}
+    \end{solbox}
+    \fi
+
+    \item Dessiner un additionneur 4 bits en réutilisant l'additionneur 1 bit.
+    \ifsolutions
+    \begin{solbox}
+    On propose ci-dessous 2 solutions : la première ne permet pas l'utilisation de retenue entrante globale, tandis que la seconde utilise une telle retenue. La seconde solution est parfaitement régulière en terme d'aboutement, constituée de full-adders 1 bit en cascade.
+
+    \vspace{1em}
+    \centering
+    \fbox{\includegraphics[scale=0.25]{./images/adder_4_wo_carry.png}}
+    \captionof{figure}{Additionneur 4 bits sans retenue entrante globale}
+
+    \vspace{1em}
+    \centering
+    \fbox{\includegraphics[scale=0.3]{./images/adder_4.png}}
+    \captionof{figure}{Additionneur 4 bits avec retenue entrante (Ripple Carry Adder)}
+    \end{solbox}
+    \fi
+
+    \item Quel est le chemin critique de ce dernier circuit ? On rappelle que le chemin critique est le parcours le plus long entre une entrée et une sortie combinatoire. On le mesurera en nombre de portes logiques élémentaires traversées.
+    \ifsolutions
+    \begin{solbox}
+    Dans la réalité, chaque porte logique est pré-caractérisée par des temps de traversée donnés par le constructeur (Intel, TSMC, etc.) et il faut sommer des \textit{temps}. L'exercice simplifie cela en comptant le nombre de portes ``abstraites''.\\
+    Nommons les étages de 0 à 3. Deux cas distincts :
+    \begin{enumerate}
+        \item \textbf{Sans retenue entrante globale :} L'étage 0 a un chemin critique de 3 portes (2 demi-additionneurs + 1 OU). Les étages 1 à 3 ont un chemin critique de $c_{in}$ à $c_{out}$, soit 2 portes chacun. Total pour les 3 étages : $3 \times 2 = 6$. Chemin critique total : $\mathbf{3 + 6 = 9}$ portes.
+        \item \textbf{Avec retenue entrante globale :} Le même raisonnement conduit à un chemin critique de \textbf{7 portes} traversées (le premier étage étant un full-adder complet dès le départ).
+    \end{enumerate}
+    \textit{Remarque :} structurellement, 9 portes existent dans le premier cas, créant un ``faux chemin critique'' si l'entrée est forcée à 0.
+    \end{solbox}
+    \fi
+
+    \item Peut-on imaginer d'anticiper le calcul de la retenue ? Si oui, comment ?
+\end{enumerate}
+
+\subsection{Multiplexeur}
+La fonction d'un multiplexeur est de sélectionner, grâce à un signal de contrôle, un signal d'entrée parmi plusieurs et de transmettre sa valeur sur une sortie unique.
+\begin{enumerate}
+    \item Dessiner le symbole communément admis pour représenter un multiplexeur à 2 entrées binaires (chacune codée sur 1 bit). On parle de multiplexeur "2 vers 1".
+    \item Calculer l'équation d'un multiplexeur "2 vers 1" pour des entrées codées sur 1 bit.
+    \item Lorsque les données d'entrées sont codées sur $n>1$ bits, chacun des bits du signal multiplexé suit évidemment un chemin similaire. Dessiner un tel multiplexeur à 2 entrées, pour $n=2$.
+    \item Etablir la structure du multiplexeur à $m$ entrées, à l'aide de multiplexeurs.
+    \item Calculer le nombre de couches logiques traversées pour un multiplexeur $m,n$ ("m vers 1" et dont les données sont codées sur $n$ bits).
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+On parle de multiplexeur 2-vers-1 (2-to-1 MUX).
+\vspace{0.5em}
+\centering
+\fbox{\includegraphics[scale=0.25]{./images/mux.png}}
+\captionof{figure}{Multiplexeur 2 vers 1, codé sur 1 bit : symbole et circuit}
+\vspace{0.5em}
+Pour $n$ bits, il suffit de mettre $n$ multiplexeurs 2-vers-1 en parallèle, tous pilotés par le même signal de sélection.
+\end{solbox}
+\fi
+
+\subsection{Comparateur}
+  Soit deux données $a$ et $b$ quelconques, encodées par deux variables booléennes générales $(a_{n-1},\dots,a_0) \in \mathcal{B}^n$ et $(b_{n-1},\dots,b_0) \in \mathcal{B}^n$.
+\begin{enumerate}
+  \item Démontrer que le résultat booléen $f$ de comparaison d'égalité entre les deux données vaut : $$f(a,b)=\prod_{i=0}^{i=n} \overline{a_{i} \oplus b_i} $$
+  \item Dessiner la structure du comparateur matériel pour $n=4$.
+\end{enumerate}
+
+\section{Formes canoniques}
+\noindent\textbf{Prérequis : Codage binaire et indexation des combinaisons booléennes}\\
+Pour un système à $n$ variables logiques ordonnées, il existe $2^n$ combinaisons possibles de valeurs. Chaque combinaison peut être interprétée comme un nombre binaire, ce qui permet de lui associer de manière unique un indice entier compris entre $0$ et $2^n - 1$. Par exemple, pour trois variables ordonnées $(x, y, z)$, la combinaison de vérités $(1, 0, 1)$ est associée au mot binaire $101_2$, qui correspond à l'indice décimal $5$ : ce dernier pourra être évoqué comme le monôme $m_5$. Ce formalisme d'indexation numérique standardise la désignation de n'importe quel état du système et s'applique de manière générale en logique combinatoire, notamment pour l'organisation des tables de vérité, le référencement des cases d'un tableau de Karnaugh, etc.
+
+\vspace{0.3cm}
+\noindent\textbf{Formes canoniques et passage de l'une à l'autre}\\
+La \textbf{première forme canonique} (ou Forme Normale Disjonctive, FND) est une somme de produits appelés mintermes ($m_i$), où chaque $m_i$ est le produit logique associé à la combinaison d'indice $i$ pour laquelle la fonction vaut $1$. À l'inverse, la \textbf{deuxième forme canonique} (ou Forme Normale Conjonctive, FNC) est un produit de sommes appelées maxterms ($M_i$), où chaque $M_i$ est la somme logique associée à la combinaison d'indice $i$ pour laquelle la fonction vaut $0$. Le passage d'une forme à l'autre exploite directement la complémentarité des indices au sein de l'ensemble des $2^n$ combinaisons. La fonction inverse $\bar{f}$ étant constituée des mintermes dont les indices sont absents de $f$, l'application de la double négation ($f = \overline{\bar{f}}$) et des lois de De Morgan permet de transformer la somme de ces mintermes manquants en un produit de maxterms de mêmes indices :
+\begin{align*}
+    f(x, y, z) &= m_1 + m_3 + m_5 \quad \text{(la fonction vaut 1 pour les indices 1, 3 et 5)} \\
+    \bar{f}(x, y, z) &= m_0 + m_2 + m_4 + m_6 + m_7 \quad \text{(indices restants parmi les } 2^3 \text{ possibles)} \\
+    f(x, y, z) = \overline{\bar{f}(x, y, z)} &= M_0 \cdot M_2 \cdot M_4 \cdot M_6 \cdot M_7 \quad \text{(par passage au dual via De Morgan)}
+\end{align*}
+Ainsi, commuter entre les deux formes canoniques revient simplement à inverser la nature de l'opérateur principal (somme ou produit) en basculant sur l'ensemble complémentaire des indices de l'univers des combinaisons.
+% Toute fonction booléenne $F$ de plusieurs variables peut s'écrire sous deux formes spéciales, appelées \textit{formes canoniques} :
+% \begin{itemize}
+%     \item \textbf{Première forme (SOP)} : somme de produits (mintermes) de chaque variable \textit{ou de son complément}. On somme les produits pour lesquels la fonction vaut '1'.
+%     \item \textbf{Seconde forme (POS)} : produit de sommes (maxtermes) de chaque variable \textit{ou de son complément}. On obtient cette forme de manière duale (pour les '0').
+% \end{itemize}
+\textit{Note : Ces formes ne sont pas simplifiées.}
+
+Établir les deux formes canoniques des fonctions suivantes :
+\begin{enumerate}
+    \item $F_1 = xy + yz + xz$
+    \item $F_2 = x + yz + \overline{y}\overline{z}t$
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+\centering
+\includegraphics[scale=0.8]{./images/./te1-douillar-1.png}
+\captionof{figure}{Solution pour $F_1$}
+\vspace{1em}
+\centering
+\includegraphics[scale=0.5]{./images/./te1-douillar-2.png}
+\captionof{figure}{Solution pour $F_2$}
+\end{solbox}
+\fi
+
+\newpage
+
+\section{Quelques formulations booléennes}
+Écrire sous la première forme canonique (somme de mintermes) les fonctions définies par les propositions suivantes :
+\begin{enumerate}
+    \item $F(a,b,c)=1$ si et seulement si aucune des variables $a,b,c$ ne prend la valeur 1.
+    \item $F(a,b,c)=1$ si et seulement si au plus une des variables $a,b,c$ prend la valeur 0.
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+\centering
+\includegraphics[scale=0.5]{./images/./te1-douillar-3.png}
+\captionof{figure}{Solutions des formulations booléennes}
+\end{solbox}
+\fi
+
+\section{Simplifications algébriques}
+Simplifier algébriquement les fonctions suivantes :
+\begin{enumerate}
+    \item $F = \overline{x}\overline{y} + xy + \overline{x}y$
+    \item $F = (x+\overline{y})(x\overline{y}+z)z$
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+\begin{enumerate}
+    \item $F = \overline{x}(\overline{y} + y) + xy = \overline{x}(1) + xy = \overline{x} + xy = (\overline{x} + x)(\overline{x} + y) = \mathbf{\overline{x} + y}$
+    \item $F = (x+\overline{y})(x\overline{y}z + z) = (x+\overline{y})z(x\overline{y} + 1) = (x+\overline{y})z(1) = \mathbf{(x+\overline{y})z}$
+\end{enumerate}
+\end{solbox}
+\fi
+
+\section{Simplifications par tableaux de Karnaugh}
+Simplifier, par la méthode des tableaux de Karnaugh, les fonctions booléennes suivantes. Dessiner le circuit correspondant et déterminer son chemin critique, en supposant que toutes les portes présentent un temps de propagation de 5 ns.
+
+\subsection{K-map à 3 variables}
+\begin{enumerate}
+    \item $F(a,b,c) = \overline{a}\overline{b}c + \overline{a}b\overline{c} + ab\overline{c}$
+    \item $F(a,b,c) = \overline{a}b\overline{c} + \overline{a}bc + ab\overline{c}$
+    \item $F(a,b,c) = \overline{a}\overline{b}c + a\overline{b}\overline{c} + ab\overline{c}$, sachant que la valeur de $F$ pour les combinaisons $\overline{a}bc$ et $abc$ est indifférente (donc care $X$).
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+\begin{enumerate}
+    \item $F(a,b,c) = \overline{a}\overline{b}c + b\overline{c}$
+    \item $F(a,b,c) = \overline{a}b + b\overline{c} = b(\overline{a} + \overline{c})$
+    \item $F(a,b,c) = \overline{a}c + a\overline{c} = a \oplus c$ (en utilisant les cares pour former des groupes de 2 optimaux).
+\end{enumerate}
+\end{solbox}
+\fi
+
+\subsection{K-map à 4 variables}
+\begin{enumerate}
+    \item $F(a,b,c,d) = \overline{a}b\overline{c}\overline{d} + \overline{a}b\overline{c}d + \overline{a}bcd + \overline{a}bc\overline{d}$
+    \item $F(a,b,c,d) = \overline{a}\overline{b}\overline{c}d + \overline{a}\overline{b}cd + a\overline{b}\overline{c}d + a\overline{b}cd$
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+\begin{enumerate}
+    \item En factorisant ou via le tableau, on isole $a=0$ et $b=1$ : $\mathbf{F = \overline{a}b}$
+    \item On isole $b=0$ et $d=1$ : $\mathbf{F = \overline{b}d}$
+\end{enumerate}
+\end{solbox}
+\fi
+
+\subsection{K-map à 5 variables}
+$F(a,b,c,d,e) = \overline{a}\overline{b}\overline{c}\overline{d}\overline{e} + \overline{a}\overline{b}c\overline{d}\overline{e} + \overline{a}b\overline{c}\overline{d}\overline{e} + \overline{a}bc\overline{d}\overline{e} + ab\overline{c}\overline{d}\overline{e} + ab\overline{c}d\overline{e} + abcd\overline{e} + abc\overline{d}\overline{e} + a\overline{b}\overline{c}\overline{d}\overline{e} + a\overline{b}c\overline{d}\overline{e} + \overline{a}b\overline{c}\overline{d}e + \overline{a}bc\overline{d}e + ab\overline{c}\overline{d}e + ab\overline{c}de + abcde + abc\overline{d}e$
+
+\ifsolutions
+\begin{solbox}
+Le tableau à 5 variables se visualise comme deux tableaux de 4 variables ($a=0$ et $a=1$) superposés. On identifie 3 groupes de 8 cases adjacentes (en tenant compte de la symétrie entre les deux plans) :
+$$ \mathbf{F(a,b,c,d,e) = ab + b\overline{d} + \overline{d}\overline{e}} $$
+\end{solbox}
+\fi
+
+\newpage
+
+\section{Différentes utilisations du OU exclusif}
+\begin{enumerate}
+    \item Rappeler la table de vérité du OU exclusif, ainsi que son symbole (américain).
+    \item Dessiner la fonction OU-exclusif à partir de portes logiques ET, OU et NON.
+    \item Le OU-exclusif possède de nombreuses propriétés intéressantes. Compléter les énoncés suivants :
+    \begin{enumerate}
+        \item Sa sortie vaut 1 si exactement une des entrées vaut 1 : $x \oplus y = ?? + ??$
+        \item On peut le considérer comme un comparateur d'égalité pour 1 bit : $x \oplus y = \text{SI } (x==y) \text{ ALORS ? SINON ?}$
+        \item On peut le considérer comme un inverseur conditionnel : $x \oplus y = \text{SI } (?) \text{ ALORS ? SINON ?}$
+        \item On peut enfin le considérer comme un additionneur modulo 2.
+    \end{enumerate}
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+\begin{enumerate}
+    \item $x \oplus y = x\overline{y} + \overline{x}y$
+    \item $x \oplus y = \text{SI } (x==y) \text{ ALORS } 0 \text{ SINON } 1$ (C'est l'inverse de l'égalité, c'est un détecteur de différence).
+    \item $x \oplus y = \text{SI } (y==1) \text{ ALORS } \overline{x} \text{ SINON } x$. (Si $y=0$, $x \oplus 0 = x$ ; si $y=1$, $x \oplus 1 = \overline{x}$).
+\end{enumerate}
+\end{solbox}
+\fi
+
+\section{Le jeu des cambrioleurs}
+Le principe du jeu \footnote{Le jeu est inspiré du jeu "Dix de Chute" des années 70.} est le suivant : un jeton est introduit par le joueur en haut du dispositif. Le but est de faire circuler ce jeton dans le dispositif, jusqu'à ce qu'il apparaisse en sortie. Dans l'intervalle, le jeton peut rester coincé à différents endroits (ou ``niveaux'') : seul un code secret correctement introduit à cet endroit permet au jeton de continuer son parcours. Sinon, l'utilisateur voit le code d'erreur \texttt{0xDEAD} apparaître en sortie. Chaque code secret, associé au niveau $i$, est codé sur 4 bits.
+
+\begin{enumerate}
+    \item Imaginer un circuit combinatoire qui simule ce jeu. On utilisera pour cela différents circuits connus : multiplexeurs et comparateurs. Enrichir votre circuit avec d'autres circuits combinatoires afin d'indiquer le nombre de niveaux franchis correctement.
+    \item Sachant que l'on peut envoyer 1 million de codes par seconde, combien de temps faudrait-il, au pire cas, pour tester toutes les combinaisons possibles, dans le cas où le nombre de niveaux est 9 ? Refaites le calcul pour des codes sur 5 bits.
+\end{enumerate}
+\textit{Cet exercice ne nécessite pas de formules complexes, mais une réflexion architecturale.}
+
+\ifsolutions
+\begin{solbox}
+\textbf{1. Architecture :}\\
+Le but est de manipuler des circuits pour réaliser un ``chemin de données''. On choisit de représenter le jeton par un vecteur de bits de taille $n=16$ (à cause du code \texttt{0xDEAD}).\\
+À chaque niveau, un comparateur vérifie si le code d'entrée correspond au code secret. La sortie du comparateur pilote un multiplexeur : si le code est bon, le jeton actuel passe au niveau suivant ; sinon, la valeur \texttt{0xDEAD} est injectée et propagée jusqu'à la sortie. Un compteur peut être incrémenté à chaque comparaison réussie.
+
+\vspace{0.5em}
+\centering
+\includegraphics[scale=0.5]{./images/./cambrioleur.png}
+\captionof{figure}{Schéma de principe du jeu des cambrioleurs}
+\vspace{0.5em}
+
+\textbf{2. Calcul de complexité :}\\
+Pour 9 niveaux avec des codes de 4 bits : il y a $(2^4)^9 = 2^{36}$ combinaisons à tester.\\
+À $10^6$ tests/seconde, le temps au pire cas est :
+$$ \frac{2^{36}}{10^6} \approx 68\,719 \text{ secondes} \approx \mathbf{19 \text{ heures}} $$
+Pour des codes sur 5 bits : $(2^5)^9 = 2^{45}$ combinaisons.
+$$ \frac{2^{45}}{10^6} \approx 35\,184\,372 \text{ secondes} \approx \mathbf{407 \text{ jours}} $$
+\end{solbox}
+\fi
+
+\section{Vu-mètre}
+On se propose de réaliser un ``contrôleur de vu-mètre'' : c'est un dispositif qui permet de visualiser une grandeur numérique (un volume sonore par exemple) au moyen d'une barrette lumineuse qui s'étire plus ou moins en fonction de la grandeur.
+
+\begin{enumerate}
+    \item Schématiser le principe d'ensemble dans le cas où la grandeur à visualiser est codée sur 3 bits.
+    \item À partir du tableau de Karnaugh, trouver une réalisation possible.
+    \item On suppose que l'on dispose désormais d'un composant complexe de décodage (un décodeur 3 vers 8). Rappeler la table de vérité de ce circuit. Utiliser alors ce décodeur pour proposer une nouvelle réalisation.
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+\textbf{Attention :} lorsqu'on envoie le code \texttt{000}, on ne veut \textit{aucune} LED allumée. Quand on envoie le code \texttt{111} (7), on veut voir 7 LEDs allumées, numérotées de $L_0$ à $L_6$ (et non 8).
+
+\textbf{Table de vérité du Vu-mètre :}
+\begin{center}
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{c c c c c c c c c c}
+    \toprule
+    $e_2$ & $e_1$ & $e_0$ & $L_0$ & $L_1$ & $L_2$ & $L_3$ & $L_4$ & $L_5$ & $L_6$ \\
+    \midrule
+    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+    1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+    1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 \\
+    1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 \\
+    1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+\textbf{Simplification (K-map) :}
+\begin{align*}
+    L_0 &= e_2 + e_1 + e_0 \\
+    L_1 &= e_2 + e_1 \\
+    L_2 &= \overline{e_2}e_1 + e_2\overline{e_1}e_0 \quad \text{(ou forme équivalente)} \\
+    L_3 &= e_2 \\
+    L_4 &= e_2 e_1 + e_2 \overline{e_1} e_0 \\
+    L_5 &= e_2 e_1 \\
+    L_6 &= e_2 e_1 e_0
+\end{align*}
+
+\textbf{Réalisation avec un décodeur 3 vers 8 :}\\
+La sortie $C_i$ d'un décodeur s'allume (vaut 1) uniquement lorsque la valeur binaire d'entrée correspond à $i$.
+\begin{center}
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{c c c c c c c c c c c}
+    \toprule
+    $e_2$ & $e_1$ & $e_0$ & $C_0$ & $C_1$ & $C_2$ & $C_3$ & $C_4$ & $C_5$ & $C_6$ & $C_7$ \\
+    \midrule
+    0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+    1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+    1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+    1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+    1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+\end{solbox} % cesure nécessaire pour mise en page !
+
+\begin{solbox}
+On remarque que $L_k$ doit être allumée pour toutes les valeurs d'entrée strictement supérieures à $k$. Ainsi :
+\begin{align*}
+    L_0 &= C_1 + C_2 + C_3 + C_4 + C_5 + C_6 + C_7 \\
+    L_1 &= C_2 + C_3 + C_4 + C_5 + C_6 + C_7 \\
+    L_2 &= C_3 + C_4 + C_5 + C_6 + C_7 \\
+    &\vdots \\
+    L_5 &= C_6 + C_7 \\
+    L_6 &= C_7
+\end{align*}
+On peut réaliser cela en cascade avec des portes OU, ce qui est très élégant et modulaire. Seul le cas du zéro ($L_0$ éteinte quand $C_0=1$) est géré naturellement car $C_0$ n'est pas inclus dans la somme de $L_0$.
+
+\vspace{0.5em}
+\centering
+\includegraphics[scale=0.3]{./images/./vumetre-2015.png}
+\captionof{figure}{Réalisation du Vu-mètre à l'aide d'un décodeur et de portes OU}
+\end{solbox}
+\fi
+
+\end{document}

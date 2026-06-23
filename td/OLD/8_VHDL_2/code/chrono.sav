@@ -1,0 +1,28 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Tue Nov 13 09:10:08 2018
+[*]
+[dumpfile] "/home/jcll/FORGE/Renater/jcllens/LOGIC/TD/2018/8_VHDL_2/code/waves.ghw"
+[dumpfile_mtime] "Tue Nov 13 09:07:57 2018"
+[dumpfile_size] 1213
+[savefile] "/home/jcll/FORGE/Renater/jcllens/LOGIC/TD/2018/8_VHDL_2/code/chrono.sav"
+[timestart] 0
+[size] 1258 743
+[pos] -1 -1
+*-26.068237 135000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.ab_plus_cd_unsigned_tb.
+[treeopen] top.ab_plus_cd_unsigned_tb.dut.
+[sst_width] 196
+[signals_width] 152
+[sst_expanded] 1
+[sst_vpaned_height] 357
+@24
+#{top.ab_plus_cd_unsigned_tb.a[7:0]} top.ab_plus_cd_unsigned_tb.a[7] top.ab_plus_cd_unsigned_tb.a[6] top.ab_plus_cd_unsigned_tb.a[5] top.ab_plus_cd_unsigned_tb.a[4] top.ab_plus_cd_unsigned_tb.a[3] top.ab_plus_cd_unsigned_tb.a[2] top.ab_plus_cd_unsigned_tb.a[1] top.ab_plus_cd_unsigned_tb.a[0]
+#{top.ab_plus_cd_unsigned_tb.b[7:0]} top.ab_plus_cd_unsigned_tb.b[7] top.ab_plus_cd_unsigned_tb.b[6] top.ab_plus_cd_unsigned_tb.b[5] top.ab_plus_cd_unsigned_tb.b[4] top.ab_plus_cd_unsigned_tb.b[3] top.ab_plus_cd_unsigned_tb.b[2] top.ab_plus_cd_unsigned_tb.b[1] top.ab_plus_cd_unsigned_tb.b[0]
+#{top.ab_plus_cd_unsigned_tb.c[7:0]} top.ab_plus_cd_unsigned_tb.c[7] top.ab_plus_cd_unsigned_tb.c[6] top.ab_plus_cd_unsigned_tb.c[5] top.ab_plus_cd_unsigned_tb.c[4] top.ab_plus_cd_unsigned_tb.c[3] top.ab_plus_cd_unsigned_tb.c[2] top.ab_plus_cd_unsigned_tb.c[1] top.ab_plus_cd_unsigned_tb.c[0]
+#{top.ab_plus_cd_unsigned_tb.d[7:0]} top.ab_plus_cd_unsigned_tb.d[7] top.ab_plus_cd_unsigned_tb.d[6] top.ab_plus_cd_unsigned_tb.d[5] top.ab_plus_cd_unsigned_tb.d[4] top.ab_plus_cd_unsigned_tb.d[3] top.ab_plus_cd_unsigned_tb.d[2] top.ab_plus_cd_unsigned_tb.d[1] top.ab_plus_cd_unsigned_tb.d[0]
+@22
+#{top.ab_plus_cd_unsigned_tb.dut.f[15:0]} top.ab_plus_cd_unsigned_tb.dut.f[15] top.ab_plus_cd_unsigned_tb.dut.f[14] top.ab_plus_cd_unsigned_tb.dut.f[13] top.ab_plus_cd_unsigned_tb.dut.f[12] top.ab_plus_cd_unsigned_tb.dut.f[11] top.ab_plus_cd_unsigned_tb.dut.f[10] top.ab_plus_cd_unsigned_tb.dut.f[9] top.ab_plus_cd_unsigned_tb.dut.f[8] top.ab_plus_cd_unsigned_tb.dut.f[7] top.ab_plus_cd_unsigned_tb.dut.f[6] top.ab_plus_cd_unsigned_tb.dut.f[5] top.ab_plus_cd_unsigned_tb.dut.f[4] top.ab_plus_cd_unsigned_tb.dut.f[3] top.ab_plus_cd_unsigned_tb.dut.f[2] top.ab_plus_cd_unsigned_tb.dut.f[1] top.ab_plus_cd_unsigned_tb.dut.f[0]
+[pattern_trace] 1
+[pattern_trace] 0

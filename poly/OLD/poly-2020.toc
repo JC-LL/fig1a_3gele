@@ -1,0 +1,209 @@
+\babel@toc {english}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Le transistor}{9}{}%
+\contentsline {section}{\numberline {1.1}Introduction}{9}{}%
+\contentsline {section}{\numberline {1.2}Silicium et dopage}{9}{}%
+\contentsline {paragraph}{En résumé}{11}{}%
+\contentsline {section}{\numberline {1.3}Jonction PN}{11}{}%
+\contentsline {section}{\numberline {1.4}Transistor MOS}{12}{}%
+\contentsline {section}{\numberline {1.5}MOS complémentaires}{13}{}%
+\contentsline {paragraph}{Principe}{13}{}%
+\contentsline {paragraph}{Inverseur CMOS}{13}{}%
+\contentsline {paragraph}{Principe de dualité}{14}{}%
+\contentsline {section}{\numberline {1.6}Niveaux d'abstraction}{15}{}%
+\contentsline {paragraph}{De la porte logique au masque métré}{15}{}%
+\contentsline {paragraph}{De la porte logique vers le système embarqué}{15}{}%
+\contentsline {section}{\numberline {1.7}Numérique versus Analogique}{16}{}%
+\contentsline {section}{\numberline {1.8}Conclusions}{16}{}%
+\contentsline {chapter}{\numberline {2}Représentations numériques}{19}{}%
+\contentsline {section}{\numberline {2.1}Notion de bases ou radix}{20}{}%
+\contentsline {subsection}{\numberline {2.1.1}Décomposition en puissance de la base}{20}{}%
+\contentsline {paragraph}{Nombre de bits nécessaires pour représenter un entier $x$}{21}{}%
+\contentsline {paragraph}{Erreurs de calcul liés aux représentations}{21}{}%
+\contentsline {subsection}{\numberline {2.1.2}Conversion entre bases}{22}{}%
+\contentsline {subsection}{\numberline {2.1.3}Exemples}{22}{}%
+\contentsline {subsection}{\numberline {2.1.4}Conversions binaire, hexadécimal, octal}{23}{}%
+\contentsline {subsection}{\numberline {2.1.5}Bits, bytes, nibbles, words}{23}{}%
+\contentsline {paragraph}{Première addition binaire}{24}{}%
+\contentsline {section}{\numberline {2.2}Représentation des entiers négatifs.}{24}{}%
+\contentsline {subsection}{\numberline {2.2.1}Complément à $r$ d'un nombre}{24}{}%
+\contentsline {paragraph}{Remarques}{24}{}%
+\contentsline {subsection}{\numberline {2.2.2}Conversion d'une représentation binaire en complément à 2}{25}{}%
+\contentsline {subsection}{\numberline {2.2.3}Astuces pour complémenter à 2}{26}{}%
+\contentsline {subsection}{\numberline {2.2.4}A propos du "bit de signe"}{26}{}%
+\contentsline {subsection}{\numberline {2.2.5}Conversion d'un nombre signé vers un nombre non signé}{27}{}%
+\contentsline {section}{\numberline {2.3}Représentations alternatives, obsolètes ou rares}{27}{}%
+\contentsline {subsection}{\numberline {2.3.1}Représentation en Magnitude signée}{27}{}%
+\contentsline {subsection}{\numberline {2.3.2}Représentation en complément à 1}{27}{}%
+\contentsline {subsection}{\numberline {2.3.3}Code BCD et code de Gray pour les entiers non-signés}{27}{}%
+\contentsline {subsubsection}{Code BCD}{27}{}%
+\contentsline {subsubsection}{Code de Gray}{28}{}%
+\contentsline {section}{\numberline {2.4}Calcul d'addition et soustraction}{29}{}%
+\contentsline {subsection}{\numberline {2.4.1}Addition}{29}{}%
+\contentsline {subsection}{\numberline {2.4.2}Soustraction}{29}{}%
+\contentsline {subsection}{\numberline {2.4.3}Petit complément sur la soustraction }{29}{}%
+\contentsline {subsubsection}{Cas où une retenue apparaît lors de l'addition}{30}{}%
+\contentsline {subsubsection}{Cas où aucune retenue n'apparaît}{30}{}%
+\contentsline {section}{\numberline {2.5}Données composées ou symboliques}{31}{}%
+\contentsline {subsection}{\numberline {2.5.1}Données composées}{31}{}%
+\contentsline {subsection}{\numberline {2.5.2}Données symboliques ou énumérées.}{31}{}%
+\contentsline {subsection}{\numberline {2.5.3}Code alphanumérique ASCII}{31}{}%
+\contentsline {subsection}{\numberline {2.5.4}Code alphanumérique UTF-8}{32}{}%
+\contentsline {section}{\numberline {2.6}Calcul en virgule fixe et en virgule flottante}{33}{}%
+\contentsline {subsection}{\numberline {2.6.1}Les nombres en virgule fixe}{33}{}%
+\contentsline {subsection}{\numberline {2.6.2}Les nombres en virgule flottante. Norme IEEE 754}{33}{}%
+\contentsline {paragraph}{Exemple}{34}{}%
+\contentsline {section}{\numberline {2.7}Manipulations numériques}{34}{}%
+\contentsline {subsection}{\numberline {2.7.1}Récupération d'un champ : masque hexadécimal}{34}{}%
+\contentsline {subsection}{\numberline {2.7.2}Autres manipulations logicielles, au niveau bit}{35}{}%
+\contentsline {subsection}{\numberline {2.7.3}Conversions et programmation}{35}{}%
+\contentsline {section}{\numberline {2.8}Vers la détection d'erreur entre émetteur et récepteur : bit de parité}{36}{}%
+\contentsline {section}{\numberline {2.9}Conclusion}{36}{}%
+\contentsline {chapter}{\numberline {3}Logique booléenne}{37}{}%
+\contentsline {section}{\numberline {3.1}Introduction}{37}{}%
+\contentsline {section}{\numberline {3.2}Définitions}{37}{}%
+\contentsline {subsection}{\numberline {3.2.1}Axiomes de l'Algèbre de Boole}{38}{}%
+\contentsline {subsection}{\numberline {3.2.2}Principaux théorèmes de l'Algèbre de Boole}{38}{}%
+\contentsline {subsection}{\numberline {3.2.3}Théorèmes de De Morgan}{39}{}%
+\contentsline {section}{\numberline {3.3}Représentation des fonctions booléennes}{39}{}%
+\contentsline {subsection}{\numberline {3.3.1}Monôme}{39}{}%
+\contentsline {subsection}{\numberline {3.3.2}Fonctions booléennes}{39}{}%
+\contentsline {subsection}{\numberline {3.3.3}Fonction booléenne incomplète ou $\phi $-booléenne}{40}{}%
+\contentsline {subsection}{\numberline {3.3.4}Minterm et maxterms}{40}{}%
+\contentsline {subsection}{\numberline {3.3.5}Décomposition de Shannon et Arbres de décision binaires}{40}{}%
+\contentsline {section}{\numberline {3.4}Simplification des fonctions booléennes}{40}{}%
+\contentsline {subsection}{\numberline {3.4.1}Par calcul algébrique}{40}{}%
+\contentsline {subsection}{\numberline {3.4.2}Par tableau de Karnaugh}{41}{}%
+\contentsline {section}{\numberline {3.5}Conclusion}{42}{}%
+\contentsline {chapter}{\numberline {4}Circuits combinatoires}{43}{}%
+\contentsline {section}{\numberline {4.1}Définition}{43}{}%
+\contentsline {section}{\numberline {4.2}Portes logiques de base}{44}{}%
+\contentsline {paragraph}{Première approche : et, ou, non}{44}{}%
+\contentsline {paragraph}{Deuxième approche : autres portes logiques}{44}{}%
+\contentsline {paragraph}{Troisième approche : non-et (nand)}{45}{}%
+\contentsline {section}{\numberline {4.3}Fonctions logiques "complexes"}{45}{}%
+\contentsline {paragraph}{Assemblage de portes logiques}{45}{}%
+\contentsline {paragraph}{Notion de "Nuage combinatoire"}{45}{}%
+\contentsline {section}{\numberline {4.4}Mapping technologique sur circuits discrets}{46}{}%
+\contentsline {section}{\numberline {4.5}Chemin critique et fréquence de fonctionnement}{46}{}%
+\contentsline {section}{\numberline {4.6}Arithmétique de base}{47}{}%
+\contentsline {subsection}{\numberline {4.6.1}Additionneur}{47}{}%
+\contentsline {paragraph}{Demi-additionneur 1 bit}{48}{}%
+\contentsline {paragraph}{Additionneur 1 bit}{48}{}%
+\contentsline {paragraph}{Additionneur {\it n} bits}{48}{}%
+\contentsline {subsection}{\numberline {4.6.2}Soustracteur}{49}{}%
+\contentsline {paragraph}{Utilisation d'une table de vérité}{49}{}%
+\contentsline {paragraph}{Utilisation du complément à 2}{49}{}%
+\contentsline {subsection}{\numberline {4.6.3}Additionneur-soustracteur}{50}{}%
+\contentsline {subsection}{\numberline {4.6.4}Multiplieur}{50}{}%
+\contentsline {paragraph}{Méthode naturelle}{50}{}%
+\contentsline {paragraph}{Multiplieur avec topologie régulière}{51}{}%
+\contentsline {subsection}{\numberline {4.6.5}Diviseur}{51}{}%
+\contentsline {section}{\numberline {4.7}Shifter}{52}{}%
+\contentsline {paragraph}{Shifter à position fixe}{52}{}%
+\contentsline {paragraph}{Barrel shifter}{52}{}%
+\contentsline {section}{\numberline {4.8}Multiplexeur}{52}{}%
+\contentsline {paragraph}{Crossbar}{52}{}%
+\contentsline {section}{\numberline {4.9}Comparateur}{53}{}%
+\contentsline {paragraph}{Comparateur 1 bit}{53}{}%
+\contentsline {paragraph}{Comparateur d'égalité de 2 entiers}{53}{}%
+\contentsline {section}{\numberline {4.10}Codeurs et Décodeurs}{53}{}%
+\contentsline {paragraph}{Décodeur 7-segments}{54}{}%
+\contentsline {section}{\numberline {4.11}Conclusion}{54}{}%
+\contentsline {chapter}{\numberline {5}Circuits séquentiels}{55}{}%
+\contentsline {section}{\numberline {5.1}Introduction}{55}{}%
+\contentsline {section}{\numberline {5.2}Discrétiser le temps}{56}{}%
+\contentsline {paragraph}{Eviter la "cacophonie"}{56}{}%
+\contentsline {paragraph}{Notion d'horloge périodique}{56}{}%
+\contentsline {section}{\numberline {5.3}Bascule D}{57}{}%
+\contentsline {subsection}{\numberline {5.3.1}Fonction d'échantillonnage de la bascule D. Set-up et hold. Metastabilité.}{57}{}%
+\contentsline {subsection}{\numberline {5.3.2}Décalage temporel : la raison d'être de la bascule D}{58}{}%
+\contentsline {section}{\numberline {5.4}Quelques {\it patterns} de conception synchrone}{58}{}%
+\contentsline {subsection}{\numberline {5.4.1}Registre à décalage}{59}{}%
+\contentsline {subsection}{\numberline {5.4.2}LFSR : linear feedback shift register}{59}{}%
+\contentsline {subsection}{\numberline {5.4.3}Bascule D et multiplexeur : mémorisation}{60}{}%
+\contentsline {subsection}{\numberline {5.4.4}Compteurs et timers}{60}{}%
+\contentsline {section}{\numberline {5.5}Initialisation d'une bascule D}{61}{}%
+\contentsline {paragraph}{Exemples}{62}{}%
+\contentsline {paragraph}{Simplification grâce aux HDL}{62}{}%
+\contentsline {section}{\numberline {5.6}Conclusion}{62}{}%
+\contentsline {chapter}{\numberline {6}Machines d'états finis}{63}{}%
+\contentsline {section}{\numberline {6.1}Introduction}{63}{}%
+\contentsline {section}{\numberline {6.2}Machines d'états finis}{63}{}%
+\contentsline {paragraph}{Automate de Moore}{64}{}%
+\contentsline {paragraph}{Automate de Mealy}{64}{}%
+\contentsline {paragraph}{Comparaison}{64}{}%
+\contentsline {paragraph}{Exemple}{65}{}%
+\contentsline {section}{\numberline {6.3}Diagramme états-transitions}{65}{}%
+\contentsline {paragraph}{Exemple : vending machine}{65}{}%
+\contentsline {section}{\numberline {6.4}Consistance ou {\it causalité} d'une machine d'états finis}{66}{}%
+\contentsline {section}{\numberline {6.5}Encodage des états}{67}{}%
+\contentsline {paragraph}{Encodage dense}{67}{}%
+\contentsline {paragraph}{Encodage one-hot}{67}{}%
+\contentsline {paragraph}{Compromis temps-surface}{67}{}%
+\contentsline {section}{\numberline {6.6}Méthode générale de conception d'un automate}{68}{}%
+\contentsline {paragraph}{Table de vérité symbolique}{68}{}%
+\contentsline {paragraph}{Table de vérité explicite}{68}{}%
+\contentsline {section}{\numberline {6.7}Exemple complet}{68}{}%
+\contentsline {paragraph}{Encodage}{68}{}%
+\contentsline {paragraph}{Table de vérité symbolique}{69}{}%
+\contentsline {paragraph}{Table de vérité avec encodage explicite}{69}{}%
+\contentsline {paragraph}{Tableaux de Karnaugh et Equations logiques}{69}{}%
+\contentsline {paragraph}{Circuit électronique}{70}{}%
+\contentsline {section}{\numberline {6.8}Gérer la complexité }{70}{}%
+\contentsline {paragraph}{Position du problème}{70}{}%
+\contentsline {paragraph}{Contraintes mutuelles}{71}{}%
+\contentsline {section}{\numberline {6.9}Méthode particulière : cas de l'encodage {\it one-hot}}{71}{}%
+\contentsline {paragraph}{Intuition}{71}{}%
+\contentsline {paragraph}{Obtention directe des équation}{71}{}%
+\contentsline {section}{\numberline {6.10}A propos du caractère fondamental des automates}{72}{}%
+\contentsline {paragraph}{}{73}{}%
+\contentsline {section}{\numberline {6.11}Conclusion}{73}{}%
+\contentsline {chapter}{\numberline {7}Introduction aux microarchitectures}{75}{}%
+\contentsline {section}{\numberline {7.1}Introduction}{75}{}%
+\contentsline {section}{\numberline {7.2}Chemin de données : architecture générique}{75}{}%
+\contentsline {section}{\numberline {7.3}Schéma générique d'architecture contrôleur-datapath}{76}{}%
+\contentsline {section}{\numberline {7.4}Exercice}{77}{}%
+\contentsline {section}{\numberline {7.5}Conclusion}{77}{}%
+\contentsline {chapter}{\numberline {8}VHDL}{79}{}%
+\contentsline {section}{\numberline {8.1}Avant propos}{79}{}%
+\contentsline {section}{\numberline {8.2}Introduction : les langages de description matérielle}{80}{}%
+\contentsline {paragraph}{Naissance de VHDL}{80}{}%
+\contentsline {paragraph}{Particularités de VHDL : deux sémantiques}{80}{}%
+\contentsline {paragraph}{Démarche de modélisation}{81}{}%
+\contentsline {section}{\numberline {8.3}La structure globale d'un programme VHDL}{81}{}%
+\contentsline {subsection}{\numberline {8.3.1}Déclaration de librairies et packages}{81}{}%
+\contentsline {subsection}{\numberline {8.3.2}Notion d'entité}{82}{}%
+\contentsline {subsection}{\numberline {8.3.3}Notion d'architecture}{82}{}%
+\contentsline {section}{\numberline {8.4}Les éléments clés de l'architecture}{83}{}%
+\contentsline {subsection}{\numberline {8.4.1}Assignations concurrentes des signaux}{83}{}%
+\contentsline {subsection}{\numberline {8.4.2}Processus}{83}{}%
+\contentsline {paragraph}{Exemple 1 \: processus générant un circuit combinatoire}{84}{}%
+\contentsline {paragraph}{Exemple 2 \: processus générant un circuit séquentiel}{84}{}%
+\contentsline {paragraph}{Exemple 3 : processus utilisé en banc de test}{85}{}%
+\contentsline {subsection}{\numberline {8.4.3}Instanciation de composants et d'entités}{85}{}%
+\contentsline {paragraph}{Instanciation de composants}{86}{}%
+\contentsline {paragraph}{Instanciation d'entités}{86}{}%
+\contentsline {section}{\numberline {8.5}Décrire des machines d'états finis}{87}{}%
+\contentsline {subsection}{\numberline {8.5.1}FSM au niveau logique}{87}{}%
+\contentsline {subsection}{\numberline {8.5.2}FSMs au niveau RTL}{87}{}%
+\contentsline {section}{\numberline {8.6}Simulation en VHDL}{90}{}%
+\contentsline {subsection}{\numberline {8.6.1}Flot de conception général}{90}{}%
+\contentsline {subsection}{\numberline {8.6.2}Bancs de tests ou {\it Testbench} pour la vérification}{90}{}%
+\contentsline {paragraph}{Génération de l'horloge}{91}{}%
+\contentsline {subsection}{\numberline {8.6.3}Modèles de référence}{91}{}%
+\contentsline {section}{\numberline {8.7}Fonctionnement interne d'un simulateur VHDL}{92}{}%
+\contentsline {paragraph}{Idée de causalité}{92}{}%
+\contentsline {paragraph}{Simulateur à événements discrets}{92}{}%
+\contentsline {paragraph}{Temps physique et délai delta}{93}{}%
+\contentsline {section}{\numberline {8.8}Utilisation du simulateur GHDL}{93}{}%
+\contentsline {subsection}{\numberline {8.8.1}Introduction}{93}{}%
+\contentsline {subsection}{\numberline {8.8.2}Commandes essentielles}{93}{}%
+\contentsline {section}{\numberline {8.9}Conclusion}{94}{}%
+\contentsline {chapter}{\numberline {9}Synthèse sur FPGA}{97}{}%
+\contentsline {section}{\numberline {9.1}FPGA : un circuit reconfigurable}{97}{}%
+\contentsline {paragraph}{Définition d'un FPGA}{97}{}%
+\contentsline {paragraph}{Architecture interne}{97}{}%
+\contentsline {paragraph}{Comparaison avec les ASICs}{98}{}%
+\contentsline {section}{\numberline {9.2}Flot de synthèse}{99}{}%
+\contentsline {section}{\numberline {9.3}Expérience pratique}{99}{}%

@@ -1,0 +1,112 @@
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay, shift={(current page.south west)}]
+        % Fond dégradé très subtil
+        %\fill[top color=white, bottom color=enstaLightBlue!10]
+        %    (current page.south west) rectangle (current page.north east);
+
+        % ====== FILET BLEU DISCRET EN HAUT ======
+        %\draw[enstaBlue!50, line width=1.0pt] (2, 26.8) -- (19, 26.8);
+        % Petit rappel doré
+        % \fill[enstaGold!60] (9.5, 26.8) circle (0.08cm);
+        % \fill[enstaGold!60] (12.5, 26.8) circle (0.08cm);
+
+        % ====== AUTOMATE D'ÉTATS FINIS (bas, centré) ======
+        \begin{scope}[shift={(8.5, 10.5)}, scale=0.8]
+            % Définition des états
+            \node[state, draw=enstaBlue!50, line width=1.5pt, fill=enstaBlue!5,
+                  minimum size=1cm, font=\small\sffamily] (S0) at (0,0) {S0};
+            \node[state, draw=enstaBlue!50, line width=1.5pt, fill=enstaBlue!5,
+                  minimum size=1cm, font=\small\sffamily] (S1) at (3,1.8) {S1};
+            \node[state, draw=enstaBlue!50, line width=1.5pt, fill=enstaBlue!5,
+                  minimum size=1cm, font=\small\sffamily] (S2) at (3,-1.8) {S2};
+            \node[state, draw=enstaBlue!50, line width=1.5pt, fill=enstaBlue!5,
+                  minimum size=1cm, font=\small\sffamily, accepting] (S3) at (6,0) {S3};
+
+            % État initial (flèche)
+            \draw[enstaBlue!50, line width=1.5pt, -{Triangle[length=3mm]}]
+                (-1.5,0) -- (-0.5,0);
+            \node[font=\scriptsize\sffamily, enstaBlue!40] at (-1.5,0.5) {Reset};
+
+            % Transitions
+            \draw[enstaBlue!50, line width=1.5pt, -{Triangle[length=3mm]}]
+                (S0) -- node[font=\scriptsize\sffamily, enstaBlue!40, above, sloped] {0/0} (S1);
+            \draw[enstaBlue!50, line width=1.5pt, -{Triangle[length=3mm]}]
+                (S0) -- node[font=\scriptsize\sffamily, enstaBlue!40, below, sloped] {1/0} (S2);
+            \draw[enstaBlue!50, line width=1.5pt, -{Triangle[length=3mm]}]
+                (S1) -- node[font=\scriptsize\sffamily, enstaBlue!40, above, sloped] {0/0} (S3);
+            \draw[enstaBlue!50, line width=1.5pt, -{Triangle[length=3mm]}]
+                (S2) -- node[font=\scriptsize\sffamily, enstaBlue!40, below, sloped] {1/0} (S3);
+            \draw[enstaBlue!50, line width=1.5pt, -{Triangle[length=3mm]}]
+                (S3) to[out=90,in=0] node[font=\scriptsize\sffamily, enstaBlue!40, right] {0/1} (S1);
+            \draw[enstaBlue!50, line width=1.5pt, -{Triangle[length=3mm]}]
+                (S3) to[out=-90,in=0] node[font=\scriptsize\sffamily, enstaBlue!40, right] {1/1} (S2);
+
+            % Boucle sur S0
+            \draw[enstaBlue!50, line width=1.5pt, -{Triangle[length=3mm]}]
+                (S0) to[out=135,in=225, loop] node[font=\scriptsize\sffamily, enstaBlue!40, left] {0/0} (S0);
+
+            % % Légende
+            % \node[font=\scriptsize\sffamily, enstaBlue!40, align=center] at (3, -3.2) {
+            %     Machine de Mealy -- Détecteur de séquence \textit{(exemple)}
+            % };
+
+            % % Petit encadré d'info
+            % \draw[enstaBlue!20, line width=0.5pt, rounded corners]
+            %     (-2.5, -3.8) rectangle (8.5, -4.8);
+            % \node[font=\tiny\sffamily, enstaBlue!30, align=center] at (3, -4.3) {
+            %     Entrée: x $\in$ \{0,1\} \quad Sortie: z $\in$ \{0,1\} \quad État final acceptant
+            % };
+        \end{scope}
+
+        % ====== LOGO ENSTA (BAS DROITE) ======
+        \node at (18.5, 5) {\includegraphics[width=3.0cm]{../../poly/figures/logo-ensta.png}};
+        % ====== LOGO ENSTA (BAS DROITE) ======
+
+
+
+        % ====== TEXTE PRINCIPAL ======
+        % École
+        \node[font=\Large\sffamily, enstaBlue] at (10.5, 32.5) {ÉCOLE NATIONALE SUPÉRIEURE DE TECHNIQUES AVANCÉES};
+
+        % Titre
+        \node[font=\Huge\bfseries\sffamily, enstaBlue, align=center] at (10.5, 19.5) {
+        Introduction à l'
+            Electronique\\[2mm]
+            \Large NUMÉRIQUE
+        };
+
+        % Sous-titre
+        \node[font=\large\sffamily, enstaBlue, align=center] at (10.5, 16.5) {
+            Travaux Dirigés -- 1\up{ère} année
+        };
+
+        % Auteur
+        \node[font=\Large\sffamily, enstaBlue] at (10.5, 15.5) {
+            \textbf{Jean-Christophe Le Lann}
+        };
+
+        \node[font=\Large\sffamily, enstaBlue] at (10.5, 14.5) {
+           \fbox{\textbf{Livret solutions}}
+        };
+
+
+        % Année
+        \node[font=\large\sffamily, enstaBlue!60] at (10.5, 4.2) {
+            Année académique 2026-2027
+        };
+
+        % Version
+        \node[font=\small\sffamily, enstaBlue!40] at (10.5, 3.7) {
+            Version 2.0
+        };
+
+        % ====== LIGNE DÉCORATIVE SOUS LE TITRE ======
+        \draw[enstaGold, line width=1.5pt] (7, 17.2) -- (14, 17.2);
+        \fill[enstaGold] (6.8, 17.2) circle (0.1cm);
+        \fill[enstaGold] (14.2, 17.2) circle (0.1cm);
+
+        % ====== FILET DE SÉPARATION EN BAS ======
+        %\draw[enstaBlue!50, line width=1.0pt] (2, 0.8) -- (19, 0.8);
+
+    \end{tikzpicture}
+\end{titlepage}

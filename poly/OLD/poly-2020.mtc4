@@ -1,0 +1,34 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.1}Définition}{\reset@font\mtcSfont 43}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.2}Portes logiques de base}{\reset@font\mtcSfont 44}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Première approche : et, ou, non}{\reset@font\mtcPfont 44}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Deuxième approche : autres portes logiques}{\reset@font\mtcPfont 44}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Troisième approche : non-et (nand)}{\reset@font\mtcPfont 45}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.3}Fonctions logiques "complexes"}{\reset@font\mtcSfont 45}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Assemblage de portes logiques}{\reset@font\mtcPfont 45}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Notion de "Nuage combinatoire"}{\reset@font\mtcPfont 45}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.4}Mapping technologique sur circuits discrets}{\reset@font\mtcSfont 46}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.5}Chemin critique et fréquence de fonctionnement}{\reset@font\mtcSfont 46}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.6}Arithmétique de base}{\reset@font\mtcSfont 47}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.6.1}Additionneur}{\reset@font\mtcSSfont 47}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Demi-additionneur 1 bit}{\reset@font\mtcPfont 48}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Additionneur 1 bit}{\reset@font\mtcPfont 48}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Additionneur {\it n} bits}{\reset@font\mtcPfont 48}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.6.2}Soustracteur}{\reset@font\mtcSSfont 49}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Utilisation d'une table de vérité}{\reset@font\mtcPfont 49}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Utilisation du complément à 2}{\reset@font\mtcPfont 49}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.6.3}Additionneur-soustracteur}{\reset@font\mtcSSfont 50}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.6.4}Multiplieur}{\reset@font\mtcSSfont 50}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Méthode naturelle}{\reset@font\mtcPfont 50}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Multiplieur avec topologie régulière}{\reset@font\mtcPfont 51}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.6.5}Diviseur}{\reset@font\mtcSSfont 51}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.7}Shifter}{\reset@font\mtcSfont 52}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Shifter à position fixe}{\reset@font\mtcPfont 52}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Barrel shifter}{\reset@font\mtcPfont 52}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.8}Multiplexeur}{\reset@font\mtcSfont 52}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Crossbar}{\reset@font\mtcPfont 52}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.9}Comparateur}{\reset@font\mtcSfont 53}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Comparateur 1 bit}{\reset@font\mtcPfont 53}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Comparateur d'égalité de 2 entiers}{\reset@font\mtcPfont 53}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.10}Codeurs et Décodeurs}{\reset@font\mtcSfont 53}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Décodeur 7-segments}{\reset@font\mtcPfont 54}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.11}Conclusion}{\reset@font\mtcSfont 54}{}}

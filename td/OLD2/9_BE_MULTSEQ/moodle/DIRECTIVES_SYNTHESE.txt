@@ -1,0 +1,49 @@
+Pour la synthèse :
+
+=============== Preparatifs ====================
+1) accès au serveur de licences :
+export LM_LICENSE_FILE=2100@licences3
+
+2) settings Xilinx :
+taper dans un terminal : vivado_init
+
+
+=============== Synthèse =======================
+3) se placer dans le répertoire récupéré et lancer la synthèse :
+vivado -mode tcl -source script.tcl
+
+Cette synthèse doit aboutir à la création d'un fichier top.bit
+
+=============== Programmation ==================
+4) Allumer la carte (une demo est activée...), connectée au micro-USB
+
+5) lancer le chargement du bitstream :
+djtgcfg prog -d Nexys4DDR -i 0 -f top.bit
+
+
+=============== Jouer la demo ==================
+
+On numérote ici les SWITCHES de 0 à 16 en partant de la DROITE. (SW0 le + à DROITE) 
+
+1) vérifier que tous les switches sont à 0 (bas)
+2) faire un reset_n "pour jouer" : bouton BTND
+3) la FSM est alors dans l'état 0000 (IDLE)
+   - les LEDs 3-2-1-0 sont à 0001
+   - la LED 15 (ready) est à 1
+   - 4 afficheurs 7-segment sont allumés et affichent 0
+4) Passer de IDLE à WAIT_A en montant le switch 0 (START).
+   - Les LEDS affichent 0010 (etat WAIT_A)
+   - Redescendre le switch 0
+
+5) saisir une valeur A avec les 4 switches 7-4
+   - note : le switch 4 est juste sous le 7-seg de droite
+   - le 7-seg le plus a droite affiche la valeur hexa
+6) passer à l'état WAIT_B en activant le SWITCH 1
+   - les LEDs affichent 0100 (etat WAIT_B)
+7)  saisir une valeur B avec les 4 switches 12-9
+   - le 7-seg en position 2 affiche la valeur hexa
+8) passer à l'état de MULT en activant le SWITCH 2
+   - les LEDs affichent 0001 (etat IDLE) ... car le calcul est déjà fini !
+   - le resultat est affiche (en HEXA !) sur les 2 7-segments les plus à gauche 
+
+   

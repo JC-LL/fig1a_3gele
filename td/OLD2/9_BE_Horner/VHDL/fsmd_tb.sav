@@ -1,0 +1,33 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Tue Oct 19 09:30:29 2021
+[*]
+[dumpfile] "/home/jcll/JCLL/ens/UE1.2-Electronique/TD/9_BE_Horner/VHDL/fsmd_tb.ghw"
+[dumpfile_mtime] "Tue Oct 19 09:29:33 2021"
+[dumpfile_size] 8376
+[savefile] "/home/jcll/JCLL/ens/UE1.2-Electronique/TD/9_BE_Horner/VHDL/fsmd_tb.sav"
+[timestart] 0
+[size] 1364 792
+[pos] -1 -1
+*-28.785175 261000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.fsmd_tb.
+[treeopen] top.fsmd_tb.dut.
+[sst_width] 212
+[signals_width] 94
+[sst_expanded] 1
+[sst_vpaned_height] 216
+@420
+top.fsmd_tb.running
+@28
+top.fsmd_tb.reset_n
+top.fsmd_tb.clk
+@29
+top.fsmd_tb.go
+@28
+top.fsmd_tb.done
+@22
+#{top.fsmd_tb.dut.x[7:0]} top.fsmd_tb.dut.x[7] top.fsmd_tb.dut.x[6] top.fsmd_tb.dut.x[5] top.fsmd_tb.dut.x[4] top.fsmd_tb.dut.x[3] top.fsmd_tb.dut.x[2] top.fsmd_tb.dut.x[1] top.fsmd_tb.dut.x[0]
+#{top.fsmd_tb.dut.px[34:0]} top.fsmd_tb.dut.px[34] top.fsmd_tb.dut.px[33] top.fsmd_tb.dut.px[32] top.fsmd_tb.dut.px[31] top.fsmd_tb.dut.px[30] top.fsmd_tb.dut.px[29] top.fsmd_tb.dut.px[28] top.fsmd_tb.dut.px[27] top.fsmd_tb.dut.px[26] top.fsmd_tb.dut.px[25] top.fsmd_tb.dut.px[24] top.fsmd_tb.dut.px[23] top.fsmd_tb.dut.px[22] top.fsmd_tb.dut.px[21] top.fsmd_tb.dut.px[20] top.fsmd_tb.dut.px[19] top.fsmd_tb.dut.px[18] top.fsmd_tb.dut.px[17] top.fsmd_tb.dut.px[16] top.fsmd_tb.dut.px[15] top.fsmd_tb.dut.px[14] top.fsmd_tb.dut.px[13] top.fsmd_tb.dut.px[12] top.fsmd_tb.dut.px[11] top.fsmd_tb.dut.px[10] top.fsmd_tb.dut.px[9] top.fsmd_tb.dut.px[8] top.fsmd_tb.dut.px[7] top.fsmd_tb.dut.px[6] top.fsmd_tb.dut.px[5] top.fsmd_tb.dut.px[4] top.fsmd_tb.dut.px[3] top.fsmd_tb.dut.px[2] top.fsmd_tb.dut.px[1] top.fsmd_tb.dut.px[0]
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Tue Nov  6 10:23:56 2018
+[*]
+[dumpfile] "/home/jcll/FORGE/Renater/jcllens/LOGIC/TD/2018/7_VHDL_1/code/waves.ghw"
+[dumpfile_mtime] "Tue Nov  6 10:23:19 2018"
+[dumpfile_size] 2330128
+[savefile] "/home/jcll/FORGE/Renater/jcllens/LOGIC/TD/2018/7_VHDL_1/code/chrono.sav"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*0.000000 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[sst_width] 196
+[signals_width] 86
+[sst_expanded] 1
+[sst_vpaned_height] 150
+@29
+top.adder8b_tb.running
+@28
+top.adder8b_tb.clk
+top.adder8b_tb.cout
+top.adder8b_tb.sreset
+top.adder8b_tb.reset_n
+[pattern_trace] 1
+[pattern_trace] 0

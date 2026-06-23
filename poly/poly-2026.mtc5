@@ -1,0 +1,16 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.1}Introduction}{\reset@font\mtcSfont 55}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.2}Discrétiser le temps}{\reset@font\mtcSfont 56}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Eviter la "cacophonie"}{\reset@font\mtcPfont 56}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Notion d'horloge périodique}{\reset@font\mtcPfont 56}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.3}Bascule D}{\reset@font\mtcSfont 57}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.1}Fonction d'échantillonnage de la bascule D. Set-up et hold. Metastabilité.}{\reset@font\mtcSSfont 57}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.2}Décalage temporel : la raison d'être de la bascule D}{\reset@font\mtcSSfont 58}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.4}Quelques {\it patterns} de conception synchrone}{\reset@font\mtcSfont 58}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.4.1}Registre à décalage}{\reset@font\mtcSSfont 59}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.4.2}LFSR : linear feedback shift register}{\reset@font\mtcSSfont 59}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.4.3}Bascule D et multiplexeur : mémorisation}{\reset@font\mtcSSfont 60}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.4.4}Compteurs et timers}{\reset@font\mtcSSfont 60}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.5}Initialisation d'une bascule D}{\reset@font\mtcSfont 61}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Exemples}{\reset@font\mtcPfont 62}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Simplification grâce aux HDL}{\reset@font\mtcPfont 62}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.6}Conclusion}{\reset@font\mtcSfont 62}{}}

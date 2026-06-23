@@ -1,0 +1,387 @@
+\documentclass[a4paper,11pt]{article}
+
+% --- Encodage et Langue ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% --- Mise en page et Typographie ---
+\usepackage{geometry}
+\geometry{margin=2.5cm, headheight=15pt}
+\usepackage{microtype}
+\usepackage{lmodern}
+
+% --- En-têtes et pieds de page ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[L]{\small\textcolor{primary}{\textit{Copyrights Jean-Christophe Le Lann -- Électronique Numérique}}}
+\fancyfoot[R]{\small\textcolor{primary}{\thepage}}
+
+% --- Mathématiques ---
+\usepackage{amsmath, amssymb}
+
+% --- Images ---
+\usepackage{graphicx}
+\usepackage{float}
+
+% --- Couleurs et Boîtes ---
+\usepackage{xcolor}
+\definecolor{primary}{RGB}{0, 85, 150}      % Bleu technique
+\definecolor{secondary}{RGB}{240, 248, 255} % Bleu très clair pour les fonds
+\definecolor{solcolor}{RGB}{245, 250, 245}  % Vert très clair pour les solutions
+\definecolor{solframe}{RGB}{60, 120, 60}    % Vert foncé pour les bordures de solution
+\definecolor{vhdlkeyword}{RGB}{0, 0, 180}   % Bleu pour mots-clés VHDL
+\definecolor{vhdlcomment}{RGB}{0, 128, 0}   % Vert pour commentaires
+\definecolor{vhdlstring}{RGB}{163, 21, 21}  % Rouge pour chaînes
+\definecolor{bashkeyword}{RGB}{0, 0, 180}   % Bleu pour mots-clés bash
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{caption} % Pour \captionof à l'intérieur des boîtes
+
+% --- Tableaux professionnels ---
+\usepackage{booktabs}
+\usepackage{array}
+
+% --- Affichage de code VHDL ---
+\usepackage{listings}
+\lstdefinestyle{vhdlstyle}{
+    language=VHDL,
+    basicstyle=\small\ttfamily,
+    keywordstyle=\color{vhdlkeyword}\bfseries,
+    commentstyle=\color{vhdlcomment}\itshape,
+    stringstyle=\color{vhdlstring},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=8pt,
+    frame=single,
+    framerule=0.5pt,
+    rulecolor=\color{gray!50},
+    backgroundcolor=\color{gray!5},
+    breaklines=true,
+    columns=fullflexible,
+    showstringspaces=false,
+    tabsize=4,
+    inputencoding=utf8,
+    morekeywords={entity,is,port,in,out,architecture,of,begin,end,signal,process,variable,constant,type,component,if,then,else,elsif,case,when,for,loop,while,generate,map,and,or,not,xor,nand,nor,xnor,library,use,all,std_logic,std_logic_vector,std_ulogic,std_ulogic_vector,integer,boolean,bit,bit_vector,real,time,character,severity_level,file_open,file_close,read,write,wait,assert,report,null,transport,inertial,after,rising_edge,falling_edge,to,downto,others,range,reverse_range,attributes,function,procedure,return,exit,next,record,units,array,unsigned,signed,ieee,numeric_std,work}
+}
+\lstset{style=vhdlstyle}
+
+\lstdefinestyle{bashstyle}{
+    language=bash,
+    basicstyle=\small\ttfamily,
+    keywordstyle=\color{bashkeyword}\bfseries,
+    commentstyle=\color{vhdlcomment}\itshape,
+    stringstyle=\color{vhdlstring},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=8pt,
+    frame=single,
+    framerule=0.5pt,
+    rulecolor=\color{gray!50},
+    backgroundcolor=\color{gray!5},
+    breaklines=true,
+    columns=fullflexible,
+    showstringspaces=false,
+    morekeywords={echo,rm,ghdl,gtkwave,chmod,module,load}
+}
+
+% --- Titres ---
+\usepackage{titlesec}
+\titleformat{\section}
+  {\color{primary}\Large\bfseries}
+  {\thesection}{1em}{}[\titlerule]
+\titleformat{\subsection}
+  {\color{primary}\large\bfseries}
+  {\thesubsection}{1em}{}
+
+% --- Gestion des solutions (Mettre \solutionstrue pour afficher les solutions) ---
+\newif\ifsolutions
+\solutionsfalse % <--- Version énoncé (sans solutions)
+
+\newtcolorbox{notebox}{
+  colback=secondary,
+  colframe=primary,
+  fonttitle=\bfseries,
+  title=Notes et Conseils,
+  arc=4pt,
+  boxrule=0.8pt
+}
+
+\newtcolorbox{questionbox}{
+  colback=secondary,
+  colframe=primary,
+  fonttitle=\bfseries,
+  title=Questions,
+  arc=4pt,
+  boxrule=0.8pt
+}
+
+\newtcolorbox{solbox}{
+  colback=solcolor,
+  colframe=solframe,
+  fonttitle=\bfseries,
+  title=Solution,
+  arc=4pt,
+  boxrule=0.8pt
+}
+
+% --- Titre du document ---
+\title{\textcolor{primary}{\Huge\bfseries TD 4 -- Électronique Numérique}\\[0.5em] \Large Initiation à VHDL}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}   % <-- AJOUTER CETTE LIGNE pour forcer le copyright sur la 1ère page
+\vspace{-2em}
+
+\begin{notebox}
+Le but de ce TD est une première découverte du langage VHDL, et notamment de sa syntaxe. Nous aborderons également des concepts importants, comme la notion de \textit{design hiérarchique}, à travers l'exemple de l'additionneur binaire. Nous donnerons également un exemple de banc de test (\textit{testbench}) qui sont le moyen de simuler nos circuits, en créant un laboratoire virtuel, grâce au langage VHDL.
+
+\vspace{0.5em}
+\textbf{Remarques pratiques :}
+\begin{itemize}
+    \item Nous travaillerons sous Linux.
+    \item VHDL n'est pas associé à un éditeur particulier. Vous pouvez utiliser gEDIT, vim, Emacs, Atom, etc.
+    \item La compilation se fera en ligne de commande Linux : \texttt{ghdl -a code.vhd}
+\end{itemize}
+\end{notebox}
+
+\vspace{1em}
+
+\section{Notion de bibliothèques (\textit{library})}
+
+La plupart des descriptions VHDL s'appuient sur des \textbf{package}s préexistants, fournis par l'organisme IEEE qui est en charge de la standardisation du langage\footnote{L'IEEE (\textit{Institute of Electrical and Electronics Engineers}) est la plus grande organisation mondiale de professionnels dans le domaine scientifique et technique.}.
+
+Ces packages correspondent à des \textit{espaces de nommage} où l'on peut regrouper différents éléments :
+\begin{itemize}
+    \item création de nouveaux types de données (\textbf{type})
+    \item déclaration de constantes importantes (\textbf{constant})
+    \item déclaration de fonctions (\textbf{function}) et procédures (\textbf{procedure})
+\end{itemize}
+
+Ces packages permettent d'être réutilisés par différents circuits. Pour utiliser les packages, il est au préalable de les compiler dans une bibliothèque (\textbf{library}). Dans notre cas, nous n'allons pas créer de nouveaux packages, mais réutiliser ceux fournis par l'IEEE. Il s'agit essentiellement de 2 packages :
+
+\begin{itemize}
+    \item \textbf{std\_logic\_1164} : ce package définit entre autres les types les plus usités.
+    \begin{itemize}
+        \item \textbf{std\_logic} : ce type correspond au booléen ('0' et '1'), mais également au 'U' (undefined), 'X' (conflit), 'Z' (haute impédance), et d'autres valeurs possibles d'un signal.
+        \item \textbf{std\_logic\_vector} : ce type correspond à un ensemble de signaux, que l'on cherche à manipuler comme un vecteur.
+        \item Différentes fonctions de conversions.
+        \item La fonction \textbf{rising\_edge} (et \textbf{falling\_edge}) qui nous seront utiles pour la description des bascules D.
+    \end{itemize}
+    \item \textbf{numeric\_std} définit quant à lui :
+    \begin{itemize}
+        \item les types \textbf{signed} et \textbf{unsigned} permettant de décrire des \underline{nombres}, avec un nombre de bits arbitraires.
+        \item des fonctions permettant de réaliser \underline{directement} les opérations arithmétiques (+, -, *, etc.), sur ces types \textbf{signed} et \textbf{unsigned}.
+        \item des fonctions de conversions permettant d'utiliser facilement ces types.
+    \end{itemize}
+\end{itemize}
+
+On retrouve fréquemment l'inclusion de ces bibliothèques de la manière suivante :
+
+\begin{lstlisting}[style=vhdlstyle]
+library IEEE; -- appel a la bibliotheque compilee
+use IEEE.std_logic_1164.all; -- on declare utiliser tous les elements du package.
+use IEEE.numeric_std.all;
+\end{lstlisting}
+
+\section{Notion d'entité}
+
+L'\textbf{entity} d'un circuit modélise son \textit{enveloppe extérieure} : on y retrouve le nom du circuit, ainsi que la liste des ports d'entrées et de sorties. Ces ports possèdent également un \underline{nom}, une \underline{direction} (\textbf{in} ou \textbf{out} dans notre cas) et un \underline{type}.
+
+\begin{lstlisting}[style=vhdlstyle]
+entity MonCircuit is
+port (
+    reset_n  : in  std_logic;
+    horloge  : in  std_logic;
+    e1       : in  std_logic;
+    e2       : in  std_logic;
+    e3       : in  std_logic_vector(3 downto 0);
+    e4,e5    : in  std_logic_vector(3 downto 0);
+    o1       : out std_logic;
+    o2       : out std_logic_vector(3 downto 0);
+    o3       : out std_logic_vector(3 downto 0) -- pas de ';' pour le dernier port
+); -- noter le ; ici
+end MonCircuit; -- le nom du circuit est rappele ici.
+\end{lstlisting}
+
+\begin{questionbox}
+\begin{enumerate}
+    \item Dessiner l'enveloppe externe du composant décrit par cette entité.
+    \item Dessiner l'entité d'un demi-additionneur, puis le code VHDL de cette entité.
+\end{enumerate}
+\end{questionbox}
+
+\section{Notion d'architecture}
+
+À l'inverse d'une entité, l'\textbf{architecture} permet de décrire l'\textit{intérieur} d'un composant. Une \textbf{architecture} s'organise syntaxiquement de la manière suivante :
+
+\begin{lstlisting}[style=vhdlstyle]
+architecture nom_architecture of nom_entity is
+    -- declarations diverses : signaux, types, fonctions,...
+begin
+    -- corps de l'architecture
+end nom_architecture;
+\end{lstlisting}
+
+Le corps de l'architecture contient un ensemble hétérogène d'éléments de description :
+\begin{itemize}
+    \item Assignations concurrentes, éventuellement conditionnelles.
+    \item Processus exécutés de manière séquentielle par le simulateur.
+    \item Appels à des sous-composants.
+\end{itemize}
+
+Ces éléments fonctionnant en parallèle, l'ordre dans lequel ils apparaissent au sein de l'architecture n'a pas d'importance. À titre d'exemple, on présente ici quelques unes des possibilités du langage (restreintes à l'UE 1.2), à travers un exemple purement fictif :
+
+\begin{lstlisting}[style=vhdlstyle]
+architecture nom_architecture of MonCircuit is
+    signal s1,s2,s3 : std_logic;              -- declaration de 3 "fils" d'un bit chacun.
+    signal v32      : std_logic_vector(31 downto 0); -- une "nappe" ou "bus" de 32 bits
+    signal cout     : std_logic;
+begin
+    -- *** assignations concurrentes ***
+    s1 <= (e1 or not(e2)) xor e3; -- formule utilisant les ports d'I/O
+    s2 <= s1 and e3;
+    v32(1) <= s2; -- on connecte le signal s2 a un des fils de la nappe.
+    o3 <= '1' & v32(2 downto 0);  -- constitution du port de sortie o3.
+
+    -- *** assignations conditionnelles ***
+    s3 <= s1 when s2='0' else e1;
+
+    -- instanciation d'entites :
+    inst1 : entity work.half_adder(logic)
+    port map(
+        clk    => horloge, -- repris de l'entite
+        a      => e1,
+        b      => s1,
+        cout   => cout,    -- signal "local"
+        sum    => o1       -- connecte au port de sortie de l'entite
+    );
+end nom_architecture;
+\end{lstlisting}
+
+\begin{questionbox}
+\begin{enumerate}
+    \setcounter{enumi}{3}
+    \item Rappeler la constitution interne du demi-additionneur.
+    \item Coder l'architecture de ce demi-additionneur.
+\end{enumerate}
+\end{questionbox}
+
+\section{Décrire un \textit{design} hiérarchique : cas de l'additionneur}
+
+L'exemple d'architecture précédent présentait la notion d'\textit{instanciation d'entité} : il s'agit de faire appel à des circuits décrits par ailleurs (par exemple dans un autre fichier) pour décrire l'architecture du circuit courant. Il faut voir le procédé comme le fait de prendre sur une étagère un composant pré-existant, puis le connecter à des fils d'entrées-sorties par des signaux. On peut instancier autant de composants qu'on le souhaite. La connexion peut se faire de la manière présentée dans l'exemple précédent : on indique où se connecte le signal en faisant référence au port dit ``formel'' sur lequel il vient se connecter.
+
+\begin{questionbox}
+\begin{enumerate}
+    \setcounter{enumi}{5}
+    \item Dessinez la constitution interne d'un additionneur 1 bit complet, à partir du demi-additionneur.
+    \item Coder en VHDL l'architecture de cet additionneur 1 bit.
+    \item Coder en VHDL l'entité et l'architecture d'un additionneur 8 bits.
+\end{enumerate}
+\end{questionbox}
+
+\section{Notion de banc de test}
+
+Afin de simuler le circuit précédent (additionneur 8 bits), nous devons créer un banc de test virtuel. Ce banc de test permet de simuler le comportement d'instruments comme des générateurs de signaux qui fourniront des stimuli, ou à l'inverse des sondes, oscilloscopes et loggers, etc., qui nous permettront de vérifier que le circuit conçu fonctionne comme on l'espérait.
+
+L'écriture de ces bancs de tests permet d'utiliser toute la puissance du langage VHDL : il n'est pas nécessaire que ces instruments soient décrits de la même manière que le circuit que l'on cherche à tester. On dit que ces bancs de tests ne sont pas forcément ``synthétisables''. C'est ce banc de test qui constituera notre simulation.
+
+Concernant l'architecture du banc de test, il inclut donc :
+\begin{itemize}
+    \item le circuit VHDL à tester (souvent labellisé \texttt{DUT} pour \textit{Design Under Test})
+    \item les générateurs de stimuli virtuels : générateurs d'horloge, de reset ou flux de données plus complexes, etc.
+    \item les instruments de mesure virtuels.
+\end{itemize}
+
+Un banc de test pour le circuit d'addition est fourni sous Moodle.
+
+\begin{questionbox}
+\begin{enumerate}
+    \setcounter{enumi}{9}
+    \item Le testbench présente également une entité. Localisez cette entité. En quoi est-elle particulière ? Comment peut-on l'expliquer ?
+    \item Un générateur d'horloge est contenu dans le banc de test. Combien de lignes sont nécessaires ? Dessinez le chronogramme de cette horloge.
+    \item Pour information, le simulateur est dit ``à événements discrets''. Il fonctionne en exécutant le code de l'instant courant, qui provoque une avalanche d'événements futurs à planifier. Si toutefois, plus aucun événement n'est à traiter, le simulateur va s'arrêter (notion de \textit{famine}). Il est possible de provoquer cette famine afin de sortir proprement d'une simulation. Comment notre banc de test provoque-t-il concrètement cet arrêt ?
+    \item Les autres stimuli sont ici générés dans un \textit{processus} : ce dernier s'exécute de manière séquentielle. Il existe des instructions qui permettent d'``étaler'' dans le temps ces actions séquentielles. Dessiner le chronogramme des stimuli.
+\end{enumerate}
+\end{questionbox}
+
+\section{Simulation sous GHDL}
+
+L'outil GHDL est un simulateur VHDL open source et gratuit. Il est disponible sur plateformes Linux, MacOS et Windows. Il a été développé par un jeune ingénieur français : Tristan Gingold. C'est un véritable tour de force ! Cocorico !
+
+Pour \textbf{analyser} la syntaxe d'un fichier VHDL, il suffit de taper, en ligne de commande :
+
+\begin{lstlisting}[style=bashstyle]
+ghdl -a MonFichier.vhd
+\end{lstlisting}
+
+À chaque fichier VHDL va correspondre un fichier binaire, généré par cette commande. C'est exactement ce qui se passe avec le langage C (la même technologie de backend GCC est d'ailleurs utilisée par GHDL).
+
+Il faut ensuite réaliser l'exécutable de simulation, agglomération des fichiers précédents et d'un procédé spécifique de simulation (GRT) : c'est l'\textit{édition de liens} ou \textbf{élaboration}. Ne pas oublier d'\textit{analyser} le testbench également !
+
+\begin{lstlisting}[style=bashstyle]
+ghdl -a FichierBancDeTest.vhd
+ghdl -e NomEntiteBancDeTest
+\end{lstlisting}
+
+\textbf{Remarque} : dans la dernière commande, noter que ce n'est pas le nom du fichier qui est passé en argument, mais le nom de l'entité, écrite dans le fichier. VHDL ne force pas un nommage identique entre le fichier et l'entité qu'il contient.
+
+Enfin, pour \textit{simuler} l'ensemble, on lance le simulateur avec (la lettre R faisant référence à ``RUN'') :
+
+\begin{lstlisting}[style=bashstyle]
+ghdl -r FichierBancDeTest --wave=test.ghw
+\end{lstlisting}
+
+Un fichier de traces de simulation (\textit{waveforms}) est alors enregistré sous \texttt{test.ghw}. Pour le visualiser, lancer :
+
+\begin{lstlisting}[style=bashstyle]
+gtkwave test.ghw
+\end{lstlisting}
+
+L'ensemble de ces commandes bash peut être regroupé dans un script, auquel on donne les droits en exécution (\texttt{chmod +x}). Analyser le résultat. Faites preuve d'initiative pour afficher les signaux voulus !
+
+\begin{questionbox}
+\begin{enumerate}
+    \setcounter{enumi}{13}
+    \item Votre additionneur 8 bits fonctionne-t-il selon vous ?
+    \item Observez les derniers stimuli du banc de test, ainsi que le chronogramme sous Gtkwave. L'additionneur fonctionne-t-il également pour les nombres signés ?
+\end{enumerate}
+\end{questionbox}
+
+\section{Pour aller plus loin\ldots}
+
+\subsection*{Instructions \textit{generate}}
+
+L'instanciation multiple de composants peut se révéler fastidieuse : imaginez un additionneur 64 bits ! Il faudrait instancier 64 fois les additionneurs 1 bit ! Fort heureusement, VHDL fournit un moyen de décrire ce procédé répétitif à l'aide d'une construction du langage : l'instruction \textit{generate}. Votre enseignant vous montrera cela.
+
+Ces \textit{generate} peuvent s'appuyer également sur des paramètres liés à l'entité, qui permettent de décrire des composants à ``géométrie variable''. Ainsi, notre entité pourrait être décrite pour un nombre $n$ de bits passé en paramètre \textbf{generic}\ldots Mais on peut faire encore plus simple\ldots
+
+\subsection*{Opérateurs du package \textit{numeric\_std}}
+
+L'exercice que nous avons réalisé ici nous a permis de prendre en main le langage, à travers le cas de l'additionneur 8 bits. Cet additionneur a été construit de toute pièce à partir des équations logiques, que nous connaissions. Cet exercice reste toutefois ``académique'', car les packages IEEE nous fournissent directement le moyen de réaliser l'addition et autres opérations arithmétiques en utilisant les signes ``+'', ``-'' etc.\ldots fort heureusement !
+
+Ces opérations seront également parfaitement synthétisées en portes logiques : le synthétiseur connaît les équations aussi bien que vous !
+
+\begin{lstlisting}[style=vhdlstyle]
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity test is
+end test;
+
+architecture example of test is
+    signal a,b,f : signed(7 downto 0);
+begin
+    f <= a + b;
+end example;
+\end{lstlisting}
+
+\end{document}

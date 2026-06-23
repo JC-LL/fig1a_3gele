@@ -1,0 +1,77 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{xcolor,listings}
+\usepackage{geometry}
+
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\lstset{
+  basicstyle=\ttfamily\,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+  showstringspaces=false,
+}
+
+\definecolor{main-color}{rgb}{0.6627, 0.7176, 0.7764}
+\definecolor{back-color}{rgb}{0.1686, 0.1686, 0.1686}
+\definecolor{string-color}{rgb}{0.3333, 0.5254, 0.345}
+\definecolor{key-color}{rgb}{0.9, 0.9, 0.9}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+
+\lstdefinestyle{my_vhdl_style}{
+    language = vhdl,
+    basicstyle = \ttfamily,
+    otherkeywords = {;},
+    keywordstyle = \color{blue},
+    numbers=left,  % where to put the line-numbers; possible values are (none, left, right)
+    %stepnumber=2,
+    numbersep=5pt,                   % how far the line-numbers are from the code
+    numberstyle=\tiny\color{mygray},
+}
+
+%.....Minitoc parameters.....
+%\setcounter{minitocdepth}{2}
+%\undotted
+
+\title{BE : conception d'un accélérateur matériel\\pour le calcul de polynômes\\\textbf{listing}}
+\author{Electronique numérique}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Controler}
+
+\subsection{Machine d'états finis}
+\lstinputlisting[style = my_vhdl_style]{./VHDL/controler.vhd}
+
+\subsection{Package dédié}
+\lstinputlisting[style = my_vhdl_style]{./VHDL/controler_pkg.vhd}
+
+\section{Datapath}
+\lstinputlisting[style=my_vhdl_style]{./VHDL/datapath.vhd}
+
+\section{FSMD microarchitecture}
+\lstinputlisting[style=my_vhdl_style]{./VHDL/fsmd.vhd}
+
+\section{Testbench}
+\lstinputlisting[style=my_vhdl_style]{./VHDL/fsmd_tb.vhd}
+
+\section{Simulation}
+\begin{center}
+  \includegraphics[scale=0.3]{gtkwave_commente.png}
+\end{center}
+
+\end{document}

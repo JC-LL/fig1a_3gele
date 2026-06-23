@@ -1,0 +1,36 @@
+digraph DFG {
+  x [label="? x",shape=circle,color=green,fillcolor=green,style=filled]
+  p [label="!P(x)",shape=circle,color=green,fillcolor=green,style=filled]
+  a0 [label="?a0",shape=circle,color=green,fillcolor=green,style=filled]
+  a1 [label="?a1",shape=circle,color=green,fillcolor=green,style=filled]
+  a2 [label="?a2",shape=circle,color=green,fillcolor=green,style=filled]
+  a3 [label="?a3",shape=circle,color=green,fillcolor=green,style=filled]
+  mul1 [label="*",shape=circle,color=orange,fillcolor=orange,style=filled]
+  mul2 [label="*",shape=circle,color=orange,fillcolor=orange,style=filled]
+  mul3 [label="*",shape=circle,color=orange,fillcolor=orange,style=filled]
+  add1 [label="+",shape=circle,color=cadetblue1,fillcolor=cadetblue1,style=filled]
+  add2 [label="+",shape=circle,color=cadetblue1,fillcolor=cadetblue1,style=filled]
+  add3 [label="+",shape=circle,color=cadetblue1,fillcolor=cadetblue1,style=filled]
+
+  { rank=same; x, a0, a1,a2, a3 }
+
+  x -> mul1 [label="x"]
+  a3-> mul1 [label="a3"]
+
+  mul1 -> add1
+  a2   -> add1 [label="a2"]
+
+  add1 -> mul2
+  x    -> mul2 [label="x"]
+
+  mul2 -> add2
+  a1   -> add2 [label="a1"]
+
+  add2 -> mul3
+  x    -> mul3 [label="x"]
+
+  mul3 -> add3
+  a0   -> add3 [label="a0"]
+
+  add3 -> p
+}

@@ -1,0 +1,11 @@
+digraph one_hot {
+  S1 [label="S1"];
+  S2 [label="S2"];
+  S3 [label="S3"];
+
+  S1 -> S1 [label="a"];
+  S1 -> S2 [label="/a"];
+  S1 -> S2 [label="a"];
+
+
+}

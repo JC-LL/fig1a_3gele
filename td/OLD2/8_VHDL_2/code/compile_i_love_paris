@@ -1,0 +1,12 @@
+echo "=> cleaning"
+rm -rf *.o *.ghw
+echo "=> compiling"
+ghdl -a i_love_paris_logic.vhd
+ghdl -a i_love_paris.vhd
+ghdl -a i_love_paris_tb.vhd
+echo "=> elaboration"
+ghdl -e i_love_paris_tb
+echo "=> running simulation"
+ghdl -r i_love_paris_tb --wave=waves.ghw
+echo "=> viewing chronograms"
+gtkwave waves.ghw chrono.sav

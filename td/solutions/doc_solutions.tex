@@ -1,0 +1,88 @@
+\documentclass{book}
+\usepackage[a4paper,vdivide={*,22cm,4cm}]{geometry}
+%\geometry{left=2.5cm,right=2cm,top=3cm,bottom=4.5cm}
+%\usepackage[top=2.5cm, bottom=4.5cm, left=3cm, right=2cm, headheight=15pt]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\fancyplain{}{\leftmark }}
+\rhead{}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfig}
+\usepackage{wrapfig}
+
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage[french]{minitoc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[]{lipsum}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{mathtools}
+
+\usepackage{microtype}
+\usepackage{lettrine}
+\usepackage[french, english]{babel}
+%\usepackage{pageGardeEnsta}
+%================================================================================
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, decorations.pathmorphing, patterns, shadows, fit, calc, automata}
+\usepackage{graphicx}
+
+%===========================================================================
+%Couleurs ENSTA
+\definecolor{enstaBlue}{RGB}{0, 70, 140}
+\definecolor{enstaLightBlue}{RGB}{100, 180, 220}
+\definecolor{enstaGold}{RGB}{200, 160, 60}
+\definecolor{enstaDarkBlue}{RGB}{0, 40, 90}
+%===========================================================================
+
+% Couleurs ENSTA
+% \definecolor{enstaBlue}{RGB}{0, 70, 140}
+% \definecolor{enstaLightBlue}{RGB}{100, 180, 220}
+% \definecolor{enstaGold}{RGB}{200, 160, 60}
+% \definecolor{enstaDarkBlue}{RGB}{0, 40, 90}
+% \definecolor{enstaRed}{RGB}{180, 40, 40}
+% \definecolor{enstaGreen}{RGB}{40, 140, 60}
+%=========================================================================
+\DeclareFontFamily{U}{wncy}{}
+\DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
+\DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
+\DeclareMathSymbol{\Sh}{\mathord}{mcy}{"58}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter\ceil{\lceil}{\rfceil}
+
+\usepackage[english]{babel}
+\usepackage{xcolor,listings}
+
+\definecolor{myblue}{RGB}{0,82,155}
+\definecolor{myred}{RGB}{140,41,18}
+
+\def\siecle#1{\textsc{\romannumeral #1}\textsuperscript{e}~siècle}
+
+\title{Electronique Numérique}
+\author{Jean-Christophe \textsc{Le Lann}\\ \texttt{lelannje@ensta-bretagne.fr}}
+\date{\today}
+% \doctype{Polycopié}
+% \promo{UE 1.2}
+% \etablissement{\textsc{Ensta} Bretagne\\2, rue François Verny\\
+%   29806 \textsc{Brest} cedex\\\textsc{France}\\Tel +33 (0)2 98 34 88 00\\} % \url{www.ensta-bretagne.fr}}
+% \logoEcole{\includegraphics[height=4.2cm]{page_garde/imgs/logo_ENSTA_Bretagne_Vertical_CMJN}}
+
+%.....Minitoc parameters.....
+\setcounter{minitocdepth}{2}
+%\undotted
+%==============================
+\newcommand{\barre}[1] {\overline{#1}}
+
+\begin{document}
+\selectlanguage{french}
+%\mtcselectlanguage{french}
+\dominitoc % preparation minitoc
+
+%\maketitle
+\include{frontpage}
+\newpage
+\end{document}

@@ -1,0 +1,255 @@
+\documentclass[a4paper,11pt]{article}
+% --- Encodage et Langue ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+% --- Mise en page et Typographie ---
+\usepackage{geometry}
+\geometry{margin=2.5cm, headheight=15pt}
+\usepackage{microtype}
+\usepackage{lmodern}
+% --- Mathématiques ---
+\usepackage{amsmath, amssymb}
+\usepackage{centernot}
+% --- Images, Sous-figures et TikZ ---
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning, arrows.meta, calc, shapes.geometric}
+\tikzset{
+  state/.style={circle, draw, minimum size=1.2cm, align=center, font=\small\bfseries},
+  edge/.style={->, >=Stealth, thick, font=\small}
+}
+% --- Cartes de Karnaugh ---
+\usepackage{karnaugh-map}
+% --- Couleurs et Boîtes ---
+\usepackage{xcolor}
+\definecolor{primary}{RGB}{0, 85, 150}
+\definecolor{secondary}{RGB}{240, 248, 255}
+\definecolor{solcolor}{RGB}{245, 250, 245}
+\definecolor{solframe}{RGB}{60, 120, 60}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{caption}
+% --- Tableaux professionnels ---
+\usepackage{booktabs}
+\usepackage{array}
+% --- Affichage de code ---
+\usepackage{listings}
+\lstset{
+basicstyle=\ttfamily\small,
+backgroundcolor=\color{gray!5},
+frame=single,
+framerule=0.5pt,
+rulecolor=\color{gray!50},
+numbers=none,
+breaklines=true,
+keepspaces=true,
+columns=fullflexible
+}
+% --- Titres ---
+\usepackage{titlesec}
+\titleformat{\section}
+{\color{primary}\Large\bfseries}
+{\thesection}{1em}{}[\titlerule]
+\titleformat{\subsection}
+{\color{primary}\large\bfseries}
+{\thesubsection}{1em}{}
+% --- Commande personnalisée (XOR) ---
+\newcommand{\op}{
+\mathop{
+\vphantom{\bigoplus}
+\mathchoice
+{\vcenter{\hbox{\resizebox{\widthof{$\displaystyle\bigoplus$}}{!}{$\boxplus$}}}}
+{\vcenter{\hbox{\resizebox{\widthof{$\bigoplus$}}{!}{$\boxplus$}}}}
+{\vcenter{\hbox{\resizebox{\widthof{$\scriptstyle\oplus$}}{!}{$\boxplus$}}}}
+{\vcenter{\hbox{\resizebox{\widthof{$\scriptscriptstyle\oplus$}}{!}{$\boxplus$}}}}
+}\displaylimits
+}
+% --- Gestion des solutions ---
+\newif\ifsolutions
+\solutionstrue % <--- Mettre \solutionsfalse pour la version étudiant
+\newtcolorbox{notebox}{
+colback=secondary,
+colframe=primary,
+fonttitle=\bfseries,
+title=Notes et Conseils,
+arc=4pt,
+boxrule=0.8pt
+}
+\newtcolorbox{solbox}{
+colback=solcolor,
+colframe=solframe,
+fonttitle=\bfseries,
+title=Solution,
+arc=4pt,
+boxrule=0.8pt
+}
+% --- Titre du document ---
+\title{\textcolor{primary}{\Huge\bfseries TD 5 -- Électronique Numérique}\\[0.5em] \Large Automates et Machines à États (FSM)}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\begin{notebox}
+\textbf{Philosophie de ce TD :} Au-delà de la simple mécanique des tableaux de Karnaugh, concevoir un automate est un exercice de \textit{spécification}. Que se passe-t-il si l'utilisateur appuie sur deux boutons en même temps ? Si un capteur tombe en panne ? Si on ouvre la porte en plein cycle ? \\
+Ce TD aborde des systèmes réels pour répondre à ces questions, tout en couvrant les points clés du programme :
+\begin{itemize}
+\item \textbf{Causalité} : Réactivité (exhaustivité) et Déterminisme (exclusivité).
+\item \textbf{Sécurité} : Différence fondamentale entre machines de Moore et de Mealy.
+\item \textbf{Encodage} : Comment le choix de l'encodage (Dense vs One-Hot) peut radicalement simplifier la logique combinatoire.
+\end{itemize}
+\end{notebox}
+\vspace{1em}
+
+\section{Le Sas du Module Lunaire (Analyse et Causalité)}
+Vous êtes ingénieur pour une agence spatiale. Vous devez concevoir la logique de contrôle d'un sas entre le vide spatial (Extérieur) et l'habitat pressurisé (Intérieur).
+Le système possède deux portes commandées par des vérins : la \textbf{Porte E} (Extérieur) et la \textbf{Porte I} (Intérieur).
+Les astronautes disposent de deux boutons de demande : \textbf{Dem\_E} et \textbf{Dem\_I}.
+
+Un stagiaire vous soumet le diagramme états-transitions de la figure \ref{fig:sas_naif}. Les sorties \textit{Cmd\_E} et \textit{Cmd\_I} commandent l'ouverture des portes.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=3cm, auto]
+  \node[state] (ES) {E\_Space \\ \scriptsize (Cmd\_E=1)};
+  \node[state, right of=ES] (Sas) {E\_Sas \\ \scriptsize (Cmd\_E=0, Cmd\_I=0)};
+  \node[state, right of=Sas] (EH) {E\_Habitat \\ \scriptsize (Cmd\_I=1)};
+
+  \path[edge]
+    (ES) edge node {Dem\_I} (Sas)
+    (Sas) edge node {Dem\_E} (ES)
+    (Sas) edge node {Dem\_I} (EH)
+    (EH) edge node {Dem\_E} (Sas);
+\end{tikzpicture}
+\caption{Diagramme naïf proposé par le stagiaire}
+\label{fig:sas_naif}
+\end{figure}
+
+\begin{enumerate}
+\item \textbf{Analyse de la causalité :} Ce diagramme est-il \textit{réactif} ? Est-il \textit{déterministe} ? Justifiez mathématiquement en vous plaçant dans l'état \textit{E\_Sas}.
+\item \textbf{Robustesse et Réalisme :} Même si le stagiaire corrige les problèmes de causalité, ce système est \textit{dangereux} pour la vie des astronautes. Identifiez au moins deux situations réelles non prises en compte qui pourraient être fatales.
+\item Proposez un nouveau diagramme (ou une description textuelle rigoureuse) intégrant des capteurs de présence (\textit{Pres\_E}, \textit{Pres\_I}) et gérant les priorités.
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+\begin{enumerate}
+\item \textbf{Réactivité (Exhaustivité) :} Dans l'état \textit{E\_Sas}, si l'astronaute appuie sur \textit{Dem\_E} alors qu'il est déjà côté Espace, aucune transition n'est définie. La somme des conditions sortantes n'est pas égale à 1 ($\text{Dem\_I} \neq 1$). L'automate est \textbf{non réactif}.\\
+\textbf{Déterminisme (Exclusivité) :} Si l'astronaute appuie \textit{simultanément} sur \textit{Dem\_E} et \textit{Dem\_I} depuis l'état \textit{E\_Sas}, deux transitions sont possibles. Le produit des conditions n'est pas nul. L'automate est \textbf{non déterministe}.
+
+\item \textbf{Situations fatales :}
+\begin{itemize}
+\item \textit{Écrasement / Confinement :} Rien n'empêche de fermer la porte si un astronaute est en train de la traverser (il faut des capteurs de présence \textit{Pres\_E} et \textit{Pres\_I}).
+\item \textit{Double demande :} Si deux astronautes sont de part et d'autre et appuient en même temps, le système ne sait pas quoi faire (ou ouvre les deux portes = dépressurisation de l'habitat).
+\item \textit{Panne de capteur :} Si le bouton reste coincé, l'automate boucle indéfiniment.
+\end{itemize}
+
+\item \textbf{Correction proposée :} Il faut ajouter des boucles de réactivité (ex: rester dans l'état si la demande n'est pas pertinente) et des conditions de sécurité.
+Par exemple, la transition \textit{E\_Sas} $\to$ \textit{E\_Habitat} nécessite : \textit{Dem\_I} ET $\overline{\text{Pres\_E}}$ (personne côté espace) ET $\overline{\text{Dem\_E}}$ (priorité à la fermeture si conflit).
+\end{enumerate}
+\end{solbox}
+\fi
+
+\section{Le Micro-Ondes de Compétition (Moore vs Mealy)}
+On souhaite concevoir l'automate de contrôle d'un four à micro-ondes.
+Le système possède une horloge interne, un bouton \textbf{Start}, un bouton \textbf{Stop}, et un capteur sur la porte \textbf{Door} (qui vaut \textbf{1} si la porte est \textit{fermée}, et \textbf{0} si elle est \textit{ouverte}).
+
+Les actionneurs sont :
+\begin{itemize}
+\item \textbf{Mag} (Magnétron) : Génère les micro-ondes.
+\item \textbf{Lamp} (Lumière) : S'allume pendant la cuisson ou si la porte est ouverte.
+\end{itemize}
+
+\begin{enumerate}
+\item Dessinez le diagramme états-transitions de cet automate.
+\item La sortie \textbf{Lamp} dépend-elle uniquement de l'état ? La sortie \textbf{Mag} dépend-elle uniquement de l'état ? Concluez sur la nature de l'automate (Moore, Mealy, ou mixte).
+\item \textbf{Question de sécurité critique :} Pourquoi est-il impératif que la transition liée à l'ouverture de la porte (\textit{Door} passant de 1 à 0) soit traitée comme une condition de \textit{transition} (Mealy) et non comme un simple état ?
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+\begin{enumerate}
+\item \textbf{Diagramme :}
+\begin{center}
+\begin{tikzpicture}[node distance=3.5cm, auto]
+  \node[state] (Off) {Off \\ \scriptsize Mag=0, Lamp=0};
+  \node[state, right of=Off] (Run) {Run \\ \scriptsize Mag=1, Lamp=1};
+  \node[state, below of=Run, yshift=-1cm] (Pause) {Pause \\ \scriptsize Mag=0, Lamp=1};
+
+  \path[edge]
+    (Off) edge node {Start / Door=1} (Run)
+    (Run) edge node {Stop} (Pause)
+    (Run) edge node[swap] {Door=0 / Mag=0} (Pause)
+    (Pause) edge node {Start / Door=1} (Run)
+    (Pause) edge node {Stop} (Off);
+\end{tikzpicture}
+\end{center}
+
+\item \textbf{Lamp} ne dépend que de l'état (allumée dans \textit{Run} et \textit{Pause}, éteinte dans \textit{Off}). C'est une sortie de \textbf{Moore}.\\
+\textbf{Mag} doit s'arrêter \textit{immédiatement} si la porte s'ouvre, sans attendre l'état suivant. C'est une sortie de \textbf{Mealy}. L'automate est donc \textbf{mixte}.
+
+\item Si on traitait la porte comme un état (ex: un état \textit{Pause\_Porte\_Ouverte}), il y aurait un \textit{temps de latence} (le temps d'un cycle d'horloge) pendant lequel le magnétron serait encore actif alors que la porte est ouverte. En électronique numérique, une transition Mealy agit de manière \textit{asynchrone} par rapport à l'état (la sortie est combinatoire par rapport à l'entrée), ce qui coupe le magnétron en quelques nanosecondes.
+\end{enumerate}
+\end{solbox}
+\fi
+
+\newpage
+\section{Le Pilote de Moteur Pas-à-Pas (L'art de l'Encodage)}
+On souhaite piloter un moteur pas-à-pas unipolaire à 4 phases. Pour faire tourner le moteur, il faut exciter les bobines dans un ordre précis.
+Le système reçoit deux signaux :
+\begin{itemize}
+\item \textbf{Step} : Impulsion d'avancement (1 pour avancer, 0 pour rester sur place).
+\item \textbf{Dir} : Sens de rotation (1 pour l'endroit, 0 pour l'envers).
+\end{itemize}
+
+Les sorties \textbf{B3, B2, B1, B0} commandent les 4 bobines. La séquence d'excitation (dite "onde") est la suivante :
+\begin{itemize}
+\item Sens direct (\textit{Dir} = 1) : $1000 \to 0100 \to 0010 \to 0001 \to 1000 \dots$
+\item Sens inverse (\textit{Dir} = 0) : $1000 \to 0001 \to 0010 \to 0100 \to 1000 \dots$
+\end{itemize}
+
+\begin{enumerate}
+\item \textbf{Encodage Dense :} On souhaite utiliser un encodage binaire dense avec 2 bascules ($Q_1, Q_0$) pour représenter les 4 états.
+Établissez la table de transition et déduisez les équations de $D_1$ et $D_0$ (vous pouvez utiliser des tableaux de Karnaugh).
+\item \textbf{Encodage One-Hot (Ring) :} On décide maintenant d'utiliser 4 bascules ($Q_3, Q_2, Q_1, Q_0$) avec un encodage \textit{one-hot} (un seul bit à 1 à la fois).
+Écrivez les équations de $D_3, D_2, D_1, D_0$ en fonction de l'état courant, de \textit{Step} et de \textit{Dir}.
+\item \textbf{Conclusion d'ingénieur :} Comparez les deux approches. Pourquoi l'encodage \textit{one-hot} est-il massivement préféré dans les FPGA pour ce type d'application, malgré le fait qu'il utilise le double de bascules ?
+\end{enumerate}
+
+\ifsolutions
+\begin{solbox}
+\begin{enumerate}
+\item \textbf{Encodage Dense :} On associe les états aux codes 00, 01, 11, 10 (code de Gray pour minimiser les transitions).
+La table de vérité montre que pour avancer ($Step=1, Dir=1$), on passe de $00 \to 01 \to 11 \to 10 \to 00$.
+Après résolution (Karnaugh), on trouve des équations complexes faisant intervenir des XOR :
+\begin{align*}
+D_0 &= Q_0 \op (Step \cdot Dir) \op (Step \cdot \overline{Dir} \cdot Q_1) \dots \text{(formule complexe)} \\
+D_1 &= \dots
+\end{align*}
+La logique combinatoire est lourde, ce qui crée des délais de propagation (glitches) dangereux pour un moteur.
+
+\item \textbf{Encodage One-Hot :} Les états sont $1000, 0100, 0010, 0001$.
+Si on observe la séquence, on remarque que passer à l'état suivant revient simplement à \textit{décaler} le bit à 1 vers la droite (ou la gauche).
+Si \textit{Step} = 0, on garde l'état ($D_i = Q_i$).
+Si \textit{Step} = 1 et \textit{Dir} = 1, le bit à 1 "descend" : $D_0 = Q_1$, $D_1 = Q_2$, etc.
+Les équations sont d'une élégance absolue :
+\begin{align*}
+D_0 &= Q_0 \cdot \overline{Step} + (Q_1 \cdot Dir + Q_3 \cdot \overline{Dir}) \cdot Step \\
+D_1 &= Q_1 \cdot \overline{Step} + (Q_2 \cdot Dir + Q_0 \cdot \overline{Dir}) \cdot Step \\
+D_2 &= Q_2 \cdot \overline{Step} + (Q_3 \cdot Dir + Q_1 \cdot \overline{Dir}) \cdot Step \\
+D_3 &= Q_3 \cdot \overline{Step} + (Q_0 \cdot Dir + Q_2 \cdot \overline{Dir}) \cdot Step
+\end{align*}
+\textit{Note :} Les sorties sont triviales : $B_0 = Q_0$, $B_1 = Q_1$, etc. Aucun Karnaugh nécessaire !
+
+\item \textbf{Conclusion :} L'encodage \textit{one-hot} consomme plus de bascules (4 au lieu de 2), mais il élimine totalement la logique combinatoire complexe entre les états. Dans un FPGA, les bascules sont "gratuites" (elles font partie des tranches logiques de toute façon), alors que la logique combinatoire profonde crée des retards de propagation. Le One-Hot garantit un fonctionnement \textit{synchrone parfait}, sans \textit{glitches}, et rend le débogage matériel extrêmement facile (il suffit de regarder les LEDs sur les broches pour voir l'état).
+\end{enumerate}
+\end{solbox}
+\fi
+
+\end{document}

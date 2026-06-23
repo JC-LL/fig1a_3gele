@@ -1,0 +1,43 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Notion de bases ou radix}{\reset@font\mtcSfont 20}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.1}Décomposition en puissance de la base}{\reset@font\mtcSSfont 20}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Nombre de bits nécessaires pour représenter un entier $x$}{\reset@font\mtcPfont 21}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Erreurs de calcul liés aux représentations}{\reset@font\mtcPfont 21}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.2}Conversion entre bases}{\reset@font\mtcSSfont 22}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.3}Exemples}{\reset@font\mtcSSfont 22}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.4}Conversions binaire, hexadécimal, octal}{\reset@font\mtcSSfont 23}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.5}Bits, bytes, nibbles, words}{\reset@font\mtcSSfont 23}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Première addition binaire}{\reset@font\mtcPfont 24}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Représentation des entiers négatifs.}{\reset@font\mtcSfont 24}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.1}Complément à $r$ d'un nombre}{\reset@font\mtcSSfont 24}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Remarques}{\reset@font\mtcPfont 24}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.2}Conversion d'une représentation binaire en complément à 2}{\reset@font\mtcSSfont 25}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.3}Astuces pour complémenter à 2}{\reset@font\mtcSSfont 26}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.4}A propos du "bit de signe"}{\reset@font\mtcSSfont 26}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.5}Conversion d'un nombre signé vers un nombre non signé}{\reset@font\mtcSSfont 27}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Représentations alternatives, obsolètes ou rares}{\reset@font\mtcSfont 27}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}Représentation en Magnitude signée}{\reset@font\mtcSSfont 27}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.2}Représentation en complément à 1}{\reset@font\mtcSSfont 27}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.3}Code BCD et code de Gray pour les entiers non-signés}{\reset@font\mtcSSfont 27}{}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Code BCD}{\reset@font\mtcSSSfont 27}{}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Code de Gray}{\reset@font\mtcSSSfont 28}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Calcul d'addition et soustraction}{\reset@font\mtcSfont 29}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.1}Addition}{\reset@font\mtcSSfont 29}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.2}Soustraction}{\reset@font\mtcSSfont 29}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.3}Petit complément sur la soustraction }{\reset@font\mtcSSfont 29}{}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Cas où une retenue apparaît lors de l'addition}{\reset@font\mtcSSSfont 30}{}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Cas où aucune retenue n'apparaît}{\reset@font\mtcSSSfont 30}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}Données composées ou symboliques}{\reset@font\mtcSfont 31}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.1}Données composées}{\reset@font\mtcSSfont 31}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.2}Données symboliques ou énumérées.}{\reset@font\mtcSSfont 31}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.3}Code alphanumérique ASCII}{\reset@font\mtcSSfont 31}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.4}Code alphanumérique UTF-8}{\reset@font\mtcSSfont 32}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.6}Calcul en virgule fixe et en virgule flottante}{\reset@font\mtcSfont 33}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.6.1}Les nombres en virgule fixe}{\reset@font\mtcSSfont 33}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.6.2}Les nombres en virgule flottante. Norme IEEE 754}{\reset@font\mtcSSfont 33}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Exemple}{\reset@font\mtcPfont 34}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.7}Manipulations numériques}{\reset@font\mtcSfont 34}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.1}Récupération d'un champ : masque hexadécimal}{\reset@font\mtcSSfont 34}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.2}Autres manipulations logicielles, au niveau bit}{\reset@font\mtcSSfont 35}{}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.3}Conversions et programmation}{\reset@font\mtcSSfont 35}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.8}Vers la détection d'erreur entre émetteur et récepteur : bit de parité}{\reset@font\mtcSfont 36}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.9}Conclusion}{\reset@font\mtcSfont 36}{}}

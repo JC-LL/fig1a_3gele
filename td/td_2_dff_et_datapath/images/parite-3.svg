@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448"
+   height="1052.3622"
+   id="svg5761"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="parite-3.png">
+  <defs
+     id="defs5763" />
+  <sodipodi:namedview
+     inkscape:document-units="mm"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.25371493"
+     inkscape:cx="164.68216"
+     inkscape:cy="549.27358"
+     inkscape:current-layer="layer1"
+     id="namedview5765"
+     showgrid="false"
+     units="mm"
+     inkscape:window-width="1366"
+     inkscape:window-height="718"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5767">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,308.2677)">
+    <g
+       id="g6340"
+       transform="translate(19.707157,-35.472883)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5770"
+         y="-216.38455"
+         x="193.4778"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="-216.38455"
+           x="193.4778"
+           id="tspan5772"
+           sodipodi:role="line">Entrées      Sortie</tspan><tspan
+           id="tspan5776"
+           y="-166.38455"
+           x="193.4778"
+           sodipodi:role="line">D C B A          P</tspan><tspan
+           id="tspan5778"
+           y="-116.38455"
+           x="193.4778"
+           sodipodi:role="line">0 0 0 0           0</tspan><tspan
+           id="tspan5780"
+           y="-66.384552"
+           x="193.4778"
+           sodipodi:role="line">0 0 0 1           1</tspan><tspan
+           id="tspan5782"
+           y="-16.384552"
+           x="193.4778"
+           sodipodi:role="line">0 0 1 0           1</tspan><tspan
+           id="tspan5784"
+           y="33.615448"
+           x="193.4778"
+           sodipodi:role="line">0 0 1 1           0</tspan><tspan
+           id="tspan5786"
+           y="83.615448"
+           x="193.4778"
+           sodipodi:role="line">0 1 0 0           1</tspan><tspan
+           id="tspan5788"
+           y="133.61545"
+           x="193.4778"
+           sodipodi:role="line">0 1 0 1           0</tspan><tspan
+           id="tspan5790"
+           y="183.61545"
+           x="193.4778"
+           sodipodi:role="line">0 1 1 0           0</tspan><tspan
+           id="tspan5792"
+           y="233.61545"
+           x="193.4778"
+           sodipodi:role="line">0 1 1 1           1</tspan><tspan
+           id="tspan5794"
+           y="283.61545"
+           x="193.4778"
+           sodipodi:role="line">1 0 0 0           1</tspan><tspan
+           id="tspan5796"
+           y="333.61545"
+           x="193.4778"
+           sodipodi:role="line">1 0 0 1           0</tspan><tspan
+           id="tspan5798"
+           y="383.61545"
+           x="193.4778"
+           sodipodi:role="line">1 0 1 0           0</tspan><tspan
+           id="tspan5800"
+           y="433.61545"
+           x="193.4778"
+           sodipodi:role="line">1 0 1 1           1</tspan><tspan
+           id="tspan5802"
+           y="483.61545"
+           x="193.4778"
+           sodipodi:role="line">1 1 0 0           0</tspan><tspan
+           id="tspan5804"
+           y="533.61548"
+           x="193.4778"
+           sodipodi:role="line">1 1 0 1           1</tspan><tspan
+           id="tspan5806"
+           y="583.61548"
+           x="193.4778"
+           sodipodi:role="line">1 1 1 1           0</tspan><tspan
+           id="tspan5808"
+           y="633.61548"
+           x="193.4778"
+           sodipodi:role="line">   mot         bit de </tspan><tspan
+           id="tspan5810"
+           y="683.61548"
+           x="193.4778"
+           sodipodi:role="line">                  parité </tspan><tspan
+           id="tspan5774"
+           y="733.61548"
+           x="193.4778"
+           sodipodi:role="line" /></text>
+      <rect
+         y="-207.17131"
+         x="132.50172"
+         height="803.85413"
+         width="467.57132"
+         id="rect5812"
+         style="fill:#0c2a2a;fill-opacity:0.12019228;stroke:#0a009f;stroke-width:2.4000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <rect
+         y="701.89246"
+         x="131.14879"
+         height="39.156219"
+         width="467.57132"
+         id="rect6330"
+         style="fill:#ff0000;fill-opacity:0.93269228;stroke:#e5001c;stroke-width:2.4000001;stroke-miterlimit:4;stroke-opacity:0.9375;stroke-dasharray:none" />
+      <text
+         transform="translate(0,-308.2677)"
+         sodipodi:linespacing="125%"
+         id="text6332"
+         y="1041.7758"
+         x="246.74564"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="1041.7758"
+           x="246.74564"
+           id="tspan6334"
+           sodipodi:role="line">      code</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="625.41467"
+       y="1014.0881"
+       id="text6336"
+       sodipodi:linespacing="125%"
+       transform="translate(0,-308.2677)"><tspan
+         sodipodi:role="line"
+         id="tspan6338"
+         x="625.41467"
+         y="1014.0881" /></text>
+  </g>
+</svg>

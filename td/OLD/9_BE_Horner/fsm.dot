@@ -1,0 +1,12 @@
+digraph FSM {
+  S0 [shape=circle,style=filled,fillcolor=darksalmon,peripheries=2]
+  S1 [shape=circle,style=filled,fillcolor=darksalmon]
+  S2 [shape=circle,style=filled,fillcolor=darksalmon]
+  S3 [shape=circle,style=filled,fillcolor=darksalmon]
+
+  S0 -> S0 [label=" not go"]
+  S0 -> S1 [label="go"]
+  S1 -> S2
+  S2 -> S3
+  S3 -> S0
+}

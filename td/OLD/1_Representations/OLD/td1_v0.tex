@@ -1,0 +1,464 @@
+\documentclass[a4paper,11pt]{article}
+%\usepackage[T1]{fontenc}
+
+%\setlength{\textwidth}{20cm}
+%\setlength{\marginparwidth}{0cm}
+%\setlength{\voffset}{0cm}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+%\special{papersize=210mm,297mm}
+\usepackage{amsmath}
+\usepackage{centernot}
+\title{{\Huge TD1 -- Electronique numérique}\\Représentation des nombres}
+%\title{TD1}
+\date{}
+
+\begin{document}
+\maketitle
+
+\paragraph{Notes}
+\begin{itemize}
+  \item Le but du TD est de manipuler  différentes représentations des \textit{nombres} et notamment maîtriser les changements de base \textit{sans calculatrice}.
+  \item En dehors du TD, on vous suggère de vérifier que vous êtes suffisamment adroits pour les réaliser également \textit{avec} calculatrice ou à l'aide de votre langage de programmation préféré.
+  \item \textit{Tous les exercices ne seront pas corrigés en séances.}
+\end{itemize}
+
+\section{Compter en base 2 et base 16}
+
+\begin{enumerate}
+\item{Compter de 0 à 15 en binaire, puis en hexadécimal. {\it (On conservera ces valeurs dans un tableau pour la durée du TD)}}
+% \begin{center}
+%   \begin{tabular}{|l|l|l|}
+%     \hline
+%     décimal & binaire & hexa \\
+%     \hline \hline
+%     0 & 0000 & 0 \\
+%     1 & 0001 & 1 \\
+%     2 & 0010 & 2 \\
+%     3 & 0011 & 3 \\
+%     4 & 0100 & 4 \\
+%     5 & 0101 & 5 \\
+%     6 & 0110 & 6 \\
+%     7 & 0111 & 7 \\
+%     8 & 1000 & 8 \\
+%     9 & 1001 & 9 \\
+%     10 & 1010 & A \\
+%     11 & 1011 & B \\
+%     12 & 1100 & C \\
+%     13 & 1101 & D \\
+%     14 & 1110 & E \\
+%     15 & 1111 & F \\
+%
+%      \hline
+%   \end{tabular}
+% \end{center}
+
+\item{Ecrire les puissance de $2^n$ pour $n$ variant de 0 à 10. En déduire une valeur approchée de $\log_{10} 2$, puis $\log_{10} 5$. Avec un procédédé similaire, trouver une valeur approchée de $\log_{10} 3$}
+% \begin{center}
+%   \begin{tabular}{|l|l|}
+%     \hline
+%     $n$ & $2^n$ \\
+%     \hline \hline
+%     0 & 1 \\
+%     1 & 2 \\
+%     2 & 4 \\
+%     3 & 8 \\
+%     4 & 16 \\
+%     5 & 32 \\
+%     6 & 64 \\
+%     7 & 128 \\
+%     8 & 256 \\
+%     9 & 512 \\
+%     10 & 1024 \\
+%      \hline
+%   \end{tabular}
+% \end{center}
+
+% On remarque que $2^{10}\approx 10^3$. D'où : $\log 2\approx \frac{3}{10}$ (en fait $\log 2=0.301$ à $10^{-3}$ près. L'erreur est de 0.3\%)
+% De même :
+% $$5=\frac{10}{2} \implies \log_{10} 5 \approx \frac{7}{10}$$
+% Pour la curiosité, on peut procéder de même pour $\log_{10} 3$ en remarquant que $3^4\approx 4^2.5$. On en déduit :
+% $$\log_{10} 3 \approx \log_{10}2+\frac{\log_{10}5}{4}\approx \frac{13}{20}$$
+%
+
+\item{Calculer la valeur décimale de $10101011_2$ en passant par les puissances de 2 et en passant par les puissances de 16}
+
+% {\bf Solution}
+% \begin{align}
+% 10101011 &= 2^7 + 2^5 + 2^3+ 2^1 + 2^0 \nonumber\\
+%          & = 128 +32 +8 +2 +1 = 171 \nonumber \\
+% 10101011 &= 1010 1011 = AB= 10*16^1 + 11*16^0 = 171 \nonumber
+% \end{align}
+
+\item{Ecrire les puissance de $2^{-n}$ pour $n$ variant de 1 à 4}
+%
+% {\bf Solution:}
+% \begin{center}
+%   \begin{tabular}{|l|l|}
+%     \hline
+%     $n$ & $2^{-n}$ \\
+%     \hline \hline
+%     1 & 0.5 \\
+%     2 & 0.25 \\
+%     3 & 0.125 \\
+%     4 & 0.0625 \\
+%      \hline
+%   \end{tabular}
+% \end{center}
+%
+% Si on s'attribue 2 bits pour représenter (quantifier) une partie décimale , on a les équivalences suivantes :
+% \begin{center}
+%   \begin{tabular}{l|l}
+%     00 & 0,00 \\
+%     01 & 0.25 \\
+%     10 & 0.50 \\
+%     11 & 0.75 \\
+%   \end{tabular}
+% \end{center}
+%
+% Pour 3 bits, on double la précision.
+% \begin{center}
+%   \begin{tabular}{l|l}
+%     000 & 0,000 \\
+%     001 & 0.125 \\
+%     010 & 0.250 \\
+%     011 & 0.500 \\
+%     etc & \dots
+%   \end{tabular}
+% \end{center}
+
+\end{enumerate}
+%
+% Des nombres possédant une partie décimale sont donc transformés ici en de simples {\it entiers}, en supposant que la position de la virgule est fixée à l'avance pour l'ensemble des calculs. Cette représentation est appelée``fixed-point''. Elle est très rapide à traiter par l'électronique, à coût matériel très faible. Cette représentation est très utilisée en traitement du signal embarqué (DSP digital signal processors). A l'inverse une représentation des nombres flottants est très consommatrice de ressources (surface) et de temps : il s'agit des représentations IEEE 754, offrant une précision beaucoup plus importante.
+
+\section{Conversions entre bases}
+
+\begin{enumerate}
+\item Convertir le nombre 39 en binaire.
+
+% {\bf Solution} On effectue les divisions successives. On trouve : $100111$.
+% Ces divisions successives correspondent à :
+% \begin{align}
+%   39 &= 2.19+1 \nonumber \\
+%      &= 2.(2.9+1)+1 \nonumber \\
+%      &= 2.(2.(2.4+1)+1)+1\nonumber \\
+%      &= 2.(2.(2.(2.2+0)+1)+1)+1\nonumber \\
+%      &= 2.(2.(2.(2.(2.(1+0)+0)+1)+1)+1\nonumber \\
+%      &= 2^5+2^2 +2^1+ 2^0\nonumber \\
+%      &= 100111_2 \nonumber
+% \end{align}
+
+
+\item Convertir le nombre $(0.375 )_{10}$ en binaire.
+% {\bf Solution} On effectue les produits successifs.
+% \begin{align}
+%   0.375 \times 2 &= 0.75 \nonumber \\
+%   0.75 \times 2  &= 1.50 \nonumber \\
+%   0.50 \times 2  &= 1.00 \nonumber \\
+% \end{align}
+% On trouve donc $0.375_{10}=0.011_{2}$. Notons que c'est $3\times 0.125$.
+
+\item En déduire la représentation binaire du le nombre $( 39.125 )_{10}$
+
+%$100111.001_{2}$
+
+\item Convertir le nombre $( 0.2)_{10}$ en binaire. Que remarquez-vous ?
+%
+% {\bf Solution} On effectue les produits successifs. Mais cette fois ci le nombre ne ``s'arrête pas''. Une période apparaît toutefois rapidement ici (ce n'est pas toujours le cas) :
+% \begin{align}
+%      0.2\times 2 &= 0.4 \nonumber \\
+%      0.4\times 2 &= 0.8 \nonumber \\
+%      0.8\times 2 &= 1.6 \nonumber \\
+%      0.6\times 2 &= 1.2 \nonumber \\
+%      0.2\times 2 &= etc...
+% \end{align}
+%
+% On trouve $0.2=\underline{0011}...$ (la barre indique la période)
+
+\item Convertir $(345.158 )_{10}$ en octal\\
+% {\bf Solution:} divisions successives par 8
+% \begin{align}
+%   345 / 8 &= 43 (1) \nonumber \\
+%   43  / 8 &= 5  (3) \nonumber \\
+%    5  / 8 &= 0  (5)
+% \end{align}
+%  Multiplications successives par 8
+% \begin{align}
+%   0.158 \times 8 &= 1.264 \nonumber \\
+%   0.264 \times 8 &= 2.112 \nonumber \\
+%   0.112 \times 8 &= 0.896 \nonumber \\
+%   0.896 \times 8 &= 7.168 \nonumber \\
+%   etc &=....
+% \end{align}
+% On trouve  donc : $531.1207$. Il est nécessaire d'aller jusqu'à $8^-4$ pour conserver la même précision.
+
+
+\item Convertir $(389)_{10}$ en hexa\\
+% {\bf Solution:} divisions successives par 16
+% \begin{align}
+%   389 / 16 &= 24 (5) \nonumber \\
+%    24  /16 &= 1  (8) \nonumber \\
+%    1  / 16 &= 0  (1)
+% \end{align}
+%
+% On trouve donc : $185_{16}=0x185$
+
+\item { Convertir $011001111011101_2$ en hexa}
+%
+% \begin{equation}
+%   011001111011101=011\ 0011\ 1101\ 1101=33DD_{16}
+% \end{equation}
+%
+% \item { Convertir $0xDEADBEEF$ en binaire}
+% $$DEADBEEF_{16}=11011110101011011011111011101111_2$$
+
+%% Inciter les étudiants à manipuler (chez eux, en travail personnel) les nombres dans leur langage préféré (matlab, java, c, python,...)
+
+%% En ruby :
+%% \begin{verbatim}
+%% puts 0xDEADBEEF.to_s(2)
+%% \end{verbatim}
+
+\item { Convertir $(10110001101011.1111 )_2$ en octal}
+% \begin{verbatim}
+% 010 110 001 101 011 . 111 100
+%  2   6   1   5   3     7   4
+% \end{verbatim}
+% $$( 10110001101011.1111 )_2 = ( 26153.74 )_8$$
+
+
+\item { Convertir  $(10110001101011.111101 )_2$ en hexa}
+% \begin{verbatim}
+% 10 1100 0110 1011 . 1111 0100
+% 2   C    6    B   .  F   4
+% \end{verbatim}
+% $$( 10110001101011.111101 )_2 = ( 2C6B.F4 )_16$$
+
+\item {Le nombre $101110001_2$ est écrit en BCD (décimal codé binaire). Convertir le nombre décimal obtenu en binaire pur. Combien de bits sont alors nécessaires ? Conclure.}
+% {\bf Solution:}
+% \begin{verbatim}
+% 1 0111 0001
+% 1   7    1
+%
+% 171 = 1x128 + 0x64 + 1x32 + 0x16 + 1x8 + 0x4 + 1x2 + 1x1 = 10101011
+% \end{verbatim}
+% 8 bits suffisent en binaire pur. Le BCD est utilisé parfois dans des afficheurs à leds : les constructeurs proposent d'entrer les valeurs des digits à afficher, directement en BCD.
+
+\end{enumerate}
+
+\section{Nombres signés en complément à 2}
+
+\subsection*{Rappels} Jusqu'ici, nous nous sommes intéréssés aux nombres positifs. Il existe plusieurs manières de représenter un nombres négatif $n$. La manière la plus intuitive serait de dédier un bit (le plus à gauche) pour préciser le signe du nombre : par exemple on pourrait choisir $0$ pour le signe $+$ et $1$ pour le signe $-$. Malheureusement, cette représentation possède deux défauts majeurs : il existe alors deux représentations du zéro et surtout, il faut modifier l'algorithme d'addition. Les architectes des ordinateurs ont retenu une autre représentation plus pratique : le {\bf complément à 2}. C'est cette représentation qui régit le fonctionnement des {\it unités arithmétiques} des ordinateurs sur lesquelles nous reviendrons plus tard.\\
+
+Avec $k$ bits, on peut représenter l'ensemble des nombres $$[-2^{k-1},\dots,2^{k-1}-1]$$ Le complément à 2 d'un entier $n$ est obtenu par le calcul de la quantité $2^k - n$ : on comprend ici que le terme ``complément à 2'' est un raccourci pour ``complément à $2^k$ ``. On peut également vérifier aisément que :
+\begin{itemize}
+\item Le complément à 2 du complément à 2 d'un entier $n$ est $n$ lui-même.
+\item Le complément à 2 de zéro est zéro (on néglige la retenue qui dépasse la taille fixée).
+\end{itemize}
+
+On doit retenir la \underline{formule de passage en complément à 2} d'un nombre négatif $-X$ :
+\begin{equation}
+-X=\overline{X}+1
+\end{equation}
+
+La barre figurant au dessus du $X$ signifie ``inversion de tous les bits'' (complément à $1$).
+
+Si l'entier $n$ est codé sur $k$ bits ($s_{k-1}\dots s_0$) en complément à 2, on a alors :
+\begin{equation}
+n_{10}=-s_{k-1}2^{k-1}+\sum_{i=0}^{k-2} s_i2^i
+\end{equation}
+
+\subsection*{Exercices}
+
+\begin{enumerate}
+\item Déterminer la plage des valeurs des entiers signés sur $k=4$ bits. Représenter ces valeurs en binaire. Quelles sont les représentations des valeurs extrêmes ? de 0,1, et -1 ?\\
+%
+% {\bf Solution}
+% Avec $k=4$ bits, on peut représenter l'ensemble des nombres :
+% \begin{align}
+% \{-2^{k-1},\dots,2^{k-1}-1\} &= \{-2^{4-1},\dots,2^{4-1}-1\}
+%                           &= \{-8,\dots,7\}
+% \end{align}
+%
+% \begin{center}
+%   \begin{tabular}{|l|l|}
+%     \hline
+%     -8 & 1000 \\
+%     -7 & 1001 \\
+%     -6 & 1010 \\
+%     -5 & 1011 \\
+%     -4 & 1100 \\
+%     -3 & 1101 \\
+%     -2 & 1110 \\
+%     -1 & 1111 \\
+%     0 & 0000 \\
+%     1 & 0001 \\
+%     2 & 0010\\
+%     3 & 0011\\
+%     4 & 0100\\
+%     5 & 0101\\
+%     6 & 0110\\
+%     7 & 0111\\
+%      \hline
+%   \end{tabular}
+% \end{center}
+% Bien remarquer les points suivants :
+% \begin{itemize}
+% \item Les nombres positifs sont codés ``normalement''
+% \item Alors qu'en non-signé on pouvait compter, avec 4 bits, jusqu'à $+15$, ici on est limité à $+7$
+% \item Les nombres qui présentent un '1' en MSB (most significant bit) sont forcément négatifs \underline{dans cette représentation}.
+% \item Remarquer le codage de la valeur $-1=1111_2$
+% \end{itemize}
+
+
+\item Quel est le complément à 2 du nombre $8$, codé sur $6$ bits ? Utiliser la formuler 1 et vérifier le résultat en appliquant la formule 2.
+
+% {\bf Solution}
+% On applique la formule (1) de l'énoncé : on inverse tous les bits et on ajoute 1 :
+% $$8=1000_2 \implies C2_6(8)=110111+1=111000 $$
+% On applique la formule (2) de l'énoncé :
+% $-2^5+2^4+2^3=-8$
+% Cela signifie que $111000$ est bien la valeur -8 représentée en complément à 2.
+%
+
+\item {Soustraire : $91_{10}-108_{10}$ en passant par le complément à 2}
+
+% {\bf Solution}
+% Attention ! 91 peut se représenter sur 7 bits. 108 aussi ! Mais pas -108 ! Il faut passer à 8 bits !
+% \begin{verbatim}
+%   91 = 64+16+8+2+1 =>   1011011
+%  108 = 64+32+8+4   =>  01101100
+% -108               =>  10010011
+%                              +1
+%                        11101111
+%   91  =>   01011011
+% -108  => + 10010100
+% ....................
+%   -17 ?    11101111
+% \end{verbatim}
+%
+% On peut vérifier que $11101111$ représente bien le bon résultat $-17$ :
+%
+% \begin{align}
+% -2^7+(2^6+2^5+2^3+2^2+2^1+2^0) &= -128+(64+32+8+4+2+1) \nonumber \\
+%                              &= -128+(96+15)=-128+111 \nonumber\\
+%                              &=-17 \nonumber
+% \end{align}
+
+\item {Ecrire les nombres suivants en binaire sur 6 bits : $+24,+31,-24,-31$. Passez ensuite à 7 bits. Que remarquez-vous ?}
+
+% {\bf Solution}
+% \begin{verbatim}
+% +24 = 011000 (16+8)
+% +31 =011111 (32 -1)
+% -24 = 100111+1=101000
+% -31 = 100000+1=100001
+%
+% +24= 0011000
+% +31 = 0011111
+% -24 = 1100111+1 = 1101000
+% -31 = 1100000+1 = 1100001
+% \end{verbatim}
+%
+% On remarque que le signe se propage vers la gauche.
+
+\item {Soustraire 1100 0101 0100 0000 - 101000 1111 1111 - 110 1111 1110 - 10 1110}
+
+
+% {\bf Solution}
+% Solution volontairement fausse (si on ne tient pas compte du format 16 bits) : on complémente ``mal''
+% \begin{verbatim}
+%  1100 0101 0100 0000
+% +  01 0111 0000 0001
+% +      001 0000 0010
+% +            01 0010
+% --------------------
+% 1101 1101 0101 0101 = 56661 (faux)
+%
+% Normalement on devrait trouver :
+% 50496-10495-1790-46 = 38165 (vrai)
+% \end{verbatim}
+%
+% La solution précédente est effectivement fausse, car nous n'avons pas complémenté sur le bon nombre de bits. On a omis de voir les espaces en tête comme des '0' !
+% En se ramenant à 16 bits, on peut écrire :
+%
+% \begin{verbatim}
+%  1100 0101 0100 0000
+% +1101 0111 0000 0001
+% +1111 1001 0000 0010
+% +1111 1111 1101 0010
+% --------------------
+% 1001 0101 0001 0101 = 38165
+% \end{verbatim}
+%
+% Cette fois-ci, le  résultat est correct. Cependant, on peut rester insatisfait par la méthode. En effet, dans la solution se mélangent
+% deux représentations différentes : le premier opérande est de type {\bf non-signé} sur 16 bits, alors que les 3 autres opérandes sont {\bf signés} sur 16 bits. Un tel
+% mélange peut amener, par exemple, à se poser la question de la signification du MSB dans les 4 cas.
+% Suivant le type, le MSB n'aurait pas les mêmes significations pour les 4 opérandes, ce qui n'est guère intelligible...En fait, il est plus sûr de recourir à des opérandes de même type, c'est-à-dire à une seule et même représentation. En se ramenant à la représentation {\it signée},
+% il faut alors ajouter le bit de signe au premier opérande, qui était précédemment sur 16 bits. Cela fait donc 17 bits !
+% \begin{verbatim}
+%  0 1100 0101 0100 0000
+% +1 1101 0111 0000 0001
+% +1 1111 1001 0000 0010
+% +1 1111 1111 1101 0010
+% ----------------------
+%  0 1001 0101 0001 0101 = 38165
+% \end{verbatim}
+%
+% La méthode générale consiste donc à considérer les valeurs absolues des opérandes mis en jeu $\{|x_1|,|x_2|,\dots,|x_{n-1}|\}$.
+% En passant en signé, le nombre de bit est
+% $$ n = 1 + max \Big( \rfloor log_2(|x_1|) \lfloor + 1,\dots,\rfloor log_2 (|x_{n-1}|) \lfloor + 1\Big)$$
+% Dans notre cas, on a
+% $$n= 1 + max \Big(16,14,11,6\Big) = 17 $$
+%
+%
+% Dernier rappel :  si vous effectuez le calcul par vous-même, lors des 2 précédentes solutions, vous remarquerez qu'une retenue a été générée à gauche, mais a été omise ici.
+% On rappelle que la soustration en complément à 2 conduit à : $$2^k+(m-n)$$ Dans le cas où le résultat est positif (c'est le cas dans notre exercice), on retrouve directement
+% la quantité $2^k$ dans le résultat.
+\end{enumerate}
+
+\section{IEEE 754}
+\paragraph{Rappel~: norme IEEE~754 (simple précision, 32~bits)}
+Un flottant est codé par trois champs~: 1~bit de signe $s$, 8~bits d'exposant $e$ et 23~bits de mantisse $m$.
+La valeur représentée est, pour la plupart des nombres,
+\[
+V = (-1)^s \times 2^{\,e-127} \times (1 + m),
+\]
+où $m = \sum_{i=1}^{23} b_i 2^{-i}$ est la partie fractionnaire.
+On dit que l'exposant est représenté en excédent (ou biais) à $127$.
+La mantisse est toujours normalisée avec un $1$ implicite (gain de place), sauf pour les cas particuliers suivants~:
+\begin{itemize}
+\item si $e=255$ et $m=0$, alors $V = \pm\infty$ (selon $s$)~;
+\item si $e=255$ et $m\neq 0$, alors $V = \mathtt{NaN}$ (not a number)~;
+\item si $e=0$ et $m=0$, alors $V = \pm 0$~;
+\item si $e=0$ et $m\neq 0$, il s'agit d'un nombre dénormalisé, dont la valeur est
+$V = (-1)^s \times 2^{-126} \times m$.
+\end{itemize}
+Pour convertir un décimal en IEEE~754, on écrit sa valeur absolue en binaire, on la normalise sous la forme $1,\!XXXXX \times 2^n$, puis on pose $e = n+127$ et l'on conserve les 23 premiers bits de la partie fractionnaire comme mantisse (avec arrondi éventuel).
+La conversion inverse s'obtient par la formule ci-dessus, en lisant les champs binaires.\\
+
+Représenter le nombre 238,4375 dans sa représentation IEEE 754 (32 bits) en virgule flottante.
+
+%% \begin{verbatim}
+%% La représentation binaire de 238 est : 1110 1110
+%% La représentation binaire de 0,4375 est 0,0111 = 0*1/2 + 1*1/4 + 1*1/8+ 1*1/16
+
+%% Dès lors, la représentation binaire de 238,4375 est : 1110 1110,0 111.
+%% En normalisant de façon à avoir un seul 1 avant la virgule, on obtient :
+%% 1, 110 1110 0111 * 2^7
+
+%% (ici nous déplaçons la virgule de 7 rangs).
+
+%% L'exposant dans notre cas est 7, codé avec la norme nous allons avoir :
+%% 7 + 127 = 134 et en binaire 1000 0 110.
+
+%% Le nombre est positif donc s = 0.
+
+%% Nous obtenons alors : 01000011011011100111000000000000.
+%% La mantisse étant complétée par des zéros à droite. Nous avons bien :
+
+%% \end{verbatim}
+%% $$ (-1)^0*2^{(10000110 - 0111 1111)} * (1,110 1110 0111)$$
+
+
+\end{document}

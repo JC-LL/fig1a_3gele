@@ -1,0 +1,171 @@
+\documentclass[a4paper,11pt]{article}
+%\usepackage[T1]{fontenc}
+
+%\setlength{\textwidth}{20cm}
+%\setlength{\marginparwidth}{0cm}
+%\setlength{\voffset}{0cm}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+%\special{papersize=210mm,297mm}
+
+\title{{\Huge Electronique numérique}\\Logique combinatoire}
+%\title{TD1}
+\date{}
+
+\begin{document}
+\maketitle
+
+{\bf Remarque} : tous les exercices ne seront pas forcément traités en TD.
+
+%==========================================================================
+\section{Equations logiques de circuits de base}
+
+\subsection{Additionneur}
+\begin{enumerate}
+\item Etablir la table de vérité d'un {\it demi-additionneur} logique, puis les deux équations logiques associées : ce circuit additionne simplement 2 entrées booléennes $a$ et $b$ (donc {\it sans retenue entrante}). Il calcule deux sorties : la somme et la retenue sortante. Dessiner le circuit.
+\item Etablir la table de vérité d'un {\it additionneur complet} pour deux opérandes 1 bit. Ce dernier tient désormais compte d'une retenue entrante. Etablir les équations simplifiées des sorties, puis dessiner le circuit correspondant. Au préalable on démontrera que :
+$$\overline{x\oplus y}=x \oplus \overline{y}$$
+\item Montrer qu'un additionneur complet ``1 bit'' peut réutiliser le demi-additionneur de la question 1.
+\item Dessiner un additionneur 4 bits en réutilisant l'additionneur 1 bit.
+\item Quel est le chemin critique de ce dernier circuit ? On rappelle que le chemin critique est le parcours le plus long entre une entrée et une sortie combinatoire. On le mesurera en nombre de portes logiques élémentaires traversées.
+\item Peut-on imaginer d'anticiper le calcul de la retenue ? Si oui, comment ?
+\end{enumerate}
+
+\subsection{Multiplexeur}
+La fonction (combinatoire) d'un multiplexeur est de sélectionner, grâce à un signal de contrôle, un signal d'entrée parmi plusieurs et de transmettre sa valeur sur une sortie unique.
+\begin{enumerate}
+\item Dessiner le symbole communément admis pour représenter un multiplexeur à 2 entrées binaires (chacune codée sur un 1 bit).
+\item Calculer l'équation d'un multiplexeur à 2 entrées 1 bit.
+%\item On pourrait de même calculer l'équation d'un multiplexeur à $3,4,\dots$ entrées, sur un 1 bit. Sans recourir à un tel calcul, dessiner la structure d'un multiplexeur à 3 entrées, à base de multiplexeurs à 2 entrées.
+\item Lorsque les données d'entrées sont codées sur $n>1$ bits, chacun des bits du signal multiplexé suit évidemment un chemin similaire. Dessiner un tel multiplexeur à 2 entrées, pour $n=2$.
+\end{enumerate}
+
+
+%==========================================================================
+\section{Formes canoniques}
+
+Toute fonction booléenne $F$ de plusieurs variables peut s'écrire sous deux formes spéciales, appelées {\it formes canoniques} : il ne s'agit ni plus ni moins que de l'expression de $F$ sous forme de :
+\begin{itemize}
+\item ({\bf première forme}) : somme de produits de chaque variable {\it ou de son complément}
+\item ({\bf seconde forme}) : produit de sommes de chaque variable {\it ou de son complément}
+\end{itemize}
+
+Pour obtenir la première forme à partir de leur table de vérité, il suffit de sommer les produits pour lesquels la fonction vaut '1'. La seconde forme s'obtient de manière duale. Notons que ces formes ne sont pas simplifiées.
+
+Etablir les deux formes canoniques des fonctions suivantes:
+
+\begin{enumerate}
+\item $F_1=xy+yz+xz$
+\item $F_2=x+yz+\overline{y}.\overline{z}.t$
+\end{enumerate}
+
+\section{Quelques formulations booléennes}
+
+Ecrire sous la première forme canonique les fonctions définies par les propositions suivantes :
+
+\begin{enumerate}
+\item $F(a,b,c)=1$ si et seulement si aucune des variables $a,b,c$ ne prend la valeur 1.
+\item $F(a,b,c)=1$ si et seulement si au plus une des variables $a,b,c$ prend la valeur 0.
+\end{enumerate}
+
+
+\section{Simplifications algébriques}
+Simplifier algébriquement les  fonctions suivantes
+
+\begin{enumerate}
+\item $F=\overline{x}.\overline{y} + xy+\overline{x}y$
+\item $F=(x+\overline{y})(x\overline{y}+z)z$
+\end{enumerate}
+
+
+\section{Simplifications par tableaux de Karnaugh}
+Simplifier, par la méthode des tableaux de Karnaugh, les fonctions booléennes suivantes. Dessiner le circuit correspondant et déterminer son chemin critique, en supposant que toutes les portes présentent un temps de propagation de 5 ns. Tous les problèmes ne seront pas forcément résolus en TE.
+
+\subsection{K-map à 3 variables}
+\begin{enumerate}
+\item $F(a,b,c)=\overline{a}\overline{b}c+\overline{a}b\overline{c}+ab\overline{c}$
+\item $F(a,b,c)=\overline{a}b\overline{c}+\overline{a}bc+ab\overline{c}$
+\item $F(a,b,c)=\overline{a}\overline{b}c+a\overline{b}\overline{c}+ab\overline{c}$, sachant que la valeur de $F$ pour les combinaisons $\overline{a}bc$ et $abc$ est indifférente.
+\end{enumerate}
+
+\subsection{K-map à 4 variables}
+
+$F(a,b,c,d)=\overline{a}b\overline{c}\overline{d} +
+            \overline{a}b\overline{c}d+
+            \overline{a}bcd+
+            \overline{a}bc\overline{d}$
+
+$F(a,b,c,d)=\overline{a}\overline{b}\overline{c}d +
+            \overline{a}\overline{b}cd +
+            a\overline{b}\overline{c}d +
+            a\overline{b}cd$
+
+
+\subsection{K-map à 5 variables}
+
+$F(a,b,c,d,e)=\overline{a}\overline{b}\overline{c}\overline{d}\overline{e} +
+              \overline{a}\overline{b}c\overline{d}\overline{e} +
+              \overline{a}b\overline{c}\overline{d}\overline{e} +
+              \overline{a}bc\overline{d}\overline{e} +
+              ab\overline{c}\overline{d}\overline{e} +
+              ab\overline{c}d\overline{e} +
+              abcd\overline{e} +
+              abc\overline{d}\overline{e} +
+              a\overline{b}\overline{c}\overline{d}\overline{e} +
+              a\overline{b}c\overline{d}\overline{e} +
+              \overline{a}b\overline{c}\overline{d}e +
+              \overline{a}bc\overline{d}e +
+              ab\overline{c}\overline{d}e +
+              ab\overline{c}de +
+              abcde +
+              abc\overline{d}e$
+
+%% \subsection{Additionneur binaire modulo 4}
+
+%% Réaliser un additionneur binaire modulo 4 : on suppose que les opérandes sont codées sur 2 bits et le résultat sur 2 bits.
+%% \begin{enumerate}
+
+%% \item Inventer un symbole possible pour ce circuit, et trouver sa table de vérité. Optimiser ce circuit, à l'aide de tables de Karnaugh.
+%% \item Dessiner le circuit logique. Combien de portes faut-il ? Quel est son chemin critique ?
+%% \end{enumerate}
+
+%\section{Temps de propagation}
+
+\section{Différentes utilisations du OU exclusif}
+\begin{enumerate}
+
+\item Rappeler la table de vérité du OU exclusif, ainsi que son symbole (américain)
+\item Dessiner la fonction OU-exclusif à partir de portes logiques ET, OU et NOT
+\item Le OU-exclusif possède de nombreuses propriétés intéressantes. Compléter les énoncé suivants :
+
+\begin{enumerate}
+\item Sa sortie vaut 1 si exactement une des entrées vaut 1 : $$x \oplus y  = ?? + ??$$
+\item On peut le considérer comme un comparateur d'égalité pour 1 bit : $$x \oplus y = \textrm{SI } (x==y) \textrm{ ALORS ? SINON ?} $$
+\item On peut le considérer comme un inverseur conditionnel : $$x \oplus y = \textrm{SI } (?) \textrm{ ALORS ? SINON ?}$$
+\item On peut enfin le considérer comme un additionneur modulo 2.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\section{Le jeu des cambrioleurs}
+Le principe du jeu est le suivant : un jeton est introduit par le joueur en haut du dispositif. Le but est de faire circuler ce jeton dans le dispositif, jusqu'à ce qu'il apparaisse en sortie. dans l'intervalle, le jeton peut rester coincé à différents endroits (ou ``niveaux'') : seul un code secret correctement introduit à cet endroit permet au jeton de continuer son parcours. Sinon, l'utilisateur voit le code d'erreur 0xDEAD apparaître en sortie. Chaque code secret, associé au niveau $i$ est codé sur 4 bits.
+
+\begin{enumerate}
+\item Imaginer un circuit combinatoire qui simule ce jeu.  On utilisera pour cela différents circuits connus : multiplexeurs et comparateurs. Enrichir votre circuit avec d'autres circuits combinatoires afin de le démarrer et d'indiquer le nombre de niveaux franchis correctement.
+\item Sachant que l'on peut envoyer 1 million de codes par secondes, combien de temps faudrait-il, au pire cas, pour tester toutes les combinaisons possibles, dans le cas où le nombre de niveaux est 9 ? Refaites le calcul pour 5 bits.
+\end{enumerate}
+
+
+\section{Vu-mètre}
+On se propose de réaliser un ``vu-mètre'' : c'est un dispositif qui permet de visualiser une grandeur numérique (un volume sonore par exemple) au moyen d'une barrette lumineuse qui s'étire plus ou moins un fonction de la grandeur.
+\begin{enumerate}
+\item Schématiser le principe d'ensemble dans le cas où la grandeur à visualiser est codée sur 3 bits.
+\item A partir du tableau de Karnaugh, trouver une réalisation possible.
+\item On supposer que l'on dispose désormais d'un composant complexe de décodage (un décodeur). Rappeler la table de vérité de ce circuit. Utiliser alors ce décodeur pour proposer une nouvelle réalisation.
+\end{enumerate}
+
+
+
+\end{document}

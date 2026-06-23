@@ -1,0 +1,168 @@
+\select@language {english}
+\select@language {french}
+\contentsline {chapter}{\numberline {1}Le transistor}{7}
+\contentsline {section}{\numberline {1.1}Introduction}{7}
+\contentsline {section}{\numberline {1.2}Silicium et dopage}{7}
+\contentsline {section}{\numberline {1.3}Jonction PN}{9}
+\contentsline {section}{\numberline {1.4}Transistor MOS}{9}
+\contentsline {section}{\numberline {1.5}MOS compl\IeC {\'e}mentaires}{11}
+\contentsline {subsection}{\numberline {1.5.1}Principe}{11}
+\contentsline {section}{\numberline {1.6}Niveaux d'abstraction}{12}
+\contentsline {section}{\numberline {1.7}Conclusions}{12}
+\contentsline {chapter}{\numberline {2}Repr\IeC {\'e}sentations num\IeC {\'e}riques}{15}
+\contentsline {section}{\numberline {2.1}Notion de bases ou radix}{16}
+\contentsline {subsection}{\numberline {2.1.1}D\IeC {\'e}composition en puissance de la base}{16}
+\contentsline {subsection}{\numberline {2.1.2}Conversion entre bases}{16}
+\contentsline {subsection}{\numberline {2.1.3}Exemples}{17}
+\contentsline {subsection}{\numberline {2.1.4}Conversions binaire, hexad\IeC {\'e}cimal, octal}{18}
+\contentsline {subsection}{\numberline {2.1.5}Bits, bytes, nibbles, words}{18}
+\contentsline {paragraph}{Premi\IeC {\`e}re addition binaire}{19}
+\contentsline {section}{\numberline {2.2}Repr\IeC {\'e}sentation des entiers n\IeC {\'e}gatifs.}{19}
+\contentsline {subsection}{\numberline {2.2.1}Compl\IeC {\'e}ment \IeC {\`a} 2 d'un nombre}{19}
+\contentsline {subsection}{\numberline {2.2.2}Astuces pour compl\IeC {\'e}menter \IeC {\`a} 2}{20}
+\contentsline {subsection}{\numberline {2.2.3}A propos du bit de signe}{20}
+\contentsline {subsection}{\numberline {2.2.4}Conversion d'un nombre sign\IeC {\'e} vers un nombre non sign\IeC {\'e}}{21}
+\contentsline {section}{\numberline {2.3}Repr\IeC {\'e}sentations alternatives, obsol\IeC {\`e}tes ou rares}{21}
+\contentsline {subsection}{\numberline {2.3.1}Repr\IeC {\'e}sentation en Magnitude sign\IeC {\'e}e}{21}
+\contentsline {subsection}{\numberline {2.3.2}Repr\IeC {\'e}sentation en compl\IeC {\'e}ment \IeC {\`a} 1}{21}
+\contentsline {subsection}{\numberline {2.3.3}Code BCD et code de Gray pour les entiers non-sign\IeC {\'e}s}{21}
+\contentsline {subsubsection}{Code BCD}{22}
+\contentsline {subsubsection}{Code de Gray}{22}
+\contentsline {section}{\numberline {2.4}Calcul d'addition et soustraction}{23}
+\contentsline {subsection}{\numberline {2.4.1}Addition}{23}
+\contentsline {subsection}{\numberline {2.4.2}Soustraction}{23}
+\contentsline {subsection}{\numberline {2.4.3}Petit compl\IeC {\'e}ment sur la soustraction }{24}
+\contentsline {subsubsection}{Cas o\IeC {\`u} une retenue appara\IeC {\^\i }t lors de l'addition}{24}
+\contentsline {subsubsection}{Cas o\IeC {\`u} aucune retenue n'appara\IeC {\^\i }t}{24}
+\contentsline {section}{\numberline {2.5}Donn\IeC {\'e}es compos\IeC {\'e}es ou symboliques}{25}
+\contentsline {subsection}{\numberline {2.5.1}Donn\IeC {\'e}es compos\IeC {\'e}es}{25}
+\contentsline {subsection}{\numberline {2.5.2}Donn\IeC {\'e}es symboliques ou \IeC {\'e}num\IeC {\'e}r\IeC {\'e}es.}{25}
+\contentsline {subsection}{\numberline {2.5.3}Code alphanum\IeC {\'e}rique ASCII}{26}
+\contentsline {subsection}{\numberline {2.5.4}Code alphanum\IeC {\'e}rique UTF-8}{26}
+\contentsline {section}{\numberline {2.6}Calcul en virgule fixe et en virgule flottante}{27}
+\contentsline {subsection}{\numberline {2.6.1}Les nombres en virgule fixe}{27}
+\contentsline {subsection}{\numberline {2.6.2}Les nombres en virgule flottante. Norme IEEE 754}{28}
+\contentsline {section}{\numberline {2.7}Manipulations num\IeC {\'e}riques}{28}
+\contentsline {subsection}{\numberline {2.7.1}R\IeC {\'e}cup\IeC {\'e}ration d'un champ}{28}
+\contentsline {subsection}{\numberline {2.7.2}Conversion par programmation}{28}
+\contentsline {subsection}{\numberline {2.7.3}Autres manipulations au niveau bit}{29}
+\contentsline {section}{\numberline {2.8}Vers la d\IeC {\'e}tection d'erreur : bit de parit\IeC {\'e}}{29}
+\contentsline {section}{\numberline {2.9}Conclusion}{29}
+\contentsline {chapter}{\numberline {3}Logique bool\IeC {\'e}enne}{31}
+\contentsline {section}{\numberline {3.1}Introduction}{31}
+\contentsline {section}{\numberline {3.2}D\IeC {\'e}finitions}{31}
+\contentsline {subsection}{\numberline {3.2.1}Axiomes de l'Alg\IeC {\`e}bre de Boole}{32}
+\contentsline {subsection}{\numberline {3.2.2}Principaux th\IeC {\'e}or\IeC {\`e}mes de l'Alg\IeC {\`e}bre de Boole}{32}
+\contentsline {subsection}{\numberline {3.2.3}Th\IeC {\'e}or\IeC {\`e}mes de De Morgan}{33}
+\contentsline {section}{\numberline {3.3}Repr\IeC {\'e}sentation des fonctions bool\IeC {\'e}ennes}{33}
+\contentsline {subsection}{\numberline {3.3.1}Mon\IeC {\^o}me}{33}
+\contentsline {subsection}{\numberline {3.3.2}Fonctions bool\IeC {\'e}ennes}{33}
+\contentsline {subsection}{\numberline {3.3.3}Fonction bool\IeC {\'e}enne incompl\IeC {\`e}te ou $\phi $-bool\IeC {\'e}enne}{34}
+\contentsline {subsection}{\numberline {3.3.4}Minterm et maxterms}{34}
+\contentsline {subsection}{\numberline {3.3.5}D\IeC {\'e}composition de Shannon et Arbres de d\IeC {\'e}cision binaires}{34}
+\contentsline {section}{\numberline {3.4}Simplification des fonctions bool\IeC {\'e}ennes}{34}
+\contentsline {subsection}{\numberline {3.4.1}Par calcul alg\IeC {\'e}brique}{34}
+\contentsline {subsection}{\numberline {3.4.2}Par tableau de Karnaugh}{35}
+\contentsline {section}{\numberline {3.5}Conclusion}{36}
+\contentsline {chapter}{\numberline {4}Circuits combinatoires}{37}
+\contentsline {section}{\numberline {4.1}D\IeC {\'e}finition}{37}
+\contentsline {section}{\numberline {4.2}Portes logiques de base}{38}
+\contentsline {paragraph}{Premi\IeC {\`e}re approche : et, ou, non}{38}
+\contentsline {paragraph}{Deuxi\IeC {\`e}me approche : autres portes logiques}{38}
+\contentsline {paragraph}{Troisi\IeC {\`e}me approche : non-et (nand)}{39}
+\contentsline {section}{\numberline {4.3}Fonctions logiques "complexes"}{39}
+\contentsline {paragraph}{Assemblage de portes logiques}{39}
+\contentsline {paragraph}{Notion de "Nuage combinatoire"}{39}
+\contentsline {section}{\numberline {4.4}Mapping technologique}{40}
+\contentsline {section}{\numberline {4.5}Chemin critique et fr\IeC {\'e}quence de fonctionnement}{40}
+\contentsline {section}{\numberline {4.6}Arithm\IeC {\'e}tique de base}{41}
+\contentsline {subsection}{\numberline {4.6.1}Additionneur}{41}
+\contentsline {paragraph}{Demi-additionneur 1 bit}{42}
+\contentsline {paragraph}{Additionneur 1 bit}{42}
+\contentsline {paragraph}{Additionneur {\it n} bits}{42}
+\contentsline {subsection}{\numberline {4.6.2}Soustracteur}{43}
+\contentsline {paragraph}{Utilisation d'une table de v\IeC {\'e}rit\IeC {\'e}}{43}
+\contentsline {paragraph}{Utilisation du compl\IeC {\'e}ment \IeC {\`a} 2}{43}
+\contentsline {subsection}{\numberline {4.6.3}Additionneur-soustracteur}{43}
+\contentsline {subsection}{\numberline {4.6.4}Multiplieur}{44}
+\contentsline {paragraph}{M\IeC {\'e}thode naturelle}{44}
+\contentsline {paragraph}{Multiplieur avec topologie r\IeC {\'e}guli\IeC {\`e}re}{45}
+\contentsline {subsection}{\numberline {4.6.5}Diviseur}{45}
+\contentsline {section}{\numberline {4.7}Shifter}{45}
+\contentsline {paragraph}{Shifter \IeC {\`a} position fixe}{45}
+\contentsline {paragraph}{Barrel shifter}{46}
+\contentsline {section}{\numberline {4.8}Multiplexeur}{46}
+\contentsline {paragraph}{Crossbar}{46}
+\contentsline {section}{\numberline {4.9}Comparateur}{46}
+\contentsline {paragraph}{Comparateur 1 bit}{47}
+\contentsline {paragraph}{Comparateur d'\IeC {\'e}galit\IeC {\'e} de 2 entiers}{47}
+\contentsline {section}{\numberline {4.10}Codeurs et D\IeC {\'e}codeurs}{47}
+\contentsline {paragraph}{D\IeC {\'e}codeur 7-segments}{47}
+\contentsline {section}{\numberline {4.11}Conclusion}{48}
+\contentsline {chapter}{\numberline {5}Circuits s\IeC {\'e}quentiels}{49}
+\contentsline {section}{\numberline {5.1}Introduction}{49}
+\contentsline {section}{\numberline {5.2}Discr\IeC {\'e}tiser le temps}{50}
+\contentsline {paragraph}{Eviter la "cacophonie"}{50}
+\contentsline {paragraph}{Notion d'horloge p\IeC {\'e}riodique}{50}
+\contentsline {section}{\numberline {5.3}Bascule D}{51}
+\contentsline {subsection}{\numberline {5.3.1}Fonction d'\IeC {\'e}chantillonnage de la bascule D. Set-up et hold. Metastabilit\IeC {\'e}.}{51}
+\contentsline {subsection}{\numberline {5.3.2}D\IeC {\'e}callage temporel : la raison d'\IeC {\^e}tre de la bascule D}{52}
+\contentsline {section}{\numberline {5.4}Quelques {\it patterns} de conception synchrone}{52}
+\contentsline {subsection}{\numberline {5.4.1}Registre \IeC {\`a} d\IeC {\'e}calage}{53}
+\contentsline {subsection}{\numberline {5.4.2}LFSR : linear feedback shift register}{53}
+\contentsline {subsection}{\numberline {5.4.3}Bascule D et multiplexeur : m\IeC {\'e}morisation}{54}
+\contentsline {subsection}{\numberline {5.4.4}Compteurs}{54}
+\contentsline {section}{\numberline {5.5}Initialisation d'une bascule D}{54}
+\contentsline {paragraph}{Exemples}{55}
+\contentsline {paragraph}{Simplification gr\IeC {\^a}ce aux HDL}{56}
+\contentsline {section}{\numberline {5.6}Conclusion}{56}
+\contentsline {chapter}{\numberline {6}Machines d'\IeC {\'e}tats finis}{57}
+\contentsline {section}{\numberline {6.1}Introduction}{57}
+\contentsline {section}{\numberline {6.2}Machines d'\IeC {\'e}tats finis}{57}
+\contentsline {paragraph}{Automate de Moore}{58}
+\contentsline {paragraph}{Automate de Mealy}{58}
+\contentsline {paragraph}{Comparaison}{58}
+\contentsline {paragraph}{Exemple}{59}
+\contentsline {section}{\numberline {6.3}Diagramme \IeC {\'e}tats-transitions}{59}
+\contentsline {paragraph}{Exemple : vending machine}{59}
+\contentsline {section}{\numberline {6.4}Consistance ou {\it causalit\IeC {\'e}} d'une machine d'\IeC {\'e}tats finis}{59}
+\contentsline {section}{\numberline {6.5}Encodage des \IeC {\'e}tats}{60}
+\contentsline {paragraph}{Encodage dense}{60}
+\contentsline {paragraph}{Encodage one-hot}{61}
+\contentsline {paragraph}{Compromis temps-surface}{61}
+\contentsline {section}{\numberline {6.6}M\IeC {\'e}thode g\IeC {\'e}n\IeC {\'e}rale de conception d'un automate}{61}
+\contentsline {paragraph}{Table de v\IeC {\'e}rit\IeC {\'e} symbolique}{61}
+\contentsline {paragraph}{Table de v\IeC {\'e}rit\IeC {\'e} explicite}{61}
+\contentsline {section}{\numberline {6.7}Exemple complet}{62}
+\contentsline {paragraph}{Encodage}{62}
+\contentsline {paragraph}{Table de v\IeC {\'e}rit\IeC {\'e} symbolique}{63}
+\contentsline {paragraph}{Table de v\IeC {\'e}rit\IeC {\'e} avec encodage explicite}{63}
+\contentsline {paragraph}{Tableaux de Karnaugh et Equations logiques}{63}
+\contentsline {paragraph}{Circuit \IeC {\'e}lectronique}{63}
+\contentsline {section}{\numberline {6.8}G\IeC {\'e}rer la complexit\IeC {\'e} }{64}
+\contentsline {paragraph}{Position du probl\IeC {\`e}me}{64}
+\contentsline {paragraph}{Contraintes mutuelles}{64}
+\contentsline {section}{\numberline {6.9}M\IeC {\'e}thode particuli\IeC {\`e}re : cas de l'encodage {\it one-hot}}{64}
+\contentsline {section}{\numberline {6.10}Conclusion}{65}
+\contentsline {chapter}{\numberline {7}VHDL}{67}
+\contentsline {section}{\numberline {7.1}Introduction : les langages de description mat\IeC {\'e}rielle}{67}
+\contentsline {section}{\numberline {7.2}Particularit\IeC {\'e}s de VHDL}{68}
+\contentsline {section}{\numberline {7.3}La structure globale d'un programme VHDL}{69}
+\contentsline {subsection}{\numberline {7.3.1}Notion d'entit\IeC {\'e}}{69}
+\contentsline {subsection}{\numberline {7.3.2}Notion d'architecture}{69}
+\contentsline {section}{\numberline {7.4}Les \IeC {\'e}l\IeC {\'e}ments cl\IeC {\'e}s du langage}{69}
+\contentsline {subsection}{\numberline {7.4.1}Assignations concurrentes}{69}
+\contentsline {subsection}{\numberline {7.4.2}Processus}{69}
+\contentsline {subsection}{\numberline {7.4.3}Instanciation de composants}{69}
+\contentsline {subsection}{\numberline {7.4.4}D\IeC {\'e}crire des machines d'\IeC {\'e}tats finis}{69}
+\contentsline {section}{\numberline {7.5}Simulation en VHDL}{69}
+\contentsline {subsection}{\numberline {7.5.1}Flot de conception g\IeC {\'e}n\IeC {\'e}ral}{69}
+\contentsline {subsection}{\numberline {7.5.2}Bancs de tests ou {\it Testbench}}{69}
+\contentsline {subsection}{\numberline {7.5.3}Algorithme de simulation}{69}
+\contentsline {section}{\numberline {7.6}Synth\IeC {\`e}se mat\IeC {\'e}rielle}{69}
+\contentsline {subsection}{\numberline {7.6.1}Exemple du flot Xilinx}{69}
+\contentsline {section}{\numberline {7.7}Conclusion}{69}
+\contentsline {chapter}{\numberline {8}Th\IeC {\`e}mes avanc\IeC {\'e}s}{71}
+\contentsline {section}{\numberline {8.1}Synth\IeC {\`e}se comportementale ou HLS}{71}
+\contentsline {section}{\numberline {8.2}Mod\IeC {\`e}les de calculs}{71}
+\contentsline {section}{\numberline {8.3}Langages synchrones}{71}

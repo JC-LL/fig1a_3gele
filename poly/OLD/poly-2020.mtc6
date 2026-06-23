@@ -1,0 +1,31 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.1}Introduction}{\reset@font\mtcSfont 63}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.2}Machines d'états finis}{\reset@font\mtcSfont 63}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Automate de Moore}{\reset@font\mtcPfont 64}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Automate de Mealy}{\reset@font\mtcPfont 64}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Comparaison}{\reset@font\mtcPfont 64}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Exemple}{\reset@font\mtcPfont 65}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.3}Diagramme états-transitions}{\reset@font\mtcSfont 65}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Exemple : vending machine}{\reset@font\mtcPfont 65}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.4}Consistance ou {\it causalité} d'une machine d'états finis}{\reset@font\mtcSfont 66}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.5}Encodage des états}{\reset@font\mtcSfont 67}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Encodage dense}{\reset@font\mtcPfont 67}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Encodage one-hot}{\reset@font\mtcPfont 67}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Compromis temps-surface}{\reset@font\mtcPfont 67}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.6}Méthode générale de conception d'un automate}{\reset@font\mtcSfont 68}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Table de vérité symbolique}{\reset@font\mtcPfont 68}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Table de vérité explicite}{\reset@font\mtcPfont 68}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.7}Exemple complet}{\reset@font\mtcSfont 68}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Encodage}{\reset@font\mtcPfont 68}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Table de vérité symbolique}{\reset@font\mtcPfont 69}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Table de vérité avec encodage explicite}{\reset@font\mtcPfont 69}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Tableaux de Karnaugh et Equations logiques}{\reset@font\mtcPfont 69}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Circuit électronique}{\reset@font\mtcPfont 70}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.8}Gérer la complexité }{\reset@font\mtcSfont 70}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Position du problème}{\reset@font\mtcPfont 70}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Contraintes mutuelles}{\reset@font\mtcPfont 71}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.9}Méthode particulière : cas de l'encodage {\it one-hot}}{\reset@font\mtcSfont 71}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Intuition}{\reset@font\mtcPfont 71}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Obtention directe des équation}{\reset@font\mtcPfont 71}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.10}A propos du caractère fondamental des automates}{\reset@font\mtcSfont 72}{}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode }{\reset@font\mtcPfont 73}{}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.11}Conclusion}{\reset@font\mtcSfont 73}{}}

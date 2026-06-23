@@ -1,0 +1,10 @@
+echo "=> cleaning..."
+rm -rf *.o work-obj93.cf ab_plus_cd_tb waves.ghw
+echo "=> compiling VHDL files"
+ghdl -a ab_plus_cd.vhd
+ghdl -a ab_plus_cd_tb.vhd
+ghdl -e ab_plus_cd_tb
+echo "=> running"
+ghdl -r ab_plus_cd_tb --wave=waves.ghw
+echo "=> viewing"
+gtkwave waves.ghw chrono.sav
