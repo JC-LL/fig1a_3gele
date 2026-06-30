@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.10.17)  22 JUN 2026 15:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.10.17)  23 JUN 2026 10:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,7 +1072,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 125.
-<./images/moore_mealy.png, id=36, 1541.76pt x 690.58pt>
+<./images/moore_mealy.png, id=48, 1541.76pt x 690.58pt>
 File: ./images/moore_mealy.png Graphic file (type png)
 <use ./images/moore_mealy.png>
 Package pdftex.def Info: ./images/moore_mealy.png  used on input line 160.
@@ -1084,7 +1084,7 @@ Package pdftex.def Info: ./images/moore_mealy.png  used on input line 160.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/sha
 re/texmf/fonts/enc/dvips/lm/lm-rm.enc} <./images/moore_mealy.png>]
-<./images/ex-fsm-1.png, id=59, 478.588pt x 438.438pt>
+<./images/ex-fsm-1.png, id=71, 478.588pt x 438.438pt>
 File: ./images/ex-fsm-1.png Graphic file (type png)
 <use ./images/ex-fsm-1.png>
 Package pdftex.def Info: ./images/ex-fsm-1.png  used on input line 189.
@@ -1121,7 +1121,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 [3]
-<./images/exo2.png, id=85, 1256.695pt x 269.005pt>
+<./images/exo2.png, id=97, 1256.695pt x 269.005pt>
 File: ./images/exo2.png Graphic file (type png)
 <use ./images/exo2.png>
 Package pdftex.def Info: ./images/exo2.png  used on input line 484.
@@ -1136,7 +1136,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 601--602
 
  []
 
-<./images/round_robin.png, id=86, 484.81125pt x 406.51875pt>
+<./images/round_robin.png, id=98, 484.81125pt x 406.51875pt>
 File: ./images/round_robin.png Graphic file (type png)
 <use ./images/round_robin.png>
 Package pdftex.def Info: ./images/round_robin.png  used on input line 605.
@@ -1166,7 +1166,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 712--713
 
  []
 
-<./images/de.png, id=98, 232.61906pt x 277.035pt>
+<./images/de.png, id=110, 232.61906pt x 277.035pt>
 File: ./images/de.png Graphic file (type png)
 <use ./images/de.png>
 Package pdftex.def Info: ./images/de.png  used on input line 716.
@@ -1196,7 +1196,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 739--740
 
  []
 
-<./images/porte.png, id=110, 667.49374pt x 434.62375pt>
+<./images/porte.png, id=121, 667.49374pt x 434.62375pt>
 File: ./images/porte.png Graphic file (type png)
 <use ./images/porte.png>
 Package pdftex.def Info: ./images/porte.png  used on input line 801.
@@ -1210,24 +1210,14 @@ Package pdftex.def Info: ./images/porte.png  used on input line 801.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `td_3.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `td_3.out':
-(rerunfilecheck)             Before: 346F8CBA99EE50DA0F2F9FAA48338F50;1748
-(rerunfilecheck)             After:  44D553BD13B51F0FA4D6B80A02D29925;2826.
+Package rerunfilecheck Info: File `td_3.out' has not changed.
+(rerunfilecheck)             Checksum: 44D553BD13B51F0FA4D6B80A02D29925;2826.
  ) 
 Here is how much of TeX's memory you used:
- 32668 strings out of 473197
- 624228 string characters out of 5718604
- 1088503 words of memory out of 5000000
- 55196 multiletter control sequences out of 15000+600000
+ 32671 strings out of 473197
+ 624261 string characters out of 5718604
+ 1089572 words of memory out of 5000000
+ 55199 multiletter control sequences out of 15000+600000
  648195 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,105p,1001b,690s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1243,10 +1233,10 @@ xmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9
 usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/
 public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on td_3.pdf (7 pages, 725425 bytes).
+Output written on td_3.pdf (7 pages, 725644 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
+ 250 PDF objects out of 1000 (max. 8388607)
+ 189 compressed objects within 2 object streams
  51 named destinations out of 1000 (max. 500000)
- 52323 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 52347 words of extra memory for PDF output out of 61914 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.10.17)  22 JUN 2026 15:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.10.17)  23 JUN 2026 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -954,10 +954,10 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 25410 strings out of 473197
- 504825 string characters out of 5718604
- 1085188 words of memory out of 5000000
- 48113 multiletter control sequences out of 15000+600000
+ 25405 strings out of 473197
+ 504783 string characters out of 5718604
+ 1085019 words of memory out of 5000000
+ 48108 multiletter control sequences out of 15000+600000
  640113 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,12n,101p,1001b,1058s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -971,7 +971,7 @@ lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf
 pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb>
-Output written on td_2.pdf (6 pages, 364913 bytes).
+Output written on td_2.pdf (6 pages, 364920 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
