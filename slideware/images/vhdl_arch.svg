@@ -1,0 +1,369 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" font-family="Consolas, monospace" font-size="12">
+  <!-- Fond -->
+  <rect width="1000" height="720" fill="#f8f9fa" rx="10"/>
+
+  <!-- Titre -->
+  <text x="500" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">Automate d'états VHDL et son inférence RTL</text>
+
+  <!-- ===== PARTIE GAUCHE : Code VHDL ===== -->
+  <rect x="15" y="55" width="465" height="650" fill="#1e1e2e" rx="8"/>
+  <rect x="15" y="55" width="4" height="650" fill="#cba6f7" rx="2"/>
+
+  <!-- === ENTITÉ === -->
+  <text x="35" y="82" fill="#6c7086" font-size="11">-- ===== ENTITÉ =====</text>
+  <text x="35" y="102" fill="#cba6f7">library</text>
+  <text x="120" y="102" fill="#cdd6f4">IEEE;</text>
+  <text x="35" y="122" fill="#cba6f7">use</text>
+  <text x="70" y="122" fill="#cdd6f4">IEEE.STD_LOGIC_1164.</text>
+  <text x="285" y="122" fill="#89b4fa">ALL</text>
+  <text x="310" y="122" fill="#cdd6f4">;</text>
+
+  <text x="35" y="148" fill="#cba6f7">entity</text>
+  <text x="95" y="148" fill="#f9e2af">seq_detector</text>
+  <text x="215" y="148" fill="#cba6f7">is</text>
+  <text x="55" y="172" fill="#cba6f7">port</text>
+  <text x="100" y="172" fill="#cdd6f4">(</text>
+
+  <text x="75" y="195" fill="#a6e3a1">clk</text>
+  <text x="110" y="195" fill="#cdd6f4">:</text>
+  <text x="125" y="195" fill="#cba6f7">in</text>
+  <text x="150" y="195" fill="#89b4fa">std_logic</text>
+  <text x="250" y="195" fill="#cdd6f4">;</text>
+
+  <text x="75" y="217" fill="#a6e3a1">rst</text>
+  <text x="110" y="217" fill="#cdd6f4">:</text>
+  <text x="125" y="217" fill="#cba6f7">in</text>
+  <text x="150" y="217" fill="#89b4fa">std_logic</text>
+  <text x="250" y="217" fill="#cdd6f4">;</text>
+
+  <text x="75" y="239" fill="#a6e3a1">din</text>
+  <text x="110" y="239" fill="#cdd6f4">:</text>
+  <text x="125" y="239" fill="#cba6f7">in</text>
+  <text x="150" y="239" fill="#89b4fa">std_logic</text>
+  <text x="250" y="239" fill="#cdd6f4">;</text>
+
+  <text x="75" y="261" fill="#a6e3a1">dout</text>
+  <text x="120" y="261" fill="#cdd6f4">:</text>
+  <text x="135" y="261" fill="#cba6f7">out</text>
+  <text x="170" y="261" fill="#89b4fa">std_logic</text>
+
+  <text x="55" y="285" fill="#cdd6f4">);</text>
+  <text x="35" y="308" fill="#cba6f7">end</text>
+  <text x="75" y="308" fill="#f9e2af">seq_detector</text>
+  <text x="185" y="308" fill="#cdd6f4">;</text>
+
+  <line x1="35" y1="325" x2="465" y2="325" stroke="#45475a" stroke-width="1"/>
+
+  <!-- === ARCHITECTURE === -->
+  <text x="35" y="348" fill="#6c7086" font-size="11">-- ===== ARCHITECTURE =====</text>
+  <text x="35" y="368" fill="#cba6f7">architecture</text>
+  <text x="150" y="368" fill="#f9e2af">FSM</text>
+  <text x="185" y="368" fill="#cba6f7">of</text>
+  <text x="215" y="368" fill="#f9e2af">seq_detector</text>
+  <text x="325" y="368" fill="#cba6f7">is</text>
+
+  <!-- Type d'état -->
+  <text x="55" y="395" fill="#cba6f7">type</text>
+  <text x="90" y="395" fill="#89b4fa">state_t</text>
+  <text x="160" y="395" fill="#cba6f7">is</text>
+  <text x="185" y="395" fill="#cdd6f4">(</text>
+  <text x="195" y="395" fill="#f9e2af">IDLE</text>
+  <text x="240" y="395" fill="#cdd6f4">,</text>
+  <text x="255" y="395" fill="#f9e2af">S1</text>
+  <text x="280" y="395" fill="#cdd6f4">,</text>
+  <text x="295" y="395" fill="#f9e2af">S10</text>
+  <text x="330" y="395" fill="#cdd6f4">,</text>
+  <text x="345" y="395" fill="#f9e2af">S101</text>
+  <text x="400" y="395" fill="#cdd6f4">);</text>
+
+  <text x="55" y="418" fill="#cba6f7">signal</text>
+  <text x="110" y="418" fill="#a6e3a1">etat_courant</text>
+  <text x="215" y="418" fill="#cdd6f4">,</text>
+  <text x="230" y="418" fill="#a6e3a1">etat_suivant</text>
+  <text x="330" y="418" fill="#cdd6f4">:</text>
+  <text x="345" y="418" fill="#89b4fa">state_t</text>
+  <text x="405" y="418" fill="#cdd6f4">;</text>
+
+  <text x="35" y="445" fill="#cba6f7">begin</text>
+
+  <!-- Process 1 : registre d'état -->
+  <text x="55" y="470" fill="#6c7086" font-size="11">-- Registre d'état (synchrone)</text>
+  <text x="55" y="490" fill="#cba6f7">process</text>
+  <text x="115" y="490" fill="#cdd6f4">(</text>
+  <text x="125" y="490" fill="#f9e2af">clk</text>
+  <text x="150" y="490" fill="#cdd6f4">,</text>
+  <text x="165" y="490" fill="#f9e2af">rst</text>
+  <text x="195" y="490" fill="#cdd6f4">)</text>
+
+  <text x="75" y="512" fill="#cba6f7">begin</text>
+
+  <text x="95" y="534" fill="#cba6f7">if</text>
+  <text x="120" y="534" fill="#f9e2af">rst</text>
+  <text x="150" y="534" fill="#cdd6f4">=</text>
+  <text x="165" y="534" fill="#f38ba8">'1'</text>
+  <text x="190" y="534" fill="#cba6f7">then</text>
+
+  <text x="115" y="556" fill="#a6e3a1">etat_courant</text>
+  <text x="220" y="556" fill="#cdd6f4">&lt;=</text>
+  <text x="245" y="556" fill="#f9e2af">IDLE</text>
+  <text x="290" y="556" fill="#cdd6f4">;</text>
+
+  <text x="95" y="578" fill="#cba6f7">elsif</text>
+  <text x="140" y="578" fill="#89b4fa">rising_edge</text>
+  <text x="235" y="578" fill="#cdd6f4">(</text>
+  <text x="245" y="578" fill="#f9e2af">clk</text>
+  <text x="270" y="578" fill="#cdd6f4">)</text>
+  <text x="285" y="578" fill="#cba6f7">then</text>
+
+  <text x="115" y="600" fill="#a6e3a1">etat_courant</text>
+  <text x="220" y="600" fill="#cdd6f4">&lt;=</text>
+  <text x="245" y="600" fill="#a6e3a1">etat_suivant</text>
+  <text x="345" y="600" fill="#cdd6f4">;</text>
+
+  <text x="95" y="622" fill="#cba6f7">end</text>
+  <text x="130" y="622" fill="#cba6f7">if</text>
+  <text x="155" y="622" fill="#cdd6f4">;</text>
+  <text x="75" y="644" fill="#cba6f7">end</text>
+  <text x="110" y="644" fill="#cba6f7">process</text>
+  <text x="185" y="644" fill="#cdd6f4">;</text>
+
+  <!-- Process 2 : logique combinatoire -->
+  <text x="55" y="668" fill="#6c7086" font-size="11">-- Logique combinatoire (transitions + sorties)</text>
+  <text x="55" y="688" fill="#cba6f7">process</text>
+  <text x="115" y="688" fill="#cdd6f4">(</text>
+  <text x="125" y="688" fill="#f9e2af">etat_courant</text>
+  <text x="230" y="688" fill="#cdd6f4">,</text>
+  <text x="245" y="688" fill="#f9e2af">din</text>
+  <text x="275" y="688" fill="#cdd6f4">)</text>
+
+  <text x="75" y="710" fill="#cba6f7">begin</text>
+
+  <text x="95" y="732" fill="#a6e3a1">etat_suivant</text>
+  <text x="200" y="732" fill="#cdd6f4">&lt;=</text>
+  <text x="225" y="732" fill="#a6e3a1">etat_courant</text>
+  <text x="330" y="732" fill="#cdd6f4">;</text>
+  <text x="95" y="754" fill="#a6e3a1">dout</text>
+  <text x="140" y="754" fill="#cdd6f4">&lt;=</text>
+  <text x="165" y="754" fill="#f38ba8">'0'</text>
+  <text x="190" y="754" fill="#cdd6f4">;</text>
+
+  <text x="95" y="778" fill="#cba6f7">case</text>
+  <text x="140" y="778" fill="#a6e3a1">etat_courant</text>
+  <text x="245" y="778" fill="#cba6f7">is</text>
+
+  <text x="115" y="800" fill="#cba6f7">when</text>
+  <text x="160" y="800" fill="#f9e2af">IDLE</text>
+  <text x="205" y="800" fill="#cdd6f4">=&gt;</text>
+
+  <text x="135" y="822" fill="#cba6f7">if</text>
+  <text x="160" y="822" fill="#f9e2af">din</text>
+  <text x="195" y="822" fill="#cdd6f4">=</text>
+  <text x="210" y="822" fill="#f38ba8">'1'</text>
+  <text x="235" y="822" fill="#cba6f7">then</text>
+  <text x="280" y="822" fill="#a6e3a1">etat_suivant</text>
+  <text x="385" y="822" fill="#cdd6f4">&lt;=</text>
+  <text x="410" y="822" fill="#f9e2af">S1</text>
+  <text x="435" y="822" fill="#cdd6f4">;</text>
+
+  <text x="135" y="844" fill="#cba6f7">end</text>
+  <text x="170" y="844" fill="#cba6f7">if</text>
+  <text x="195" y="844" fill="#cdd6f4">;</text>
+
+  <text x="115" y="866" fill="#cba6f7">when</text>
+  <text x="160" y="866" fill="#f9e2af">S1</text>
+  <text x="190" y="866" fill="#cdd6f4">=&gt;</text>
+
+  <text x="135" y="888" fill="#cba6f7">if</text>
+  <text x="160" y="888" fill="#f9e2af">din</text>
+  <text x="195" y="888" fill="#cdd6f4">=</text>
+  <text x="210" y="888" fill="#f38ba8">'0'</text>
+  <text x="235" y="888" fill="#cba6f7">then</text>
+  <text x="280" y="888" fill="#a6e3a1">etat_suivant</text>
+  <text x="385" y="888" fill="#cdd6f4">&lt;=</text>
+  <text x="410" y="888" fill="#f9e2af">S10</text>
+  <text x="445" y="888" fill="#cdd6f4">;</text>
+
+  <text x="135" y="910" fill="#cba6f7">end</text>
+  <text x="170" y="910" fill="#cba6f7">if</text>
+  <text x="195" y="910" fill="#cdd6f4">;</text>
+
+  <text x="115" y="932" fill="#cba6f7">when</text>
+  <text x="160" y="932" fill="#f9e2af">S10</text>
+  <text x="200" y="932" fill="#cdd6f4">=&gt;</text>
+
+  <text x="135" y="954" fill="#cba6f7">if</text>
+  <text x="160" y="954" fill="#f9e2af">din</text>
+  <text x="195" y="954" fill="#cdd6f4">=</text>
+  <text x="210" y="954" fill="#f38ba8">'1'</text>
+  <text x="235" y="954" fill="#cba6f7">then</text>
+  <text x="280" y="954" fill="#a6e3a1">etat_suivant</text>
+  <text x="385" y="954" fill="#cdd6f4">&lt;=</text>
+  <text x="410" y="954" fill="#f9e2af">S101</text>
+  <text x="460" y="954" fill="#cdd6f4">;</text>
+
+  <text x="135" y="976" fill="#cba6f7">end</text>
+  <text x="170" y="976" fill="#cba6f7">if</text>
+  <text x="195" y="976" fill="#cdd6f4">;</text>
+
+  <text x="115" y="998" fill="#cba6f7">when</text>
+  <text x="160" y="998" fill="#f9e2af">S101</text>
+  <text x="210" y="998" fill="#cdd6f4">=&gt;</text>
+  <text x="135" y="1020" fill="#a6e3a1">dout</text>
+  <text x="180" y="1020" fill="#cdd6f4">&lt;=</text>
+  <text x="205" y="1020" fill="#f38ba8">'1'</text>
+  <text x="230" y="1020" fill="#cdd6f4">;</text>
+  <text x="135" y="1042" fill="#a6e3a1">etat_suivant</text>
+  <text x="240" y="1042" fill="#cdd6f4">&lt;=</text>
+  <text x="265" y="1042" fill="#f9e2af">IDLE</text>
+  <text x="310" y="1042" fill="#cdd6f4">;</text>
+
+  <text x="95" y="1066" fill="#cba6f7">end</text>
+  <text x="130" y="1066" fill="#cba6f7">case</text>
+  <text x="175" y="1066" fill="#cdd6f4">;</text>
+  <text x="75" y="1088" fill="#cba6f7">end</text>
+  <text x="110" y="1088" fill="#cba6f7">process</text>
+  <text x="185" y="1088" fill="#cdd6f4">;</text>
+
+  <text x="35" y="1112" fill="#cba6f7">end</text>
+  <text x="70" y="1112" fill="#f9e2af">FSM</text>
+  <text x="100" y="1112" fill="#cdd6f4">;</text>
+
+  <!-- ===== PARTIE DROITE : Inférence RTL ===== -->
+  <rect x="500" y="55" width="485" height="650" fill="#ffffff" rx="8" stroke="#dee2e6" stroke-width="1.5"/>
+
+  <text x="742" y="85" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Inférence RTL de l'automate</text>
+  <text x="742" y="107" text-anchor="middle" font-size="12" fill="#6c757d">Détecteur de séquence "101" (Moore)</text>
+
+  <!-- Entrées globales -->
+  <text x="515" y="160" font-size="13" font-weight="bold" fill="#e74c3c">clk</text>
+  <line x1="515" y1="168" x2="560" y2="168" stroke="#e74c3c" stroke-width="2.5"/>
+
+  <text x="515" y="210" font-size="13" font-weight="bold" fill="#e74c3c">rst</text>
+  <line x1="515" y1="218" x2="560" y2="218" stroke="#e74c3c" stroke-width="2.5"/>
+
+  <text x="515" y="260" font-size="13" font-weight="bold" fill="#e74c3c">din</text>
+  <line x1="515" y1="268" x2="560" y2="268" stroke="#e74c3c" stroke-width="2.5"/>
+
+  <!-- Bloc registre d'état -->
+  <rect x="560" y="135" width="120" height="160" fill="#e2d9f3" stroke="#7c3aed" stroke-width="2.5" rx="6"/>
+  <text x="620" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#5b21b6">Registre</text>
+  <text x="620" y="185" text-anchor="middle" font-size="13" font-weight="bold" fill="#5b21b6">d'état</text>
+  <text x="620" y="215" text-anchor="middle" font-size="11" fill="#5b21b6">etat_courant</text>
+  <text x="620" y="240" text-anchor="middle" font-size="11" fill="#5b21b6">(state_t)</text>
+  <text x="620" y="268" text-anchor="middle" font-size="11" fill="#5b21b6">D → Q</text>
+
+  <!-- Entrée clk dans le registre -->
+  <line x1="560" y1="168" x2="560" y2="168" stroke="#e74c3c" stroke-width="2.5"/>
+  <line x1="560" y1="168" x2="590" y2="168" stroke="#e74c3c" stroke-width="2.5"/>
+  <line x1="590" y1="168" x2="590" y2="195" stroke="#e74c3c" stroke-width="2.5"/>
+
+  <!-- Entrée rst dans le registre -->
+  <line x1="560" y1="218" x2="590" y2="218" stroke="#e74c3c" stroke-width="2.5"/>
+
+  <!-- Flèche etat_suivant -> registre (D) -->
+  <line x1="680" y1="190" x2="740" y2="190" stroke="#7c3aed" stroke-width="2.5"/>
+  <polygon points="735,184 745,190 735,196" fill="#7c3aed"/>
+  <line x1="740" y1="190" x2="740" y2="215" stroke="#7c3aed" stroke-width="2.5"/>
+  <line x1="740" y1="215" x2="680" y2="215" stroke="#7c3aed" stroke-width="2.5"/>
+
+  <!-- Sortie etat_courant -->
+  <line x1="680" y1="250" x2="740" y2="250" stroke="#7c3aed" stroke-width="2.5"/>
+  <polygon points="735,244 745,250 735,256" fill="#7c3aed"/>
+
+  <!-- Bloc logique combinatoire -->
+  <rect x="740" y="160" width="150" height="180" fill="#d1ecf1" stroke="#0c5460" stroke-width="2.5" rx="6"/>
+  <text x="815" y="185" text-anchor="middle" font-size="12" font-weight="bold" fill="#0c5460">Logique</text>
+  <text x="815" y="203" text-anchor="middle" font-size="12" font-weight="bold" fill="#0c5460">combinatoire</text>
+  <text x="815" y="230" text-anchor="middle" font-size="10" fill="#0c5460">Case etat_courant</text>
+  <text x="815" y="248" text-anchor="middle" font-size="10" fill="#0c5460">+ calcul sorties</text>
+
+  <!-- Entrée din dans logique combinatoire -->
+  <line x1="560" y1="268" x2="700" y2="268" stroke="#e74c3c" stroke-width="2.5"/>
+  <line x1="700" y1="268" x2="700" y2="300" stroke="#e74c3c" stroke-width="2.5"/>
+  <line x1="700" y1="300" x2="740" y2="300" stroke="#e74c3c" stroke-width="2.5"/>
+
+  <!-- Sortie dout -->
+  <line x1="890" y1="220" x2="955" y2="220" stroke="#27ae60" stroke-width="2.5"/>
+  <text x="960" y="224" font-size="13" font-weight="bold" fill="#27ae60">dout</text>
+
+  <!-- Boucle de retour etat_courant vers logique combinatoire -->
+  <line x1="745" y1="250" x2="730" y2="250" stroke="#7c3aed" stroke-width="2.5"/>
+  <line x1="730" y1="250" x2="730" y2="310" stroke="#7c3aed" stroke-width="2.5"/>
+  <line x1="730" y1="310" x2="740" y2="310" stroke="#7c3aed" stroke-width="2.5"/>
+
+  <!-- Légende -->
+  <rect x="520" y="460" width="14" height="14" fill="#e2d9f3" stroke="#7c3aed" rx="2"/>
+  <text x="540" y="472" font-size="12" fill="#555">Registre d'état (séquentiel)</text>
+
+  <rect x="520" y="485" width="14" height="14" fill="#d1ecf1" stroke="#0c5460" rx="2"/>
+  <text x="540" y="497" font-size="12" fill="#555">Logique combinatoire</text>
+
+  <rect x="520" y="510" width="14" height="14" fill="#fff3cd" stroke="#f0ad4e" rx="2"/>
+  <text x="540" y="522" font-size="12" fill="#555">Sorties de l'automate</text>
+
+  <!-- Séparation des deux processus -->
+  <line x1="520" y1="550" x2="965" y2="550" stroke="#dee2e6" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <text x="742" y="580" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50">Diagramme d'états</text>
+
+  <!-- États -->
+  <!-- IDLE -->
+  <ellipse cx="570" cy="635" rx="35" ry="22" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="570" y="640" text-anchor="middle" font-size="11" font-weight="bold" fill="#155724">IDLE</text>
+  <text x="570" y="672" text-anchor="middle" font-size="10" fill="#888">dout=0</text>
+
+  <!-- S1 -->
+  <ellipse cx="690" cy="635" rx="30" ry="22" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="690" y="640" text-anchor="middle" font-size="11" font-weight="bold" fill="#155724">S1</text>
+  <text x="690" y="672" text-anchor="middle" font-size="10" fill="#888">dout=0</text>
+
+  <!-- S10 -->
+  <ellipse cx="810" cy="635" rx="30" ry="22" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="810" y="640" text-anchor="middle" font-size="11" font-weight="bold" fill="#155724">S10</text>
+  <text x="810" y="672" text-anchor="middle" font-size="10" fill="#888">dout=0</text>
+
+  <!-- S101 -->
+  <ellipse cx="930" cy="635" rx="35" ry="22" fill="#f8d7da" stroke="#dc3545" stroke-width="2.5"/>
+  <text x="930" y="640" text-anchor="middle" font-size="11" font-weight="bold" fill="#721c24">S101</text>
+  <text x="930" y="672" text-anchor="middle" font-size="10" fill="#888">dout=1</text>
+
+  <!-- Flèches de transition -->
+  <!-- IDLE -> S1 (din=1) -->
+  <line x1="605" y1="635" x2="655" y2="635" stroke="#555" stroke-width="1.5"/>
+  <polygon points="650,630 660,635 650,640" fill="#555"/>
+  <text x="630" y="626" text-anchor="middle" font-size="9" fill="#555">1</text>
+
+  <!-- S1 -> S10 (din=0) -->
+  <line x1="720" y1="635" x2="775" y2="635" stroke="#555" stroke-width="1.5"/>
+  <polygon points="770,630 780,635 770,640" fill="#555"/>
+  <text x="748" y="626" text-anchor="middle" font-size="9" fill="#555">0</text>
+
+  <!-- S10 -> S101 (din=1) -->
+  <line x1="840" y1="635" x2="890" y2="635" stroke="#555" stroke-width="1.5"/>
+  <polygon points="885,630 895,635 885,640" fill="#555"/>
+  <text x="865" y="626" text-anchor="middle" font-size="9" fill="#555">1</text>
+
+  <!-- S101 -> IDLE (retour) -->
+  <path d="M 930 657 Q 930 700 570 700 Q 555 700 555 660" fill="none" stroke="#555" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="550,662 555,652 560,662" fill="#555"/>
+
+  <!-- Boucles sur soi-même -->
+  <!-- IDLE -> IDLE -->
+  <path d="M 555 613 Q 570 590 585 613" fill="none" stroke="#555" stroke-width="1.5"/>
+  <polygon points="583,608 588,616 578,618" fill="#555"/>
+  <text x="570" y="595" text-anchor="middle" font-size="9" fill="#555">0</text>
+
+  <!-- S1 -> S1 -->
+  <path d="M 680 613 Q 690 595 700 613" fill="none" stroke="#555" stroke-width="1.5"/>
+  <polygon points="698,608 703,616 693,618" fill="#555"/>
+  <text x="690" y="600" text-anchor="middle" font-size="9" fill="#555">1</text>
+
+  <!-- S10 -> S10 -->
+  <path d="M 800 613 Q 810 595 820 613" fill="none" stroke="#555" stroke-width="1.5"/>
+  <polygon points="818,608 823,616 813,618" fill="#555"/>
+  <text x="810" y="600" text-anchor="middle" font-size="9" fill="#555">0</text>
+
+  <!-- Flèche décorative code → schéma -->
+  <line x1="482" y1="370" x2="498" y2="370" stroke="#6c757d" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="494,363 506,370 494,377" fill="#6c757d"/>
+</svg>

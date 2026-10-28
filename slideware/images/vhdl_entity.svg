@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" font-family="Consolas, monospace" font-size="13">
+  <!-- Fond -->
+  <rect width="900" height="500" fill="#f8f9fa" rx="10"/>
+
+  <!-- Titre -->
+  <text x="450" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">Entité VHDL et son enveloppe extérieure</text>
+
+  <!-- ===== PARTIE GAUCHE : Code VHDL ===== -->
+  <rect x="20" y="60" width="420" height="420" fill="#1e1e2e" rx="8"/>
+  <text x="40" y="90" fill="#6c7086" font-size="12">-- Fichier : additionneur.vhd</text>
+
+  <text x="40" y="115" fill="#cba6f7">library</text>
+  <text x="125" y="115" fill="#cdd6f4">IEEE;</text>
+
+  <text x="40" y="140" fill="#cba6f7">use</text>
+  <text x="75" y="140" fill="#cdd6f4">IEEE.STD_LOGIC_1164.</text>
+  <text x="290" y="140" fill="#89b4fa">ALL</text>
+  <text x="315" y="140" fill="#cdd6f4">;</text>
+
+  <text x="40" y="170" fill="#cba6f7">use</text>
+  <text x="75" y="170" fill="#cdd6f4">IEEE.NUMERIC_STD.</text>
+  <text x="280" y="170" fill="#89b4fa">ALL</text>
+  <text x="305" y="170" fill="#cdd6f4">;</text>
+
+  <line x1="40" y1="190" x2="420" y2="190" stroke="#313244" stroke-width="1"/>
+
+  <text x="40" y="215" fill="#cba6f7">entity</text>
+  <text x="100" y="215" fill="#f9e2af">additionneur</text>
+  <text x="210" y="215" fill="#cba6f7">is</text>
+
+  <text x="60" y="245" fill="#cba6f7">port</text>
+  <text x="105" y="245" fill="#cdd6f4">(</text>
+
+  <text x="80" y="270" fill="#a6e3a1">A</text>
+  <text x="100" y="270" fill="#cdd6f4">:</text>
+  <text x="115" y="270" fill="#cba6f7">in</text>
+  <text x="140" y="270" fill="#89b4fa">std_logic_vector</text>
+  <text x="275" y="270" fill="#cdd6f4">(</text>
+  <text x="285" y="270" fill="#fab387">3</text>
+  <text x="297" y="270" fill="#cba6f7">downto</text>
+  <text x="360" y="270" fill="#fab387">0</text>
+  <text x="372" y="270" fill="#cdd6f4">);</text>
+
+  <text x="80" y="295" fill="#a6e3a1">B</text>
+  <text x="100" y="295" fill="#cdd6f4">:</text>
+  <text x="115" y="295" fill="#cba6f7">in</text>
+  <text x="140" y="295" fill="#89b4fa">std_logic_vector</text>
+  <text x="275" y="295" fill="#cdd6f4">(</text>
+  <text x="285" y="295" fill="#fab387">3</text>
+  <text x="297" y="295" fill="#cba6f7">downto</text>
+  <text x="360" y="295" fill="#fab387">0</text>
+  <text x="372" y="295" fill="#cdd6f4">);</text>
+
+  <text x="80" y="320" fill="#a6e3a1">Cin</text>
+  <text x="115" y="320" fill="#cdd6f4">:</text>
+  <text x="130" y="320" fill="#cba6f7">in</text>
+  <text x="155" y="320" fill="#89b4fa">std_logic</text>
+  <text x="255" y="320" fill="#cdd6f4">;</text>
+
+  <text x="80" y="345" fill="#a6e3a1">S</text>
+  <text x="100" y="345" fill="#cdd6f4">:</text>
+  <text x="115" y="345" fill="#cba6f7">out</text>
+  <text x="150" y="345" fill="#89b4fa">std_logic_vector</text>
+  <text x="285" y="345" fill="#cdd6f4">(</text>
+  <text x="295" y="345" fill="#fab387">3</text>
+  <text x="307" y="345" fill="#cba6f7">downto</text>
+  <text x="370" y="345" fill="#fab387">0</text>
+  <text x="382" y="345" fill="#cdd6f4">);</text>
+
+  <text x="80" y="370" fill="#a6e3a1">Cout</text>
+  <text x="125" y="370" fill="#cdd6f4">:</text>
+  <text x="140" y="370" fill="#cba6f7">out</text>
+  <text x="175" y="370" fill="#89b4fa">std_logic</text>
+
+  <text x="60" y="395" fill="#cdd6f4">);</text>
+
+  <text x="40" y="420" fill="#cba6f7">end</text>
+  <text x="80" y="420" fill="#f9e2af">additionneur</text>
+  <text x="190" y="420" fill="#cdd6f4">;</text>
+
+  <!-- Barre latérale code -->
+  <rect x="20" y="60" width="4" height="420" fill="#cba6f7" rx="2"/>
+
+  <!-- ===== PARTIE DROITE : Enveloppe extérieure ===== -->
+  <rect x="470" y="60" width="410" height="420" fill="#ffffff" rx="8" stroke="#dee2e6" stroke-width="1.5"/>
+
+  <!-- Titre enveloppe -->
+  <text x="675" y="95" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Enveloppe extérieure</text>
+  <text x="675" y="118" text-anchor="middle" font-size="14" fill="#6c757d">(Boîtier / Block Symbol)</text>
+
+  <!-- Corps du bloc -->
+  <rect x="580" y="160" width="190" height="230" fill="#e8f4f8" stroke="#2c3e50" stroke-width="2.5" rx="4"/>
+
+  <!-- Nom de l'entité dans le bloc -->
+  <text x="675" y="200" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a5276">additionneur</text>
+  <line x1="600" y1="215" x2="750" y2="215" stroke="#2c3e50" stroke-width="1.5"/>
+
+  <!-- Ports d'entrée (gauche) -->
+  <!-- A -->
+  <line x1="530" y1="250" x2="580" y2="250" stroke="#e74c3c" stroke-width="3"/>
+  <text x="520" y="255" text-anchor="end" font-size="14" font-weight="bold" fill="#e74c3c">A</text>
+  <text x="595" y="255" font-size="11" fill="#555">[3:0]</text>
+
+  <!-- B -->
+  <line x1="530" y1="290" x2="580" y2="290" stroke="#e74c3c" stroke-width="3"/>
+  <text x="520" y="295" text-anchor="end" font-size="14" font-weight="bold" fill="#e74c3c">B</text>
+  <text x="595" y="295" font-size="11" fill="#555">[3:0]</text>
+
+  <!-- Cin -->
+  <line x1="530" y1="330" x2="580" y2="330" stroke="#e74c3c" stroke-width="3"/>
+  <text x="520" y="335" text-anchor="end" font-size="14" font-weight="bold" fill="#e74c3c">Cin</text>
+  <text x="595" y="335" font-size="11" fill="#555">[0]</text>
+
+  <!-- Ports de sortie (droite) -->
+  <!-- S -->
+  <line x1="770" y1="270" x2="820" y2="270" stroke="#27ae60" stroke-width="3"/>
+  <text x="835" y="275" font-size="14" font-weight="bold" fill="#27ae60">S</text>
+  <text x="755" y="275" text-anchor="end" font-size="11" fill="#555">[3:0]</text>
+
+  <!-- Cout -->
+  <line x1="770" y1="330" x2="820" y2="330" stroke="#27ae60" stroke-width="3"/>
+  <text x="835" y="335" font-size="14" font-weight="bold" fill="#27ae60">Cout</text>
+  <text x="755" y="335" text-anchor="end" font-size="11" fill="#555">[0]</text>
+
+  <!-- Légende entrées/sorties -->
+  <rect x="530" y="410" width="12" height="12" fill="#e74c3c" rx="2"/>
+  <text x="550" y="421" font-size="12" fill="#555">Entrées</text>
+  <rect x="640" y="410" width="12" height="12" fill="#27ae60" rx="2"/>
+  <text x="660" y="421" font-size="12" fill="#555">Sorties</text>
+
+  <!-- Flèche décorative reliant code → boîtier -->
+  <line x1="445" y1="270" x2="515" y2="270" stroke="#6c757d" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="510,263 522,270 510,277" fill="#6c757d"/>
+</svg>

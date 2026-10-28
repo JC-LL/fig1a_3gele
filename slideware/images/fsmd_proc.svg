@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1189.6652 466.87311"
+   font-family="Arial, Helvetica, sans-serif"
+   version="1.1"
+   id="svg31"
+   sodipodi:docname="fsmd_proc.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   width="1189.6652"
+   height="466.87311"
+   inkscape:export-filename="fsmd_proc.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview31"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.37594511"
+     inkscape:cx="212.79702"
+     inkscape:cy="-159.59777"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="1920"
+     inkscape:window-y="120"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg31" />
+  <defs
+     id="defs3">
+    <marker
+       style="overflow:visible"
+       id="marker38"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path38" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker37"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path37" />
+    </marker>
+    <rect
+       x="695.75989"
+       y="210.05638"
+       width="215.03795"
+       height="140.31435"
+       id="rect36" />
+    <rect
+       x="267.71036"
+       y="315.85126"
+       width="59.882584"
+       height="64.579254"
+       id="rect33" />
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       id="arrowBlack"
+       markerWidth="9"
+       markerHeight="6"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth"
+       viewBox="0 0 9 6"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,0 V 6 L 9,3 Z"
+         fill="#000000"
+         id="path1" />
+    </marker>
+    <marker
+       id="arrowBlue"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 V 6 L 9,3 Z"
+         fill="#0000cc"
+         id="path2" />
+    </marker>
+    <marker
+       id="arrowGray"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 V 6 L 9,3 Z"
+         fill="#888888"
+         id="path3" />
+    </marker>
+    <marker
+       id="arrowBlack-2"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 V 6 L 9,3 Z"
+         fill="#000000"
+         id="path1-1" />
+    </marker>
+    <marker
+       id="arrowBlue-2"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 V 6 L 9,3 Z"
+         fill="#0000cc"
+         id="path2-4" />
+    </marker>
+    <marker
+       id="arrowBlack-1"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 V 6 L 9,3 Z"
+         fill="#000000"
+         id="path1-6" />
+    </marker>
+    <marker
+       id="arrowBlack-7"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 V 6 L 9,3 Z"
+         fill="#000000"
+         id="path1-3" />
+    </marker>
+    <marker
+       id="arrowBlack-72"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 V 6 L 9,3 Z"
+         fill="#000000"
+         id="path1-2" />
+    </marker>
+    <marker
+       id="arrowBlack-72-6"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 V 6 L 9,3 Z"
+         fill="#000000"
+         id="path1-2-3" />
+    </marker>
+    <marker
+       id="arrowBlack-72-0"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 V 6 L 9,3 Z"
+         fill="#000000"
+         id="path1-2-0" />
+    </marker>
+  </defs>
+  <!-- ======================= TITRES ======================= -->
+  <!-- ======================= FIGURE GAUCHE ======================= -->
+  <!-- FSM (à gauche) -->
+  <!-- Chemin de données (à droite) -->
+  <!-- Flèche commandes : FSM -> Chemin de données -->
+  <!-- Flèche drapeaux : Chemin de données -> FSM -->
+  <!-- ======================= FLÈCHE CENTRALE ======================= -->
+  <!-- ======================= FIGURE DROITE ======================= -->
+  <!-- Mémoire d'instructions (en haut) -->
+  <!-- Contrôleur générique (à gauche, sous la mémoire) -->
+  <!-- Chemin de données (à droite du contrôleur) -->
+  <!-- Mémoire de données (à droite) -->
+  <rect
+     x="1185.2627"
+     y="198.66827"
+     width="0"
+     height="0"
+     fill="none"
+     id="rect23" />
+  <!-- placeholder retiré -->
+  <rect
+     x="945.26263"
+     y="308.66827"
+     width="220"
+     height="70"
+     rx="6"
+     fill="#d6f5c9"
+     stroke="#000000"
+     stroke-width="2"
+     display="none"
+     id="rect24" />
+  <!-- Mémoire de données repositionnée à droite, en dehors du viewBox visible : on la place dessous à droite -->
+  <!-- Flèche adresse (PC) : Contrôleur -> Mémoire instructions -->
+  <!-- Flèche instruction : Mémoire instructions -> Contrôleur -->
+  <!-- Flèche commandes : Contrôleur -> Chemin de données -->
+  <!-- Flèche drapeaux : Chemin de données -> Contrôleur -->
+  <!-- Double flèche adr./données entre Chemin de données et Mémoire de données -->
+  <text
+     xml:space="preserve"
+     id="text33"
+     style="font-weight:bold;font-size:18.6667px;font-family:'Latin Modern Roman', 'CMU Serif', 'Times New Roman', Times, serif;-inkscape-font-specification:'Latin Modern Roman, CMU Serif, Times New Roman, Times, serif Bold';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect33);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.40157;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1"
+     transform="translate(-14.737356,-21.331734)" />
+  <text
+     xml:space="preserve"
+     id="text36"
+     style="font-weight:bold;font-size:18.6667px;font-family:'Latin Modern Roman', 'CMU Serif', 'Times New Roman', Times, serif;-inkscape-font-specification:'Latin Modern Roman, CMU Serif, Times New Roman, Times, serif Bold';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect36);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.402;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     transform="translate(-14.737356,-21.331734)" />
+  <g
+     id="g47">
+    <text
+       x="162.68927"
+       y="16.016602"
+       font-size="22px"
+       font-weight="bold"
+       id="text3">FSMD (modèle explicite)</text>
+    <text
+       x="882.75775"
+       y="16.016602"
+       font-size="22px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="text4">Micro-Processeur (modèle de Harvard)</text>
+    <rect
+       x="15.262644"
+       y="198.66827"
+       width="230"
+       height="90"
+       rx="6"
+       fill="#e6e0ff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect4" />
+    <text
+       x="130.10881"
+       y="234.90628"
+       font-size="22.3075px"
+       text-anchor="middle"
+       id="text5"
+       transform="scale(1.0227489,0.9777571)"
+       style="stroke-width:1.23931">FSM</text>
+    <text
+       x="130.26265"
+       y="258.66827"
+       font-size="16px"
+       text-anchor="middle"
+       id="text11">états <tspan
+   font-style="italic"
+   id="tspan5">S</tspan><tspan
+   font-size="12px"
+   dy="3"
+   id="tspan6">0</tspan><tspan
+   dy="-3"
+   id="tspan7">…</tspan><tspan
+   font-style="italic"
+   id="tspan8">S</tspan><tspan
+   font-size="12px"
+   dy="3"
+   id="tspan9">n</tspan><tspan
+   dy="-3"
+   id="tspan10">=</tspan><tspan
+   fill="#e87722"
+   id="tspan11">programme câblé</tspan></text>
+    <rect
+       x="275.26263"
+       y="198.66827"
+       width="210"
+       height="90"
+       rx="6"
+       fill="#ffe0c2"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect11" />
+    <text
+       x="401.51941"
+       y="222.80902"
+       font-size="19.2648px"
+       text-anchor="middle"
+       id="text12"
+       transform="scale(0.95171095,1.0507392)"
+       style="stroke-width:1.20405">Chemin de données</text>
+    <text
+       x="401.51941"
+       y="251.70628"
+       font-size="19.2648px"
+       text-anchor="middle"
+       id="text14"
+       transform="scale(0.95171095,1.0507392)"
+       style="stroke-width:1.20405">registres <tspan
+   font-style="italic"
+   id="tspan12"
+   style="stroke-width:1.20405">R</tspan><tspan
+   font-size="14.4486px"
+   dy="3.6121593"
+   id="tspan13"
+   style="stroke-width:1.20405">i</tspan><tspan
+   dy="-3.6121593"
+   id="tspan14"
+   style="stroke-width:1.20405">+ UAL</tspan></text>
+    <line
+       x1="514.08844"
+       y1="261.28079"
+       x2="624.08844"
+       y2="261.28079"
+       stroke="#888888"
+       stroke-width="4"
+       marker-end="url(#arrowGray)"
+       id="line16"
+       style="marker-end:url(#Triangle)" />
+    <text
+       x="583.66193"
+       y="203.41103"
+       font-size="17.7252px"
+       fill="#e87722"
+       text-anchor="middle"
+       id="text17"
+       transform="scale(0.98101875,1.0193485)"
+       style="stroke-width:1.26609">on extrait</text>
+    <text
+       x="587.37842"
+       y="226.42113"
+       font-size="17.7252px"
+       text-anchor="middle"
+       id="text18"
+       transform="scale(0.98101875,1.0193485)"
+       style="stroke-width:1.26609">le programme</text>
+    <rect
+       x="665.26263"
+       y="198.66827"
+       width="250"
+       height="90"
+       rx="6"
+       fill="#e6e0ff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect19" />
+    <text
+       x="806.29462"
+       y="229.34865"
+       font-size="18.3714px"
+       text-anchor="middle"
+       id="text20"
+       transform="scale(0.9808342,1.0195403)"
+       style="stroke-width:1.14821">Contrôleur <tspan
+   fill="#e87722"
+   id="tspan19"
+   style="stroke-width:1.14821">générique</tspan></text>
+    <text
+       x="806.29462"
+       y="259.20215"
+       font-size="18.3714px"
+       text-anchor="middle"
+       id="text21"
+       transform="scale(0.9808342,1.0195403)"
+       style="stroke-width:1.14821">PC · IR · décodeur</text>
+    <rect
+       x="945.26263"
+       y="198.66827"
+       width="220"
+       height="90"
+       rx="6"
+       fill="#ffe0c2"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect21" />
+    <text
+       x="1095.5941"
+       y="225.93698"
+       font-size="18.4777px"
+       text-anchor="middle"
+       id="text22"
+       transform="scale(0.96987594,1.0310597)"
+       style="stroke-width:1.15486">Chemin de données</text>
+    <text
+       x="1096.1995"
+       y="258.79422"
+       font-size="18.4777px"
+       text-anchor="middle"
+       id="text23"
+       transform="scale(0.96987594,1.0310597)"
+       style="stroke-width:1.15486">registres <tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial, Helvetica, sans-serif;-inkscape-font-specification:'Arial, Helvetica, sans-serif Italic'"
+   id="tspan46">R</tspan><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Arial, Helvetica, sans-serif;-inkscape-font-specification:'Arial, Helvetica, sans-serif Italic';baseline-shift:sub"
+   id="tspan45">i</tspan>+ UAL</text>
+    <rect
+       x="942.19696"
+       y="358.66827"
+       width="226.7061"
+       height="60"
+       rx="6"
+       fill="#d6f5c9"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect25" />
+    <text
+       x="1057.2046"
+       y="382.70676"
+       font-size="19.5399px"
+       text-anchor="middle"
+       id="text25"
+       transform="scale(0.99920173,1.0007989)"
+       style="stroke-width:1.22124">Mémoire de</text>
+    <text
+       x="1057.2046"
+       y="407.13159"
+       font-size="19.5399px"
+       text-anchor="middle"
+       id="text26"
+       transform="scale(0.99920173,1.0007989)"
+       style="stroke-width:1.22124"><tspan
+         fill="#e87722"
+         id="tspan25"
+         style="stroke-width:1.22124">données</tspan></text>
+    <line
+       x1="876.73035"
+       y1="199.84244"
+       x2="876.73035"
+       y2="119.84243"
+       stroke="#000000"
+       stroke-width="2"
+       marker-end="url(#arrowBlack)"
+       id="line26" />
+    <line
+       x1="199.97498"
+       y1="199.22403"
+       x2="199.97498"
+       y2="119.22404"
+       stroke="#000000"
+       stroke-width="2"
+       marker-end="url(#arrowBlack-7)"
+       id="line26-6"
+       style="marker-end:url(#arrowBlack-7)" />
+    <text
+       x="736.74188"
+       y="151.03616"
+       font-size="13px"
+       id="text27"
+       style="font-size:21.3333px">adresse (PC)</text>
+    <line
+       x1="718.03864"
+       y1="118.52583"
+       x2="718.03864"
+       y2="198.52582"
+       stroke="#000000"
+       stroke-width="2"
+       marker-end="url(#arrowBlack)"
+       id="line27" />
+    <line
+       x1="379.98672"
+       y1="111.00486"
+       x2="379.98672"
+       y2="191.00485"
+       stroke="#000000"
+       stroke-width="2"
+       marker-end="url(#arrowBlack-72)"
+       id="line27-1"
+       style="marker-end:url(#marker38)" />
+    <line
+       x1="380.11588"
+       y1="287.69177"
+       x2="380.11588"
+       y2="367.69177"
+       stroke="#000000"
+       stroke-width="2"
+       marker-end="url(#arrowBlack-72-6)"
+       id="line27-1-0"
+       style="marker-end:url(#marker37)" />
+    <line
+       x1="54.579666"
+       y1="116.26905"
+       x2="54.579666"
+       y2="196.26904"
+       stroke="#000000"
+       stroke-width="2"
+       marker-end="url(#arrowBlack-2)"
+       id="line27-7"
+       style="marker-end:url(#arrowBlack-2)" />
+    <text
+       x="606.26904"
+       y="151.90814"
+       font-size="13"
+       id="text28"
+       style="font-size:21.3333px">instruction</text>
+    <line
+       x1="916.67999"
+       y1="220.23785"
+       x2="946.67999"
+       y2="220.23785"
+       stroke="#0000cc"
+       stroke-width="2"
+       marker-end="url(#arrowBlue)"
+       id="line28" />
+    <text
+       x="898.09991"
+       y="198.73067"
+       font-size="15.6926px"
+       fill="#0000cc"
+       text-anchor="middle"
+       id="text29"
+       transform="scale(1.0353489,0.96585798)"
+       style="font-size:18.6667px;stroke-width:1.20713">contrôles</text>
+    <line
+       x1="946.33606"
+       y1="268.70886"
+       x2="916.33606"
+       y2="268.70886"
+       stroke="#000000"
+       stroke-width="2"
+       marker-end="url(#arrowBlack)"
+       id="line29" />
+    <text
+       x="914.40015"
+       y="319.17987"
+       font-size="19.1048px"
+       text-anchor="middle"
+       id="text30"
+       transform="scale(1.0174803,0.98282001)"
+       style="font-size:18.6667px;stroke-width:1.4696">status</text>
+    <g
+       id="g33-5"
+       transform="translate(-684.90031,-21.596373)">
+      <line
+         x1="929.75684"
+         y1="242.39984"
+         x2="959.75684"
+         y2="242.39984"
+         stroke="#0000cc"
+         stroke-width="2"
+         marker-end="url(#arrowBlue-2)"
+         id="line28-7"
+         style="marker-end:url(#arrowBlue-2)" />
+      <text
+         x="914.73987"
+         y="216.5184"
+         font-size="15.6926px"
+         fill="#0000cc"
+         text-anchor="middle"
+         id="text29-8"
+         transform="scale(1.0353489,0.96585797)"
+         style="font-size:18.6667px;stroke-width:1.20713">contrôles</text>
+      <line
+         x1="959.4129"
+         y1="290.87085"
+         x2="929.4129"
+         y2="290.87085"
+         stroke="#000000"
+         stroke-width="2"
+         marker-end="url(#arrowBlack-1)"
+         id="line29-5"
+         style="marker-end:url(#arrowBlack-1)" />
+      <text
+         x="927.25232"
+         y="341.72928"
+         font-size="19.1048px"
+         text-anchor="middle"
+         id="text30-9"
+         transform="scale(1.0174803,0.98282001)"
+         style="font-size:18.6667px;stroke-width:1.4696">status</text>
+    </g>
+    <line
+       x1="1047.2627"
+       y1="288.66827"
+       x2="1047.2627"
+       y2="358.66827"
+       stroke="#000000"
+       stroke-width="2"
+       marker-end="url(#arrowBlack)"
+       id="line30" />
+    <line
+       x1="1075.2627"
+       y1="358.66827"
+       x2="1075.2627"
+       y2="288.66827"
+       stroke="#000000"
+       stroke-width="2"
+       marker-end="url(#arrowBlack)"
+       id="line31" />
+    <text
+       x="1010.3785"
+       y="311.24966"
+       font-size="16.9232px"
+       text-anchor="middle"
+       id="text31"
+       transform="scale(0.99272147,1.0073319)"
+       style="stroke-width:1.41027">adresses</text>
+    <text
+       x="1127.1904"
+       y="313.12875"
+       font-size="16.9232px"
+       text-anchor="middle"
+       id="text31-2"
+       transform="scale(0.99272147,1.0073319)"
+       style="stroke-width:1.41027">données</text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:24px;font-family:'Latin Modern Roman', 'CMU Serif', 'Times New Roman', Times, serif;-inkscape-font-specification:'Latin Modern Roman, CMU Serif, Times New Roman, Times, serif Bold';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.40157;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1"
+       x="58.061081"
+       y="97.25927"
+       id="text32"><tspan
+         sodipodi:role="line"
+         id="tspan31"
+         x="58.061081"
+         y="97.25927">go</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:24px;font-family:'Latin Modern Roman', 'CMU Serif', 'Times New Roman', Times, serif;-inkscape-font-specification:'Latin Modern Roman, CMU Serif, Times New Roman, Times, serif Bold';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.40157;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1"
+       x="197.56473"
+       y="98.672417"
+       id="text32-4"><tspan
+         sodipodi:role="line"
+         id="tspan31-7"
+         x="197.56473"
+         y="98.672417">done</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#4365c6;stroke-width:3.402;stroke-miterlimit:4.1;stroke-dasharray:3.402, 10.206;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 564.12761,9.1966423 562.95344,460.07727"
+       id="path33" />
+    <g
+       id="g37"
+       transform="translate(-14.737356,-21.331734)">
+      <g
+         id="g36"
+         transform="translate(-49.815742,1.6605247)">
+        <rect
+           x="731.47626"
+           y="74.151314"
+           width="249.72258"
+           height="62.527641"
+           rx="6"
+           fill="#d6f5c9"
+           stroke="#000000"
+           stroke-width="2"
+           id="rect18" />
+        <text
+           x="859.67084"
+           y="99.428062"
+           font-size="18"
+           text-anchor="middle"
+           id="text19"
+           style="font-size:18.6667px">Mémoire d'instructions</text>
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:18.6667px;font-family:'Latin Modern Roman', 'CMU Serif', 'Times New Roman', Times, serif;-inkscape-font-specification:'Latin Modern Roman, CMU Serif, Times New Roman, Times, serif Bold';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.402;stroke-miterlimit:4.1;stroke-dasharray:3.402, 10.206;stroke-dashoffset:0;stroke-opacity:1"
+           x="858.435"
+           y="122.8013"
+           id="text34"><tspan
+             sodipodi:role="line"
+             id="tspan34"
+             x="858.435"
+             y="122.8013">(programme)</tspan></text>
+      </g>
+    </g>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#4365c6;stroke-width:3.31913;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect34"
+       width="513.19446"
+       height="162.03465"
+       x="1.659565"
+       y="166.49374"
+       ry="10.895482" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#4365c6;stroke-width:3.31913;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect34-5"
+       width="549.72607"
+       height="166.44644"
+       x="638.27948"
+       y="165.19247"
+       ry="10.895482" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:18.6667px;font-family:'Latin Modern Roman', 'CMU Serif', 'Times New Roman', Times, serif;-inkscape-font-specification:'Latin Modern Roman, CMU Serif, Times New Roman, Times, serif Bold';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.402;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="388.00238"
+       y="96.085083"
+       id="text35"><tspan
+         sodipodi:role="line"
+         id="tspan35"
+         x="388.00238"
+         y="96.085083">données in</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:18.6667px;font-family:'Latin Modern Roman', 'CMU Serif', 'Times New Roman', Times, serif;-inkscape-font-specification:'Latin Modern Roman, CMU Serif, Times New Roman, Times, serif Bold';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.402;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="386.26184"
+       y="394.48087"
+       id="text35-2"><tspan
+         sodipodi:role="line"
+         id="tspan35-1"
+         x="386.26184"
+         y="394.48087">données out</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:18.6667px;font-family:'Latin Modern Roman', 'CMU Serif', 'Times New Roman', Times, serif;-inkscape-font-specification:'Latin Modern Roman, CMU Serif, Times New Roman, Times, serif Bold';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.402;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="758.23688"
+       y="368.8916"
+       id="text38"><tspan
+         sodipodi:role="line"
+         id="tspan38"
+         x="758.23688"
+         y="368.8916">(L'entrée et sortie </tspan><tspan
+         sodipodi:role="line"
+         x="758.23688"
+         y="392.22498"
+         id="tspan39">des données</tspan><tspan
+         sodipodi:role="line"
+         x="758.23688"
+         y="415.55835"
+         id="tspan41">s'effectuent par des <tspan
+   style="fill:#ff2a2a"
+   id="tspan44">périphériques</tspan> </tspan><tspan
+         sodipodi:role="line"
+         x="758.23688"
+         y="438.89172"
+         id="tspan42">qui occupent certaines adresses </tspan><tspan
+         sodipodi:role="line"
+         x="758.23688"
+         y="462.2251"
+         id="tspan43">de la mémoire de données...)</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,307 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="Arial, sans-serif">
+  <rect width="1200" height="720" fill="white"/>
+  
+  <!-- ===== INPUT SIGNALS (left side) ===== -->
+  <!-- RAS -->
+  <text x="30" y="195" font-size="14" fill="#333">RAS</text>
+  <line x1="55" y1="190" x2="62" y2="190" stroke="#333" stroke-width="1"/>
+  <line x1="55" y1="188" x2="62" y2="188" stroke="#333" stroke-width="1"/>
+  <circle cx="80" cy="190" r="8" fill="white" stroke="#999" stroke-width="1.5"/>
+  <text x="76" y="194" font-size="12" fill="#333">0</text>
+  <line x1="88" y1="190" x2="140" y2="190" stroke="#CC0000" stroke-width="2"/>
+  
+  <!-- Address 1 -->
+  <text x="15" y="275" font-size="14" fill="#333">Address</text>
+  <circle cx="80" cy="270" r="8" fill="white" stroke="#999" stroke-width="1.5"/>
+  <text x="76" y="274" font-size="12" fill="#CC0000">1</text>
+  <line x1="88" y1="270" x2="140" y2="270" stroke="#CC0000" stroke-width="2"/>
+  
+  <!-- Address 0 -->
+  <circle cx="80" cy="295" r="8" fill="white" stroke="#999" stroke-width="1.5"/>
+  <text x="76" y="299" font-size="12" fill="#0066CC">0</text>
+  <line x1="88" y1="295" x2="140" y2="295" stroke="#0066CC" stroke-width="2"/>
+  
+  <!-- Address 1 -->
+  <circle cx="80" cy="320" r="8" fill="white" stroke="#999" stroke-width="1.5"/>
+  <text x="76" y="324" font-size="12" fill="#CC0000">1</text>
+  <line x1="88" y1="320" x2="140" y2="320" stroke="#CC0000" stroke-width="2"/>
+  
+  <!-- CAS -->
+  <text x="30" y="375" font-size="14" fill="#333">CAS</text>
+  <line x1="55" y1="370" x2="62" y2="370" stroke="#333" stroke-width="1"/>
+  <line x1="55" y1="368" x2="62" y2="368" stroke="#333" stroke-width="1"/>
+  <circle cx="80" cy="370" r="8" fill="white" stroke="#999" stroke-width="1.5"/>
+  <text x="76" y="374" font-size="12" fill="#CC0000">1</text>
+  <line x1="88" y1="370" x2="140" y2="370" stroke="#CC0000" stroke-width="2"/>
+  
+  <!-- WE -->
+  <text x="30" y="425" font-size="14" fill="#333">WE</text>
+  <line x1="55" y1="420" x2="62" y2="420" stroke="#333" stroke-width="1"/>
+  <line x1="55" y1="418" x2="62" y2="418" stroke="#333" stroke-width="1"/>
+  <circle cx="80" cy="420" r="8" fill="white" stroke="#999" stroke-width="1.5"/>
+  <text x="76" y="424" font-size="12" fill="#CC0000">1</text>
+  <line x1="88" y1="420" x2="140" y2="420" stroke="#CC0000" stroke-width="2"/>
+  
+  <!-- ===== TIMING AND CONTROL ===== -->
+  <rect x="140" y="180" width="50" height="280" fill="#2E6B9E" rx="2"/>
+  <text x="165" y="260" font-size="13" fill="white" text-anchor="middle" transform="rotate(90, 165, 260)">Timing and Control</text>
+  
+  <!-- ===== ROW ADDRESS BUFFER ===== -->
+  <rect x="210" y="210" width="130" height="55" fill="#5B9BD5" rx="2"/>
+  <text x="275" y="232" font-size="12" fill="white" text-anchor="middle">Row Address</text>
+  <text x="275" y="248" font-size="12" fill="white" text-anchor="middle">Buffer</text>
+  
+  <!-- Connection from Timing to Row Address Buffer -->
+  <line x1="190" y1="220" x2="210" y2="220" stroke="#CC0000" stroke-width="1.5"/>
+  <line x1="190" y1="240" x2="210" y2="240" stroke="#0066CC" stroke-width="1.5"/>
+  <line x1="190" y1="260" x2="210" y2="260" stroke="#CC0000" stroke-width="1.5"/>
+  
+  <!-- ===== COLUMN ADDRESS BUFFER ===== -->
+  <rect x="210" y="340" width="130" height="55" fill="#5B9BD5" rx="2"/>
+  <text x="275" y="362" font-size="12" fill="white" text-anchor="middle">Column Address</text>
+  <text x="275" y="378" font-size="12" fill="white" text-anchor="middle">Buffer</text>
+  
+  <!-- Connection from Timing to Column Address Buffer -->
+  <line x1="190" y1="350" x2="210" y2="350" stroke="#CC0000" stroke-width="1.5"/>
+  <line x1="190" y1="370" x2="210" y2="370" stroke="#0066CC" stroke-width="1.5"/>
+  <line x1="190" y1="390" x2="210" y2="390" stroke="#CC0000" stroke-width="1.5"/>
+  
+  <!-- ===== ROW ADDRESS DECODER ===== -->
+  <rect x="450" y="150" width="45" height="380" fill="#5B9E5B" rx="2"/>
+  <text x="472" y="300" font-size="12" fill="white" text-anchor="middle" transform="rotate(90, 472, 300)">Row Address Decoder</text>
+  
+  <!-- Connections from Row Address Buffer to Row Address Decoder -->
+  <line x1="340" y1="220" x2="450" y2="220" stroke="#CC0000" stroke-width="1.5"/>
+  <line x1="340" y1="240" x2="450" y2="240" stroke="#0066CC" stroke-width="1.5"/>
+  <line x1="340" y1="260" x2="450" y2="260" stroke="#CC0000" stroke-width="1.5"/>
+  
+  <!-- Address values near connections -->
+  <text x="355" y="215" font-size="10" fill="#CC0000">1</text>
+  <text x="370" y="215" font-size="10" fill="#0066CC">0</text>
+  <text x="385" y="215" font-size="10" fill="#CC0000">1</text>
+  
+  <!-- ===== MEMORY CELL ARRAY ===== -->
+  <!-- Grid of 8 columns x 8 rows -->
+  <!-- Row 0 -->
+  <rect x="520" y="160" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="560" y="160" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="600" y="160" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="640" y="160" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="680" y="160" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="720" y="160" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="760" y="160" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="800" y="160" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  
+  <!-- Row 1 -->
+  <rect x="520" y="200" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="560" y="200" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="600" y="200" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="640" y="200" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="680" y="200" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="720" y="200" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="760" y="200" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="800" y="200" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  
+  <!-- Row 2 -->
+  <rect x="520" y="240" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="560" y="240" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="600" y="240" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="640" y="240" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="680" y="240" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="720" y="240" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="760" y="240" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="800" y="240" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  
+  <!-- Row 3 -->
+  <rect x="520" y="280" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="560" y="280" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="600" y="280" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="640" y="280" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="680" y="280" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="720" y="280" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="760" y="280" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="800" y="280" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  
+  <!-- Row 4 (word line row) -->
+  <rect x="520" y="320" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="560" y="320" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="600" y="320" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="640" y="320" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="680" y="320" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="720" y="320" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="760" y="320" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="800" y="320" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  
+  <!-- Row 5 -->
+  <rect x="520" y="360" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="560" y="360" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="600" y="360" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="640" y="360" width="35" height="35" fill="#FFD700" stroke="#DAA520" stroke-width="2"/>
+  <rect x="680" y="360" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="720" y="360" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="760" y="360" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="800" y="360" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  
+  <!-- Row 6 -->
+  <rect x="520" y="400" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="560" y="400" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="600" y="400" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="640" y="400" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="680" y="400" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  <rect x="720" y="400" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="760" y="400" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="800" y="400" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  
+  <!-- Row 7 -->
+  <rect x="520" y="440" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="560" y="440" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="600" y="440" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="640" y="440" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="680" y="440" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="720" y="440" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="760" y="440" width="35" height="35" fill="#7FB3D5" stroke="#999" stroke-width="0.5"/>
+  <rect x="800" y="440" width="35" height="35" fill="#CC0000" stroke="#999" stroke-width="0.5"/>
+  
+  <!-- Word line (yellow horizontal line) -->
+  <line x1="510" y1="377" x2="900" y2="377" stroke="#FFD700" stroke-width="3"/>
+  <text x="910" y="382" font-size="13" fill="#CC0000" font-style="italic">Word line asserted</text>
+  
+  <!-- Vertical bit lines (red) -->
+  <line x1="537" y1="155" x2="537" y2="480" stroke="#CC0000" stroke-width="1" opacity="0.5"/>
+  <line x1="577" y1="155" x2="577" y2="480" stroke="#CC0000" stroke-width="1" opacity="0.5"/>
+  <line x1="617" y1="155" x2="617" y2="480" stroke="#CC0000" stroke-width="1" opacity="0.5"/>
+  <line x1="657" y1="155" x2="657" y2="480" stroke="#CC0000" stroke-width="1" opacity="0.5"/>
+  <line x1="697" y1="155" x2="697" y2="480" stroke="#CC0000" stroke-width="1" opacity="0.5"/>
+  <line x1="737" y1="155" x2="737" y2="480" stroke="#CC0000" stroke-width="1" opacity="0.5"/>
+  <line x1="777" y1="155" x2="777" y2="480" stroke="#CC0000" stroke-width="1" opacity="0.5"/>
+  <line x1="817" y1="155" x2="817" y2="480" stroke="#CC0000" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Horizontal word lines (light blue) -->
+  <line x1="515" y1="177" x2="840" y2="177" stroke="#7FB3D5" stroke-width="1" opacity="0.5"/>
+  <line x1="515" y1="217" x2="840" y2="217" stroke="#7FB3D5" stroke-width="1" opacity="0.5"/>
+  <line x1="515" y1="257" x2="840" y2="257" stroke="#7FB3D5" stroke-width="1" opacity="0.5"/>
+  <line x1="515" y1="297" x2="840" y2="297" stroke="#7FB3D5" stroke-width="1" opacity="0.5"/>
+  <line x1="515" y1="337" x2="840" y2="337" stroke="#7FB3D5" stroke-width="1" opacity="0.5"/>
+  <line x1="515" y1="377" x2="840" y2="377" stroke="#7FB3D5" stroke-width="1" opacity="0.5"/>
+  <line x1="515" y1="417" x2="840" y2="417" stroke="#7FB3D5" stroke-width="1" opacity="0.5"/>
+  <line x1="515" y1="457" x2="840" y2="457" stroke="#7FB3D5" stroke-width="1" opacity="0.5"/>
+  
+  <!-- ===== SENSE AMPLIFIERS ===== -->
+  <rect x="510" y="485" width="340" height="45" fill="#5B9BD5" rx="2"/>
+  <text x="680" y="513" font-size="14" fill="white" text-anchor="middle">Sense Amplifiers</text>
+  
+  <!-- ===== COLUMN MULTIPLEXER/DEMULTIPLEXER ===== -->
+  <polygon points="510,535 850,535 820,580 540,580" fill="#5B9E5B"/>
+  <text x="680" y="563" font-size="11" fill="white" text-anchor="middle">Column Multiplexer/Demultiplexer</text>
+  
+  <!-- ===== DATA BUFFER ===== -->
+  <rect x="920" y="540" width="100" height="45" fill="#5B9BD5" rx="2"/>
+  <text x="970" y="560" font-size="12" fill="white" text-anchor="middle">Data Buffer</text>
+  
+  <!-- ===== DATA IN/OUT ===== -->
+  <text x="1060" y="565" font-size="14" fill="#333">Data In/Out</text>
+  <circle cx="1045" cy="562" r="5" fill="white" stroke="#999" stroke-width="1.5"/>
+  <line x1="1020" y1="562" x2="1040" y2="562" stroke="#999" stroke-width="1.5"/>
+  
+  <!-- Connection from Column Mux to Data Buffer -->
+  <line x1="820" y1="558" x2="920" y2="558" stroke="#999" stroke-width="2"/>
+  
+  <!-- Connection from Data Buffer to Data In/Out -->
+  <line x1="1020" y1="562" x2="1040" y2="562" stroke="#999" stroke-width="1.5"/>
+  
+  <!-- ===== CONNECTIONS FROM COLUMN ADDRESS BUFFER TO COLUMN MUX ===== -->
+  <line x1="275" y1="395" x2="275" y2="558" stroke="#999" stroke-width="1.5"/>
+  <line x1="275" y1="558" x2="540" y2="558" stroke="#999" stroke-width="1.5"/>
+  
+  <line x1="310" y1="395" x2="310" y2="550" stroke="#999" stroke-width="1.5"/>
+  <line x1="310" y1="550" x2="540" y2="550" stroke="#999" stroke-width="1.5"/>
+  
+  <line x1="340" y1="395" x2="340" y2="542" stroke="#999" stroke-width="1.5"/>
+  <line x1="340" y1="542" x2="540" y2="542" stroke="#999" stroke-width="1.5"/>
+  
+  <!-- ===== MEMORY ADDRESS LINE (bottom) ===== -->
+  <line x1="100" y1="690" x2="700" y2="690" stroke="#CC0000" stroke-width="3"/>
+  <circle cx="650" cy="690" r="5" fill="#CC0000"/>
+  <text x="150" y="710" font-size="12" fill="#CC0000">Memory Address</text>
+  
+  <!-- ===== CONNECTIONS FROM TIMING TO INPUTS ===== -->
+  <!-- RAS to Timing -->
+  <line x1="140" y1="190" x2="140" y2="190" stroke="#CC0000" stroke-width="1.5"/>
+  
+  <!-- Address to Timing -->
+  <line x1="140" y1="270" x2="140" y2="270" stroke="#CC0000" stroke-width="1.5"/>
+  <line x1="140" y1="295" x2="140" y2="295" stroke="#0066CC" stroke-width="1.5"/>
+  <line x1="140" y1="320" x2="140" y2="320" stroke="#CC0000" stroke-width="1.5"/>
+  
+  <!-- CAS to Timing -->
+  <line x1="140" y1="370" x2="140" y2="370" stroke="#CC0000" stroke-width="1.5"/>
+  
+  <!-- WE to Timing -->
+  <line x1="140" y1="420" x2="140" y2="420" stroke="#CC0000" stroke-width="1.5"/>
+  
+  <!-- ===== CONNECTIONS FROM TIMING TO BUFFERS ===== -->
+  <!-- To Row Address Buffer -->
+  <line x1="190" y1="225" x2="210" y2="225" stroke="#CC0000" stroke-width="1.5"/>
+  <line x1="190" y1="240" x2="210" y2="240" stroke="#0066CC" stroke-width="1.5"/>
+  <line x1="190" y1="255" x2="210" y2="255" stroke="#CC0000" stroke-width="1.5"/>
+  
+  <!-- To Column Address Buffer -->
+  <line x1="190" y1="355" x2="210" y2="355" stroke="#CC0000" stroke-width="1.5"/>
+  <line x1="190" y1="370" x2="210" y2="370" stroke="#0066CC" stroke-width="1.5"/>
+  <line x1="190" y1="385" x2="210" y2="385" stroke="#CC0000" stroke-width="1.5"/>
+  
+  <!-- ===== CONNECTIONS FROM ROW ADDRESS BUFFER TO DECODER ===== -->
+  <line x1="340" y1="225" x2="450" y2="225" stroke="#CC0000" stroke-width="1.5"/>
+  <line x1="340" y1="240" x2="450" y2="240" stroke="#0066CC" stroke-width="1.5"/>
+  <line x1="340" y1="255" x2="450" y2="255" stroke="#CC0000" stroke-width="1.5"/>
+  
+  <!-- ===== CONNECTIONS FROM DECODER TO MEMORY ARRAY ===== -->
+  <line x1="495" y1="177" x2="520" y2="177" stroke="#CC0000" stroke-width="1"/>
+  <line x1="495" y1="217" x2="520" y2="217" stroke="#CC0000" stroke-width="1"/>
+  <line x1="495" y1="257" x2="520" y2="257" stroke="#CC0000" stroke-width="1"/>
+  <line x1="495" y1="297" x2="520" y2="297" stroke="#CC0000" stroke-width="1"/>
+  <line x1="495" y1="337" x2="520" y2="337" stroke="#CC0000" stroke-width="1"/>
+  <line x1="495" y1="377" x2="520" y2="377" stroke="#FFD700" stroke-width="2"/>
+  <line x1="495" y1="417" x2="520" y2="417" stroke="#CC0000" stroke-width="1"/>
+  <line x1="495" y1="457" x2="520" y2="457" stroke="#CC0000" stroke-width="1"/>
+  
+  <!-- ===== CONNECTIONS FROM MEMORY ARRAY TO SENSE AMPLIFIERS ===== -->
+  <line x1="537" y1="480" x2="537" y2="485" stroke="#999" stroke-width="1"/>
+  <line x1="577" y1="480" x2="577" y2="485" stroke="#999" stroke-width="1"/>
+  <line x1="617" y1="480" x2="617" y2="485" stroke="#999" stroke-width="1"/>
+  <line x1="657" y1="480" x2="657" y2="485" stroke="#999" stroke-width="1"/>
+  <line x1="697" y1="480" x2="697" y2="485" stroke="#999" stroke-width="1"/>
+  <line x1="737" y1="480" x2="737" y2="485" stroke="#999" stroke-width="1"/>
+  <line x1="777" y1="480" x2="777" y2="485" stroke="#999" stroke-width="1"/>
+  <line x1="817" y1="480" x2="817" y2="485" stroke="#999" stroke-width="1"/>
+  
+  <!-- ===== CONNECTIONS FROM SENSE AMPLIFIERS TO COLUMN MUX ===== -->
+  <line x1="680" y1="530" x2="680" y2="535" stroke="#999" stroke-width="1.5"/>
+  
+  <!-- ===== CONNECTIONS FROM COLUMN MUX TO DATA BUFFER ===== -->
+  <line x1="820" y1="558" x2="920" y2="558" stroke="#999" stroke-width="2"/>
+  
+  <!-- ===== CONNECTIONS FROM DATA BUFFER TO DATA IN/OUT ===== -->
+  <line x1="1020" y1="562" x2="1040" y2="562" stroke="#999" stroke-width="1.5"/>
+  
+  <!-- ===== RED/BLUE LINES FROM TIMING GOING UP ===== -->
+  <line x1="275" y1="190" x2="275" y2="50" stroke="#CC0000" stroke-width="1.5"/>
+  <line x1="310" y1="190" x2="310" y2="60" stroke="#0066CC" stroke-width="1.5"/>
+  <line x1="340" y1="190" x2="340" y2="70" stroke="#CC0000" stroke-width="1.5"/>
+  
+  <line x1="275" y1="50" x2="450" y2="50" stroke="#CC0000" stroke-width="1.5"/>
+  <line x1="310" y1="60" x2="450" y2="60" stroke="#0066CC" stroke-width="1.5"/>
+  <line x1="340" y1="70" x2="450" y2="70" stroke="#CC0000" stroke-width="1.5"/>
+  
+  <line x1="450" y1="50" x2="450" y2="150" stroke="#CC0000" stroke-width="1.5"/>
+  <line x1="450" y1="60" x2="450" y2="150" stroke="#0066CC" stroke-width="1.5"/>
+  <line x1="450" y1="70" x2="450" y2="150" stroke="#CC0000" stroke-width="1.5"/>
+  
+  <!-- ===== SMALL CIRCLES AT CONNECTION POINTS ===== -->
+  <circle cx="80" cy="190" r="4" fill="white" stroke="#999" stroke-width="1"/>
+  <circle cx="80" cy="270" r="4" fill="white" stroke="#999" stroke-width="1"/>
+  <circle cx="80" cy="295" r="4" fill="white" stroke="#999" stroke-width="1"/>
+  <circle cx="80" cy="320" r="4" fill="white" stroke="#999" stroke-width="1"/>
+  <circle cx="80" cy="370" r="4" fill="white" stroke="#999" stroke-width="1"/>
+  <circle cx="80" cy="420" r="4" fill="white" stroke="#999" stroke-width="1"/>
+</svg>

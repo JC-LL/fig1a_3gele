@@ -1,0 +1,458 @@
+\documentclass[10pt,aspectratio=169]{beamer}
+% aspectratio can be 1610, 169, 149, 54, 43 and 32
+\PassOptionsToPackage{table}{xcolor}
+%\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc} % ????
+%
+\usepackage[french]{babel}
+% %\usepackage{emojione}
+\usepackage{svg}
+\usepackage{wasysym}
+%\usepackage{minted}
+\usepackage{tabu}
+
+% \usepackage{algorithm2e}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage[table]{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{diagbox}
+
+\usepackage{tikz}
+\usepackage{colortbl}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\tikzset{
+  box/.style={draw, rounded corners=2pt, thick, align=center, minimum height=8mm, inner sep=3pt},
+  ctrl/.style={fill=blue!15},
+  data/.style={fill=orange!25},
+  mem/.style={fill=green!20},
+  cmd/.style={-{Stealth[length=2mm]}, thick, blue!60!black},
+  dat/.style={-{Stealth[length=2mm]}, thick},
+  lab/.style={font=\tiny, inner sep=1pt},
+  field/.style={draw, thick, minimum height=7mm, align=center, font=\scriptsize, inner sep=1pt},
+  st/.style={circle,draw,thick,fill=blue!15,minimum size=9mm,inner sep=0pt}
+}
+
+\newcommand{\R}[1]{\mathrm{R}[\mathit{#1}]}
+\newcommand{\M}[1]{\mathrm{DMEM}[#1]}
+\newcommand{\aff}{\leftarrow}
+\newcommand{\cS}{green!18}
+\newcommand{\cT}{blue!15}
+\newcommand{\cU}{orange!25}
+\newcommand{\cV}{purple!15}
+
+\usepackage{circuitikz}
+\usepackage{booktabs}
+\usepackage{colortbl,xcolor}
+\definecolor{hl}{RGB}{255,230,153}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.pathreplacing,positioning,shapes.arrows,calc}
+\usetikzlibrary{babel}
+\usetikzlibrary{automata,fit}
+
+\usepackage{booktabs}
+
+\usepackage{amsmath, amssymb}
+\usepackage{lmodern}
+
+% Couleurs personnalisées pour rester sobre
+\definecolor{maincolor}{RGB}{0, 102, 204}
+\setbeamercolor{frametitle}{bg=maincolor!10, fg=maincolor}
+%\setbeamercolor{title}{fg=maincolor}
+
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+
+\usetheme{Madrid}
+\useoutertheme{infolines}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+\lstset{
+  language=Ruby,
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\tiny,
+  tabsize=2
+}
+
+% Redéfinition du footline pour modifier les proportions
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  % Partie gauche (30% de la largeur)
+  \begin{beamercolorbox}[wd=0.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+
+  % Partie centrale (40% de la largeur)
+  \begin{beamercolorbox}[wd=0.4\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+
+  % Partie droite (30% de la largeur)
+  \begin{beamercolorbox}[wd=0.3\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+
+
+\useinnertheme{circles} % circles, inmargin, rectangles, rounded
+\setbeamertemplate{blocks}[default]
+\usefonttheme{professionalfonts}
+
+\definecolor{monokaibg}{rgb}{0.153, 0.157, 0.133}
+\definecolor{monokaibghl}{rgb}{0.20, 0.20, 0.18}
+\definecolor{highlightlbg}{rgb}{0.80, 0.96, 1.00}
+\definecolor{lbg}{rgb}{0.96, 0.96, 0.96}
+\definecolor{ENSTALBlue}{rgb}{0.1725, 0.3333, 0.4549}
+\definecolor{ENSTALCyan}{rgb}{0.3922, 0.7608, 0.7843}
+\definecolor{ENSTALYellow}{rgb}{0.9098, 0.8863, 0.2157}
+\definecolor{ENSTACMagenta}{rgb}{0.2824, 0.3451, 0.4196}
+\definecolor{ENSTACDarkBlue}{rgb}{0.0, 0.3294, 0.4157}
+\definecolor{ENSTACBlue}{rgb}{0.0, 0.6353, 0.6627}
+\definecolor{ENSTACYellow}{rgb}{0.9804, 0.7137, 0.0}
+\definecolor{ENSTACOrange}{rgb}{0.9412, 0.498, 0.2196}
+\definecolor{ENSTACRed}{rgb}{0.9294, 0.4196, 0.3804}
+
+\usecolortheme[named=ENSTALBlue]{structure}
+%\setbeamercolor{block title}{fg=white,bg=ENSTACDarkBlue}
+\setbeamercolor{block title}{fg=white,bg=ENSTALBlue}
+\setbeamercolor{block title alerted}{fg=white,bg=ENSTACOrange}
+\setbeamercolor{block title example}{fg=white,bg=ENSTALCyan}
+\setbeamercolor{alerted text}{fg=ENSTACOrange}
+%\setbeamercolor{subtitle}{fg=ENSTALCyan}
+
+%% Remove navigation buttons
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{itemize item}[circle]            % First level item
+\setbeamertemplate{itemize subitem}{\LARGE{-}}       % Second level item
+\setbeamertemplate{itemize subitem}{\scriptsize{$\blacktriangleright$}}       % Second level item
+%\setbeamertemplate{itemize subitem}{\tiny{$\blacksquare$}}       % Second level item
+%\setbeamertemplate{itemize subitem}{\textbf{$\Rightarrow$}}       % Second level item
+%\setbeamertemplate{itemize subitem}{\textbf{$\diamond$}}       % Second level item
+
+\definecolor{lightgray}{RGB}{230,230,230}
+\definecolor{darkgray}{RGB}{100,100,100}
+\definecolor{lila1}{RGB}{183, 132, 183}
+\definecolor{lila2}{RGB}{216, 191, 216}
+% =================================================
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+\newtcolorbox{myblock}[1]{
+  colback=lightgray,
+  colframe=darkgray,
+  coltitle=white,
+  title={#1},
+  fonttitle=\bfseries,
+  boxrule=1pt,
+  arc=0pt
+}
+
+
+\newtcolorbox{blockbleu}[1]{
+  colframe=lila1,
+  colback=lila2,
+  coltitle=white,
+  title={#1},
+  fonttitle=\bfseries,
+  boxrule=0pt,
+  arc=0pt
+}
+
+
+\titlegraphic{
+	%\includegraphics[height=1.2cm]{images/logo_labsticc.png}\hspace{10em}
+	%\includegraphics[height=0.9cm]{images/logo-ubo.png}\hspace{4em}
+	\includegraphics[height=1.2cm]{images/logo_ensta_blanc.jpg}
+	\hspace{1em}
+	%\includegraphics[height=1.5cm]{images/logo-labsticc.png}
+	%\includegraphics[height=1.5cm]{images/logo_ecole_navale.png}
+	%\includegraphics[height=1.5cm]{images/logo_imt.jpg}
+	%\includegraphics[height=1.5cm]{images/logo_utbm.png}
+
+}
+
+\addtobeamertemplate{frametitle}{}{%
+	%% Set ENSTA logo on each frame
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[anchor=north east,yshift=0.02cm,xshift=-0.05cm] at (current page.north east) {
+			\includegraphics[width=3cm]{images/logo_ensta.png}
+		};
+	\end{tikzpicture}
+	%% Decrease top margin for the content
+	\vspace{-1em}
+}
+
+
+\title{Introduction à l'Electronique Numérique}
+%\subtitle{Capture applicative, Architecture et Sécurité}
+\author[Jean-Christophe Le Lann]{
+	Jean-Christophe Le Lann\\
+	\vspace{0.75em}
+	%\footnotesize{\texttt{jean-christophe.le\_lann@ensta.fr}}
+  \footnotesize{Cours 1A}
+}
+%==========================================================
+
+%==========================================================
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+			\usebeamerfont{title}~\insertsectionnumber -- ~\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\newcommand<>{\insertExampleCode}[2][0]{
+	\begin{onlyenv}#3
+		\inputminted[bgcolor=lbg,fontsize=\footnotesize,highlightcolor=highlightlbg,highlightlines={#1}]{asm}{#2}
+	\end{onlyenv}
+}
+
+\newtcolorbox{ideabox}{
+    colback=blue!5!white, % Fond bleu clair
+    colframe=blue!75!black, % Bordure bleue
+    title={Idée}, % Titre avec icône (FontAwesome)
+    fonttitle=\bfseries,
+    enhanced, % Améliorations graphiques
+    attach boxed title to top left={xshift=5mm, yshift=-2mm},
+    boxed title style={colback=blue!75!black, colframe=blue!75!black}
+}
+
+\newcommand{\triangalert}[1]{\alert{\textcolor{blue}{$\triangleright$} #1}}
+
+\newcommand{\orangetriangalert}[1]{%
+    {\color{orange}\textbf{$\blacktriangleright$} #1}%
+}
+
+%================================ GCD VHDL ======================
+\usepackage{courier}  % police machine (Type 1, psnfss)
+\IfFileExists{french.ldf}{\usepackage[french]{babel}}{}  % si babel-french est installe
+\usepackage{graphicx,xcolor,listings}
+
+% ---------- couleurs & thème léger ----------
+\definecolor{ctrl}{HTML}{2F5D8C}
+\definecolor{dpath}{HTML}{B5651D}
+\definecolor{codebg}{HTML}{F6F8FA}
+\definecolor{kwc}{HTML}{7A3E9D}
+\definecolor{tyc}{HTML}{1F6F8B}
+\definecolor{cmc}{HTML}{4C7A3F}
+\definecolor{skipc}{HTML}{C0392B}
+% \usetheme{default}
+% \setbeamercolor{structure}{fg=ctrl}
+% \setbeamercolor{frametitle}{bg=ctrl,fg=white}
+% \setbeamertemplate{navigation symbols}{}
+% \setbeamersize{text margin left=6mm,text margin right=6mm}
+% \setbeamertemplate{frametitle}{%
+%   \nointerlineskip
+%   \begin{beamercolorbox}[wd=\paperwidth,ht=8mm,dp=2.5mm,leftskip=6mm]{frametitle}
+%     {\large\bfseries\insertframetitle}
+%   \end{beamercolorbox}\vspace{1.5mm}}
+% \setbeamertemplate{footline}{%
+%   \hbox to \paperwidth{\hspace{6mm}{\tiny\color{gray}PGCD par FSMD en VHDL}\hfil
+%   {\tiny\color{gray}\insertframenumber/\inserttotalframenumber}\hspace{6mm}}\vspace{2mm}}
+
+% ---------- listings VHDL ----------
+\lstdefinestyle{vhdl}{
+  language=VHDL,
+  basicstyle=\ttfamily\fontsize{6}{6.9}\selectfont,
+  keywordstyle=\color{kwc}\bfseries,
+  keywordstyle=[2]\color{tyc},
+  commentstyle=\color{cmc}\itshape,
+  morekeywords=[2]{std_logic,unsigned,integer,boolean,natural,time,to_unsigned,rising_edge,control_type,status_type,state_type},
+  columns=fixed, keepspaces=true, showstringspaces=false,
+  backgroundcolor=\color{codebg}, frame=single, rulecolor=\color{gray!35},
+  xleftmargin=1pt, xrightmargin=1pt, framexleftmargin=3pt,
+  aboveskip=0pt, belowskip=0pt,
+  moredelim=[is][\color{ctrl}\bfseries]{|}{|},
+  literate={...}{{\textcolor{skipc}{\textbf{...}}}}{3}
+}
+\lstset{style=vhdl}
+\newcommand{\codecap}[1]{{\fontsize{6.8}{7.5}\selectfont\color{ctrl}\bfseries\ttfamily #1}\par\vspace{0.6mm}}
+\newcommand{\fig}[2][66mm]{\centering\includegraphics[width=\linewidth,height=#1,keepaspectratio]{images/#2.pdf}}
+\newcommand{\takeaway}[1]{\par\vspace{1mm}{\footnotesize\color{ctrl}$\blacktriangleright$\ #1\par}}
+%===============================xxx================================================================================
+\lstdefinestyle{shell}{style=vhdl, language=bash,
+  morekeywords=[2]{ghdl,gtkwave},
+  keywordstyle=[2]\color{tyc}\bfseries,
+  stringstyle=\color{cmc},
+  basicstyle=\ttfamily\fontsize{6.8}{8.2}\selectfont,
+  moredelim=[is][\color{ctrl}\bfseries]{@}{@}}
+
+
+\begin{document}
+
+%\frame{\titlepage}
+
+\begin{frame}
+  \titlepage
+	% \begin{block}{\centering \large Capture applicative, Architecture et Sécurité}
+	% \end{block}
+\end{frame}
+
+% \begin{frame}{De l'idée au circuit}
+%     \begin{columns}[c]  % [T] aligne en haut, [c] centré, [b] en bas
+%         \begin{column}{0.4\textwidth}  % Colonne de gauche (50% de la largeur)
+%           \begin{enumerate}
+%
+%             \item \textbf{Abstraction technologique} :
+%             \begin{itemize}
+%               \item Nouveaux modes de pensée
+%               \item Approche \textbf{constructive} et \textbf{scalable}
+%             \end{itemize}
+%
+%             \item \textbf{Double discrétisation} :
+%             \begin{itemize}
+%               \item discrétisation des \textbf{valeurs}
+%               \item discrétisation du \textbf{temps}
+%             \end{itemize}
+%
+%             \item \textbf{Evitement des fluctuations physiques} :
+%             \begin{itemize}
+%               \item Indépendance vis-à-vis de la température.
+%               \item Indépendance vis-à-vis des courants, tensions, etc.
+%             \end{itemize}
+%
+%           \end{enumerate}
+%         \end{column}
+%
+%         \begin{column}{0.6\textwidth}  % Colonne de droite (50% de la largeur)
+%             \centering
+%             \includegraphics[scale=0.3]{./images/idee_circuit.png}
+%         \end{column}
+%     \end{columns}
+% \end{frame}
+
+%========================================================================================
+% \input{./a_propos_de_moi}
+%
+% \begin{frame}{De l'idée au circuit}
+%   \begin{center}
+%     \includegraphics[scale=0.32]{./images/idee_circuit.png}
+%   \end{center}
+% \end{frame}
+%
+% \begin{frame}{Numérisation}
+%   \begin{center}
+%     \includegraphics[scale=0.25]{./images/numerisation.png}
+%   \end{center}
+% \end{frame}
+%
+% %========================================================================================
+% \begin{frame}{Plan}
+%   \tableofcontents
+% \end{frame}
+%
+% \begin{frame}{Objectifs}
+%   \begin{columns}
+%     \begin{column}{0.5\textwidth}
+%       \begin{enumerate}
+%         \item Comprendre les fondements de la conception des systèmes numériques :
+%         \begin{itemize}
+%           \item Logique booléenne : combinatoire et séquentielle.
+%           \item Calcul sur silicium, chemin de données
+%           \item Machines d'états finis : contrôleurs / automates
+%           \item Principe des Micro-architectures
+%           \item Initiation à VHDL au niveau logique et structurel
+%         \end{itemize}
+%
+%         \item Premiers pas vers les systèmes embarqués :
+%         \begin{itemize}
+%           \item Processeurs, périphériques, communication
+%         \end{itemize}
+%       \end{enumerate}
+%     \end{column}
+%
+%     \begin{column}{0.5\textwidth}
+%       \begin{center}
+%         \includegraphics[scale=0.25]{./images/scope.png}
+%       \end{center}
+%     \end{column}
+%   \end{columns}
+%
+%
+% \end{frame}
+
+% %========================================================================================
+% \section{Physique des semi-conducteurs et micro-électronique : un aperçu}
+% %========================================================================================
+% \input{1_silicium}
+% \input{1_cristal}
+% \input{1_jonction}
+% \input{1_cmos}
+% \input{1_porte}
+
+%========================================================================================
+%\section{Montée en abstraction}
+%========================================================================================
+% \input{1_abstraction}
+% \input{1_eda}
+% \input{1_jalons_historiques}
+
+%================================================%\input{2_representations}
+%========================================
+%\section{Représentations numériques}
+%========================================================================================
+%\input{2_representations}
+
+%========================================================================================
+%\section*{Logique Booléenne et Combinatoire}
+%========================================================================================
+%\input{3_bool}
+%\input{3_circuit}
+%\input{3_bestiaire}
+% %========================================================================================
+%\section{Logique Séquentielle}
+% % %========================================================================================
+%\input{4_bascule_d}
+%\input{4_automates}
+%\input{4_complements}
+%\section{Introduction aux langages de description matériels : VHDL}
+%========================================================================================
+%\input{5_vhdl}
+%========================================================================================
+\section{Micro-architectures FSMD}
+% %========================================================================================
+% \input{6_fsmd}
+% \input{6_gcd_vhdl}
+%========================================================================================
+%                               mémoires et processeurs
+%========================================================================================
+\section{Mémoires SRAM et DRAM}
+\input{6_memoires}
+\section{Des FSMD aux Microprocesseurs}
+\input{7_processeur}
+%========================================================================================
+
+\end{document}

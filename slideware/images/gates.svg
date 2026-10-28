@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 900 700"
+     width="900" height="700"
+     font-family="Helvetica, Arial, sans-serif">
+
+  <!-- ===================== STYLES ===================== -->
+  <defs>
+    <style>
+      .gate      { fill: #ffffff; stroke: #000000; stroke-width: 2.2; }
+      .wire      { stroke: #000000; stroke-width: 2; fill: none; }
+      .label     { font-size: 15px; fill: #000000; }
+      .title     { font-size: 17px; font-weight: bold; fill: #1a1a1a; }
+      .bubble    { fill: #ffffff; stroke: #000000; stroke-width: 2.2; }
+      .grid      { stroke: #e0e0e0; stroke-width: 0.5; }
+    </style>
+  </defs>
+
+  <!-- Fond -->
+  <rect width="900" height="700" fill="#fafafa"/>
+
+  <!-- ======================================================
+       TITRE
+       ====================================================== -->
+  <text x="450" y="32" text-anchor="middle" class="title" font-size="20">
+    Portes logiques élémentaires — conventions CEI / IEEE
+  </text>
+
+  <!-- ======================================================
+       1) PORTE NON (NOT / INVERSEUR)   — forme triangulaire + bulle
+       ====================================================== -->
+  <g transform="translate(60, 80)">
+    <text x="55" y="-12" text-anchor="middle" class="title">NOT (NON)</text>
+
+    <!-- Corps triangulaire -->
+    <polygon class="gate" points="0,0 0,50 55,25"/>
+    <!-- Bulle de sortie -->
+    <circle class="bubble" cx="62" cy="25" r="6"/>
+
+    <!-- Entrée -->
+    <line class="wire" x1="-40" y1="25" x2="0" y2="25"/>
+    <text x="-48" y="30" text-anchor="end" class="label">A</text>
+
+    <!-- Sortie -->
+    <line class="wire" x1="68" y1="25" x2="105" y2="25"/>
+    <text x="112" y="30" class="label">S = A̅</text>
+  </g>
+
+  <!-- ======================================================
+       2) PORTE ET (AND)   — forme en D
+       ====================================================== -->
+  <g transform="translate(260, 80)">
+    <text x="55" y="-12" text-anchor="middle" class="title">AND (ET)</text>
+
+    <!-- Corps en D : ligne + demi-cercle -->
+    <path class="gate" d="M 0,0 L 0,50 L 30,50
+                             A 25,25 0 0 0 30,0 Z"/>
+
+    <!-- Entrées -->
+    <line class="wire" x1="-40" y1="12" x2="0" y2="12"/>
+    <line class="wire" x1="-40" y1="38" x2="0" y2="38"/>
+    <text x="-48" y="17" text-anchor="end" class="label">A</text>
+    <text x="-48" y="43" text-anchor="end" class="label">B</text>
+
+    <!-- Sortie -->
+    <line class="wire" x1="55" y1="25" x2="105" y2="25"/>
+    <text x="112" y="30" class="label">S = A · B</text>
+  </g>
+
+  <!-- ======================================================
+       3) PORTE OU (OR)   — forme arrondie en ogive
+       ====================================================== -->
+  <g transform="translate(470, 80)">
+    <text x="55" y="-12" text-anchor="middle" class="title">OR (OU)</text>
+
+    <!-- Corps : courbe gauche concave + ogive droite -->
+    <path class="gate" d="M 0,0
+                             Q 20,25 0,50
+                             Q 35,50 55,25
+                             Q 35,0 0,0 Z"/>
+
+    <!-- Entrées -->
+    <line class="wire" x1="-40" y1="12" x2="5" y2="12"/>
+    <line class="wire" x1="-40" y1="38" x2="5" y2="38"/>
+    <text x="-48" y="17" text-anchor="end" class="label">A</text>
+    <text x="-48" y="43" text-anchor="end" class="label">B</text>
+
+    <!-- Sortie -->
+    <line class="wire" x1="55" y1="25" x2="105" y2="25"/>
+    <text x="112" y="30" class="label">S = A + B</text>
+  </g>
+
+  <!-- ======================================================
+       4) PORTE OU EXCLUSIF (XOR)  — OR + double courbure
+       ====================================================== -->
+  <g transform="translate(680, 80)">
+    <text x="55" y="-12" text-anchor="middle" class="title">XOR (OU exclusif)</text>
+
+    <!-- Double courbure d'entrée -->
+    <path class="gate" d="M -8,0 Q 12,25 -8,50" fill="none"/>
+    <!-- Corps ogival -->
+    <path class="gate" d="M 0,0
+                             Q 20,25 0,50
+                             Q 35,50 55,25
+                             Q 35,0 0,0 Z"/>
+
+    <!-- Entrées -->
+    <line class="wire" x1="-40" y1="12" x2="-4" y2="12"/>
+    <line class="wire" x1="-40" y1="38" x2="-4" y2="38"/>
+    <text x="-48" y="17" text-anchor="end" class="label">A</text>
+    <text x="-48" y="43" text-anchor="end" class="label">B</text>
+
+    <!-- Sortie -->
+    <line class="wire" x1="55" y1="25" x2="105" y2="25"/>
+    <text x="112" y="30" class="label">S = A ⊕ B</text>
+  </g>
+
+  <!-- ======================================================
+       5) PORTE NON-ET (NAND)  — AND + bulle
+       ====================================================== -->
+  <g transform="translate(60, 260)">
+    <text x="55" y="-12" text-anchor="middle" class="title">NAND (NON-ET)</text>
+
+    <path class="gate" d="M 0,0 L 0,50 L 30,50
+                             A 25,25 0 0 0 30,0 Z"/>
+    <circle class="bubble" cx="61" cy="25" r="6"/>
+
+    <line class="wire" x1="-40" y1="12" x2="0" y2="12"/>
+    <line class="wire" x1="-40" y1="38" x2="0" y2="38"/>
+    <text x="-48" y="17" text-anchor="end" class="label">A</text>
+    <text x="-48" y="43" text-anchor="end" class="label">B</text>
+
+    <line class="wire" x1="67" y1="25" x2="105" y2="25"/>
+    <text x="112" y="30" class="label">S = A · B̅</text>
+  </g>
+
+  <!-- ======================================================
+       6) PORTE NON-OU (NOR)  — OR + bulle
+       ====================================================== -->
+  <g transform="translate(260, 260)">
+    <text x="55" y="-12" text-anchor="middle" class="title">NOR (NON-OU)</text>
+
+    <path class="gate" d="M 0,0
+                             Q 20,25 0,50
+                             Q 35,50 55,25
+                             Q 35,0 0,0 Z"/>
+    <circle class="bubble" cx="62" cy="25" r="6"/>
+
+    <line class="wire" x1="-40" y1="12" x2="5" y2="12"/>
+    <line class="wire" x1="-40" y1="38" x2="5" y2="38"/>
+    <text x="-48" y="17" text-anchor="end" class="label">A</text>
+    <text x="-48" y="43" text-anchor="end" class="label">B</text>
+
+    <line class="wire" x1="68" y1="25" x2="105" y2="25"/>
+    <text x="112" y="30" class="label">S = A + B̅</text>
+  </g>
+
+  <!-- ======================================================
+       7) PORTE NON-OU EXCLUSIF (XNOR)  — XOR + bulle
+       ====================================================== -->
+  <g transform="translate(470, 260)">
+    <text x="55" y="-12" text-anchor="middle" class="title">XNOR (NON-XOR)</text>
+
+    <path class="gate" d="M -8,0 Q 12,25 -8,50" fill="none"/>
+    <path class="gate" d="M 0,0
+                             Q 20,25 0,50
+                             Q 35,50 55,25
+                             Q 35,0 0,0 Z"/>
+    <circle class="bubble" cx="62" cy="25" r="6"/>
+
+    <line class="wire" x1="-40" y1="12" x2="-4" y2="12"/>
+    <line class="wire" x1="-40" y1="38" x2="-4" y2="38"/>
+    <text x="-48" y="17" text-anchor="end" class="label">A</text>
+    <text x="-48" y="43" text-anchor="end" class="label">B</text>
+
+    <line class="wire" x1="68" y1="25" x2="105" y2="25"/>
+    <text x="112" y="30" class="label">S = A ⊕ B̅</text>
+  </g>
+
+  <!-- ======================================================
+       8) BUFFER (TAMPON)  — triangle sans bulle
+       ====================================================== -->
+  <g transform="translate(680, 260)">
+    <text x="55" y="-12" text-anchor="middle" class="title">BUFFER (Tampon)</text>
+
+    <polygon class="gate" points="0,0 0,50 55,25"/>
+
+    <line class="wire" x1="-40" y1="25" x2="0" y2="25"/>
+    <text x="-48" y="30" text-anchor="end" class="label">A</text>
+
+    <line class="wire" x1="55" y1="25" x2="105" y2="25"/>
+    <text x="112" y="30" class="label">S = A</text>
+  </g>
+
+  <!-- ======================================================
+       LÉGENDE / CONVENTIONS
+       ====================================================== -->
+  <g transform="translate(60, 420)">
+    <text x="0" y="0" class="title" font-size="16">Conventions de dessin (CEI 60617-12 / IEEE Std 91) :</text>
+
+    <text x="0" y="35" class="label">• La <tspan font-weight="bold">bulle</tspan> (petit cercle) sur une entrée ou une sortie indique une <tspan font-style="italic">inversion logique</tspan> (NON).</text>
+    <text x="0" y="60" class="label">• <tspan font-weight="bold">AND / NAND</tspan> : forme en « D » (face plane à l'entrée, arrondie à la sortie).</text>
+    <text x="0" y="85" class="label">• <tspan font-weight="bold">OR / NOR / XOR / XNOR</tspan> : ogive (courbe concave à l'entrée, pointe arrondie à la sortie).</text>
+    <text x="0" y="110" class="label">• <tspan font-weight="bold">XOR / XNOR</tspan> : ogive précédée d'une <tspan font-style="italic">double courbure</tspan> sur le flanc d'entrée.</text>
+    <text x="0" y="135" class="label">• <tspan font-weight="bold">NOT / BUFFER</tspan> : triangle (le NOT porte une bulle en sortie, le buffer non).</text>
+    <text x="0" y="160" class="label">• Les entrées se placent toujours à <tspan font-weight="bold">gauche</tspan>, la sortie à <tspan font-weight="bold">droite</tspan> (convention de lecture).</text>
+  </g>
+
+  <!-- ======================================================
+       TABLE DE VÉRITÉ RÉCAPITULATIVE
+       ====================================================== -->
+  <g transform="translate(560, 420)">
+    <text x="0" y="0" class="title" font-size="16">Tables de vérité (2 entrées) :</text>
+
+    <!-- En-tête -->
+    <line x1="0" y1="15" x2="290" y2="15" stroke="#000" stroke-width="1.5"/>
+    <text x="10"  y="32" class="label" font-weight="bold">A</text>
+    <text x="45"  y="32" class="label" font-weight="bold">B</text>
+    <text x="85"  y="32" class="label" font-weight="bold">ET</text>
+    <text x="130" y="32" class="label" font-weight="bold">OU</text>
+    <text x="175" y="32" class="label" font-weight="bold">XOR</text>
+    <text x="225" y="32" class="label" font-weight="bold">NAND</text>
+    <text x="275" y="32" class="label" font-weight="bold">NOR</text>
+    <line x1="0" y1="38" x2="290" y2="38" stroke="#000" stroke-width="1"/>
+
+    <!-- Lignes -->
+    <text x="10"  y="58" class="label">0</text>
+    <text x="45"  y="58" class="label">0</text>
+    <text x="85"  y="58" class="label">0</text>
+    <text x="130" y="58" class="label">0</text>
+    <text x="175" y="58" class="label">0</text>
+    <text x="225" y="58" class="label">1</text>
+    <text x="275" y="58" class="label">1</text>
+
+    <text x="10"  y="80" class="label">0</text>
+    <text x="45"  y="80" class="label">1</text>
+    <text x="85"  y="80" class="label">0</text>
+    <text x="130" y="80" class="label">1</text>
+    <text x="175" y="80" class="label">1</text>
+    <text x="225" y="80" class="label">1</text>
+    <text x="275" y="80" class="label">0</text>
+
+    <text x="10"  y="102" class="label">1</text>
+    <text x="45"  y="102" class="label">0</text>
+    <text x="85"  y="102" class="label">0</text>
+    <text x="130" y="102" class="label">1</text>
+    <text x="175" y="102" class="label">1</text>
+    <text x="225" y="102" class="label">1</text>
+    <text x="275" y="102" class="label">0</text>
+
+    <text x="10"  y="124" class="label">1</text>
+    <text x="45"  y="124" class="label">1</text>
+    <text x="85"  y="124" class="label">1</text>
+    <text x="130" y="124" class="label">1</text>
+    <text x="175" y="124" class="label">0</text>
+    <text x="225" y="124" class="label">0</text>
+    <text x="275" y="124" class="label">0</text>
+
+    <line x1="0" y1="134" x2="290" y2="134" stroke="#000" stroke-width="1.5"/>
+  </g>
+
+</svg>

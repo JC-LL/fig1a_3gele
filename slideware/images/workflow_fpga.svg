@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="981.39844"
+   height="1156.2462"
+   viewBox="0 0 981.39846 1156.2462"
+   version="1.1"
+   id="svg154"
+   sodipodi:docname="workflow_fpga.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   inkscape:export-filename="/home/jcll/JCLL/ens/cours_elec_num/fig1a_3gele/slideware/images/workflow_fpga.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview156"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.70054283"
+     inkscape:cx="490.33404"
+     inkscape:cy="578.12311"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg154" />
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient12303">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop12299" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop12301" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient12222">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop12218" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop12220" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect11169"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect10931"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect10903"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect10877"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect10825"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect10779"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       style="overflow:visible"
+       id="marker10675"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path10673" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect10665"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect9175"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect8413"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7661"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7649"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7637"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7604"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7592"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7580"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7390"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7380"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7370"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect4400"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect4388"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1553"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1549"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1545"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1541"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1537"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1473"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1455"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1431"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1206"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect641"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <rect
+       x="-829.90204"
+       y="58.520863"
+       width="662.31006"
+       height="279.91739"
+       id="rect567" />
+    <style
+       id="style2">
+.bg { fill:black; }
+.goldBox { fill:#111; stroke:#c8a24a; stroke-width:3; }
+.goldStroke { stroke:#c8a24a; stroke-width:3; fill:none; }
+.title { fill:white; font-family:Arial; font-size:22px; text-anchor:middle; }
+.label { fill:white; font-family:Arial; font-size:18px; text-anchor:middle; }
+.code { fill:white; font-family:Courier New; font-size:14px; }
+.pipe { stroke:#cfcfcf; stroke-width:22; fill:none; stroke-linecap:round; }
+.thinPipe { stroke:#cfcfcf; stroke-width:6; fill:none; stroke-linecap:round; }
+</style>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient12222"
+       id="linearGradient12224"
+       x1="399.62604"
+       y1="1000.8458"
+       x2="588.78619"
+       y2="1000.8458"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient12303"
+       id="linearGradient12331"
+       x1="393.39557"
+       y1="1000.8458"
+       x2="594.88776"
+       y2="1000.8458"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <!-- ================= TOP BLOCKS ================= -->
+  <!-- HDL -->
+  <g
+     id="g30"
+     transform="translate(2.7193355,-77.569352)"
+     style="stroke-width:1;stroke-dasharray:none">
+    <rect
+       x="70"
+       y="80"
+       width="350"
+       height="250"
+       class="goldBox"
+       id="rect8"
+       style="fill:none;fill-opacity:1;stroke-width:5;stroke-dasharray:none" />
+    <text
+       x="245"
+       y="115"
+       class="title"
+       id="text10"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:33.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:1;stroke-dasharray:none"><tspan
+         sodipodi:role="line"
+         id="tspan575"
+         x="245"
+         y="115">Circuit Description</tspan><tspan
+         sodipodi:role="line"
+         id="tspan577"
+         x="245"
+         y="156.66663">using HDL Code</tspan></text>
+    <text
+       x="95"
+       y="222"
+       class="code"
+       id="text12"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-opacity:1;fill-opacity:1;stroke-width:1;stroke-dasharray:none"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1;stroke-width:1;stroke-dasharray:none"
+         id="tspan579">Languages:</tspan></text>
+    <text
+       x="268.41086"
+       y="290.29102"
+       class="code"
+       id="text571"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-opacity:1;fill-opacity:1;stroke-width:1;stroke-dasharray:none"><tspan
+         sodipodi:role="line"
+         id="tspan1487"
+         x="268.41086"
+         y="290.29102">entities, </tspan><tspan
+         sodipodi:role="line"
+         id="tspan1489"
+         x="268.41086"
+         y="315.29102">signals</tspan></text>
+    <text
+       x="95"
+       y="260"
+       class="code"
+       id="text573"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:12.0543;display:inline;fill:#ffffff;stroke-width:1;stroke-dasharray:none"
+       xml:space="preserve"><tspan
+         x="95"
+         y="260"
+         id="tspan2"><tspan
+           dx="0 12.001953 12.001953 12.001953 12.001953 12.001953 12.001953 12.001953 12.001953 12.001953 12.001953"
+           id="tspan1">components
+</tspan></tspan></text>
+    <text
+       x="275.40891"
+       y="199.33887"
+       class="code"
+       id="text583"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-opacity:1;fill-opacity:1;stroke-width:1;stroke-dasharray:none"><tspan
+         sodipodi:role="line"
+         id="tspan1198"
+         x="275.40891"
+         y="199.33887">Verilog</tspan><tspan
+         sodipodi:role="line"
+         id="tspan1200"
+         x="275.40891"
+         y="224.33887">VHDL</tspan><tspan
+         sodipodi:role="line"
+         x="275.40891"
+         y="249.33887"
+         id="tspan1202">Chisel</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;stroke-dasharray:none"
+       d="m 96.266959,226.17969 c 36.907391,0 73.812791,0 110.719181,0"
+       id="path639"
+       inkscape:path-effect="#path-effect641"
+       inkscape:original-d="m 96.266959,226.17969 c 36.907391,0.001 110.719181,0 110.719181,0" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+       d="m 214.82854,214.16699 c 12.52234,-6.74013 25.04432,-13.48008 37.56595,-20.21983"
+       id="path1204"
+       inkscape:path-effect="#path-effect1206"
+       inkscape:original-d="m 214.82854,214.16699 c 12.52298,-6.73894 25.04496,-13.47889 37.56595,-20.21983" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+       d="m 214.82854,223.68174 c 12.52234,6.74013 25.04432,13.48008 37.56595,20.21983"
+       id="path1427"
+       inkscape:path-effect="#path-effect1431"
+       inkscape:original-d="m 214.82854,223.68174 c 12.52298,6.73894 25.04496,13.47889 37.56595,20.21983" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+       d="m 215.99155,219.16303 c 14.21472,0.42405 28.42906,0.84809 42.64297,1.27211"
+       id="path1451"
+       inkscape:path-effect="#path-effect1455"
+       inkscape:original-d="m 215.99155,219.16303 c 14.21468,0.42541 28.42902,0.84943 42.64297,1.27211" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;stroke-dasharray:none"
+       d="m 96.266959,298.58934 c 50.096611,0 100.190511,0 150.285771,0"
+       id="path1469"
+       inkscape:path-effect="#path-effect1473"
+       inkscape:original-d="m 96.266959,298.58934 c 50.096611,0.001 150.285771,0 150.285771,0" />
+    <text
+       x="95"
+       y="292"
+       class="code"
+       id="text1485"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-opacity:1;fill-opacity:1;stroke-width:1;stroke-dasharray:none"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1;stroke-width:1;stroke-dasharray:none"
+         id="tspan1483">Abstractions:</tspan></text>
+  </g>
+  <!-- SCHEMATIC -->
+  <!-- ================= SYNTHESIZE ================= -->
+  <rect
+     x="97.719292"
+     y="338.43063"
+     width="300"
+     height="60"
+     class="goldBox"
+     id="rect44"
+     style="fill:none;stroke-width:5;stroke-dasharray:none" />
+  <text
+     x="247.71928"
+     y="378.43063"
+     class="title"
+     id="text46"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:33.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1">Synthesis</text>
+  <!-- Thick curved dual pipes -->
+  <!-- Small junction diamond -->
+  <!-- ================= IMPLEMENTATION ================= -->
+  <!-- Internal flow blocks -->
+  <g
+     id="g7625"
+     transform="matrix(1.21,0,0,1.21,-118.58629,-196.07799)">
+    <text
+       x="503.28995"
+       y="670.27246"
+       class="title"
+       id="text56">Implementation</text>
+    <rect
+       x="393.28995"
+       y="640.27246"
+       width="220"
+       height="40"
+       class="goldBox"
+       id="rect58"
+       style="fill:none;stroke-width:4.13223;stroke-dasharray:none" />
+    <text
+       x="503.28995"
+       y="667.27246"
+       class="label"
+       id="text60"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1">Translate</text>
+    <rect
+       x="393.28995"
+       y="720.27246"
+       width="220"
+       height="40"
+       class="goldBox"
+       id="rect62"
+       style="fill:none;stroke-width:4.13223;stroke-dasharray:none" />
+    <text
+       x="503.28995"
+       y="747.27246"
+       class="label"
+       id="text64"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1">Map</text>
+    <rect
+       x="393.28995"
+       y="796.27246"
+       width="220"
+       height="40"
+       class="goldBox"
+       id="rect66"
+       style="fill:none;stroke:#c8a24a;stroke-width:4.13223;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       x="503.28995"
+       y="823.27246"
+       class="label"
+       id="text68"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1">Place &amp; Route</text>
+    <text
+       x="213.9664"
+       y="744.42139"
+       class="label"
+       id="text10775"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:27.5482px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;stroke:none;stroke-opacity:1;fill-opacity:1">Implementation</text>
+  </g>
+  <!-- Connection down from junction -->
+  <!-- ================= SIMULATION PANEL ================= -->
+  <rect
+     x="737.96783"
+     y="582.19672"
+     width="240"
+     height="200"
+     fill="#111111"
+     stroke="#c8a24a"
+     stroke-width="3"
+     id="rect72"
+     style="fill:none;stroke:#000000;stroke-opacity:1" />
+  <text
+     x="857.96783"
+     y="567.19672"
+     class="label"
+     id="text74"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:33.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1">Simulation</text>
+  <!-- Signal labels -->
+  <text
+     x="752.96783"
+     y="636.19702"
+     class="code"
+     id="text76"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1">d&lt;0&gt;</text>
+  <text
+     x="752.96783"
+     y="666.19702"
+     class="code"
+     id="text78"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1">d&lt;1&gt;</text>
+  <text
+     x="752.96783"
+     y="696.19702"
+     class="code"
+     id="text80"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1">d&lt;2&gt;</text>
+  <text
+     x="752.96783"
+     y="726.19702"
+     class="code"
+     id="text82"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1">s&lt;0&gt;</text>
+  <!-- Waveforms -->
+  <path
+     d="m 797.96784,632.19667 h 40 v -20 h 40 v 20 h 40 v -20 h 40"
+     stroke="#ffffff"
+     fill="none"
+     stroke-width="2"
+     id="path84"
+     style="stroke:#000000;stroke-opacity:1;stroke-width:2.6;stroke-dasharray:none" />
+  <path
+     d="m 797.96784,662.19667 h 60 v -20 h 60 v 20"
+     stroke="#ffffff"
+     fill="none"
+     stroke-width="2"
+     id="path86"
+     style="stroke:#000000;stroke-opacity:1;stroke-width:2.6;stroke-dasharray:none" />
+  <path
+     d="m 797.96784,692.19667 h 30 v -20 h 60 v 20 h 60"
+     stroke="#ffffff"
+     fill="none"
+     stroke-width="2"
+     id="path88"
+     style="stroke:#000000;stroke-opacity:1;stroke-width:2.6;stroke-dasharray:none" />
+  <path
+     d="m 797.96784,722.19667 h 80 v -20 h 40 v 20"
+     stroke="#ffffff"
+     fill="none"
+     stroke-width="2"
+     id="path90"
+     style="stroke:#000000;stroke-opacity:1;stroke-width:2.6;stroke-dasharray:none" />
+  <!-- Thin branches -->
+  <!-- ================= BITSTREAM ================= -->
+  <rect
+     x="344.32965"
+     y="970.71973"
+     width="300"
+     height="60"
+     class="goldBox"
+     id="rect98"
+     style="fill:none;stroke-width:5;stroke-dasharray:none" />
+  <text
+     x="494.32965"
+     y="1008.7198"
+     class="title"
+     id="text100"
+     style="stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1;-inkscape-font-specification:'Arial, Normal';font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:22px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle">Generate Bitstream</text>
+  <!-- Bitstream binary panel -->
+  <text
+     x="857.96783"
+     y="767.19672"
+     class="label"
+     id="text106"
+     style="stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1">Bitstream</text>
+  <!-- ================= DOWNLOAD ================= -->
+  <rect
+     x="344.32965"
+     y="1080.7197"
+     width="300"
+     height="60"
+     class="goldBox"
+     id="rect118"
+     style="fill:none;stroke-width:5;stroke-dasharray:none" />
+  <text
+     x="494.32965"
+     y="1118.7197"
+     class="title"
+     id="text120"
+     style="stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1;-inkscape-font-specification:'Arial, Normal';font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:22px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle">Download to FPGA</text>
+  <!-- ================= FPGA ================= -->
+  <!-- CLB grid -->
+  <g
+     id="g559"
+     transform="translate(11.694535,23.71971)"
+     style="stroke-width:5;stroke-dasharray:none">
+    <rect
+       x="727.27338"
+       y="941"
+       width="240"
+       height="180"
+       fill="#111111"
+       stroke="#c8a24a"
+       stroke-width="3"
+       id="rect104"
+       style="fill:none;stroke-width:5;stroke-dasharray:none" />
+    <text
+       x="747.26263"
+       y="971.04883"
+       class="code"
+       id="text108"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.3333px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:5;stroke-dasharray:none"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.3333px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:5;stroke-dasharray:none"
+         id="tspan541">1010101010110101</tspan></text>
+    <text
+       x="747.25958"
+       y="991.04846"
+       class="code"
+       id="text110"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.3333px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:5;stroke-dasharray:none">0101010110101010</text>
+    <text
+       x="747.26263"
+       y="1011.0488"
+       class="code"
+       id="text112"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.3333px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:5;stroke-dasharray:none">1101010101010110</text>
+    <text
+       x="747.25958"
+       y="1031.0488"
+       class="code"
+       id="text114"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.3333px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:5;stroke-dasharray:none">0110101010101010</text>
+    <text
+       x="747.26263"
+       y="1051.0488"
+       class="code"
+       id="text116"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.3333px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:5;stroke-dasharray:none">1011010101010101</text>
+    <text
+       x="747.25958"
+       y="1069.0486"
+       class="code"
+       id="text543"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.3333px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:5;stroke-dasharray:none">0101010110101010</text>
+    <text
+       x="747.26263"
+       y="1089.0488"
+       class="code"
+       id="text545"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.3333px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:5;stroke-dasharray:none">1101010101010110</text>
+    <text
+       x="747.25958"
+       y="1109.0488"
+       class="code"
+       id="text547"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.3333px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:5;stroke-dasharray:none">0110101010101010</text>
+  </g>
+  <g
+     id="g1533"
+     transform="translate(489.44944,-77.569352)">
+    <rect
+       x="70"
+       y="80"
+       width="350"
+       height="250"
+       class="goldBox"
+       id="rect1491"
+       style="fill:none;stroke-width:5;stroke-dasharray:none" />
+    <text
+       x="245"
+       y="115"
+       class="title"
+       id="text1497"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:33.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#111111;fill-opacity:1;stroke:#000000;stroke-opacity:1"><tspan
+         sodipodi:role="line"
+         id="tspan1495"
+         x="245"
+         y="115">Circuit  Schematic</tspan></text>
+    <text
+       x="95"
+       y="260"
+       class="code"
+       id="text1509"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:12.0543;display:inline;fill:#ffffff"
+       xml:space="preserve"><tspan
+         x="95"
+         y="260"
+         id="tspan4"><tspan
+           dx="0 12.001953 12.001953 12.001953 12.001953 12.001953 12.001953 12.001953 12.001953 12.001953 12.001953"
+           id="tspan3">components
+</tspan></tspan></text>
+    <g
+       id="g4356"
+       transform="translate(34)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1">
+      <path
+         d="m 116.88034,170.39496 q 35,0 55,20 -20,20 -55,20 15,-20 0,-40 z"
+         class="gate"
+         id="path1868"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-opacity:1" />
+      <circle
+         cx="110.88036"
+         cy="180.39496"
+         r="4"
+         fill="#111111"
+         id="circle1872"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <line
+         x1="110.88036"
+         y1="180.39496"
+         x2="120.88036"
+         y2="180.39496"
+         class="wire"
+         id="line1880"
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+      <circle
+         cx="110.88036"
+         cy="200.39496"
+         r="4"
+         fill="#111111"
+         id="circle1874"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <line
+         x1="110.88036"
+         y1="200.39496"
+         x2="120.88036"
+         y2="200.39496"
+         class="wire"
+         id="line1882"
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+      <line
+         x1="171.88036"
+         y1="190.39496"
+         x2="206.88036"
+         y2="190.39496"
+         class="wire"
+         id="line1888"
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+    </g>
+    <g
+       id="g4370"
+       transform="translate(34,66)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1">
+      <path
+         d="m 116.88034,170.39496 q 35,0 55,20 -20,20 -55,20 15,-20 0,-40 z"
+         class="gate"
+         id="path4358"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-opacity:1" />
+      <circle
+         cx="110.88036"
+         cy="180.39496"
+         r="4"
+         fill="#111111"
+         id="circle4360"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <line
+         x1="110.88036"
+         y1="180.39496"
+         x2="120.88036"
+         y2="180.39496"
+         class="wire"
+         id="line4362"
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+      <circle
+         cx="110.88036"
+         cy="200.39496"
+         r="4"
+         fill="#111111"
+         id="circle4364"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <line
+         x1="110.88036"
+         y1="200.39496"
+         x2="120.88036"
+         y2="200.39496"
+         class="wire"
+         id="line4366"
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+      <line
+         x1="171.88036"
+         y1="190.39496"
+         x2="206.88036"
+         y2="190.39496"
+         class="wire"
+         id="line4368"
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+    </g>
+    <g
+       id="g4384"
+       transform="translate(166,32)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1">
+      <path
+         d="m 116.88034,170.39496 q 35,0 55,20 -20,20 -55,20 15,-20 0,-40 z"
+         class="gate"
+         id="path4372"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-opacity:1" />
+      <circle
+         cx="110.88036"
+         cy="180.39496"
+         r="4"
+         fill="#111111"
+         id="circle4374"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <line
+         x1="110.88036"
+         y1="180.39496"
+         x2="120.88036"
+         y2="180.39496"
+         class="wire"
+         id="line4376"
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+      <circle
+         cx="110.88036"
+         cy="200.39496"
+         r="4"
+         fill="#111111"
+         id="circle4378"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <line
+         x1="110.88036"
+         y1="200.39496"
+         x2="120.88036"
+         y2="200.39496"
+         class="wire"
+         id="line4380"
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+      <line
+         x1="171.88036"
+         y1="190.39496"
+         x2="206.88036"
+         y2="190.39496"
+         class="wire"
+         id="line4382"
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-opacity:1;fill-opacity:1" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+       d="m 240.88036,190.39496 c 6.3388,0 12.6756,0 19.0134,0 0,0 0,21.43285 0,21.43285 0,0 17.72462,0 17.72462,0"
+       id="path4386"
+       inkscape:path-effect="#path-effect4388"
+       inkscape:original-d="m 240.88036,190.39496 c 6.3388,0.001 19.0134,0 19.0134,0 0,0 0,21.43285 0,21.43285 0,0 17.72462,0 17.72462,0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.05382;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+       d="m 240.88036,256.16697 c 6.3388,0 12.6756,0 19.0134,0 0,0 0,-23.76679 0,-23.76679 0,0 17.72462,0 17.72462,0"
+       id="path4396"
+       inkscape:path-effect="#path-effect4400"
+       inkscape:original-d="m 240.88036,256.16697 c 6.3388,-9.7e-4 19.0134,0 19.0134,0 0,0 0,-23.76679 0,-23.76679 0,0 17.72462,0 17.72462,0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:14.8686;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m -241.73011,330 c 0,28.16765 0,56.3343 0,84.49999"
+       id="path7388"
+       inkscape:path-effect="#path-effect7390"
+       inkscape:original-d="m -241.73011,330 c 0.001,28.16765 0.001,56.3343 0,84.49999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:15.0435;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m -241.73011,477.49999 c 0,28.83434 0,57.66767 0,86.50001"
+       id="path7576"
+       inkscape:path-effect="#path-effect7580"
+       inkscape:original-d="m -241.73011,477.49999 c 0.001,28.83434 0.001,57.66767 0,86.50001" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 245,330 c 0,28.66767 0,57.33433 0,86"
+       id="path7588"
+       inkscape:path-effect="#path-effect7592"
+       inkscape:original-d="m 245,330 c 0.001,28.66767 0.001,57.33433 0,86" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 245,416 c 0,49.33506 0,98.66838 0,148"
+       id="path7600"
+       inkscape:path-effect="#path-effect7604"
+       inkscape:original-d="m 245,416 c 0.001,49.33506 0.001,98.66838 0,148" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:14.6704;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 4.559818,571.6147 c 0,27.42188 0,54.8428 0,82.26276"
+       id="path7633"
+       inkscape:path-effect="#path-effect7637"
+       inkscape:original-d="m 4.559818,571.6147 c 0.001,27.42188 0.001,54.8428 0,82.26276" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:13;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 4.5598365,705.69712 c 0,14.99632 0,29.99212 0,44.98739"
+       id="path7645"
+       inkscape:path-effect="#path-effect7649"
+       inkscape:original-d="m 4.5598365,705.69712 c 10e-4,14.99632 10e-4,29.99212 0,44.98739" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:12.2509;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 4.5598365,802.68554 c 0,13.31778 0,26.63508 0,39.95192"
+       id="path7657"
+       inkscape:path-effect="#path-effect7661"
+       inkscape:original-d="m 4.5598365,802.68554 c 10e-4,13.31778 10e-4,26.63508 0,39.95192" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:13;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+       d="m 4.559818,896.78906 c 0,50.15575 0,100.30976 0,150.46204"
+       id="path8409"
+       inkscape:path-effect="#path-effect8413"
+       inkscape:original-d="m 4.559818,896.78906 c 0.001,50.15575 0.001,100.30976 0,150.46204" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:15.2294;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m -249.23011,564 c 167.244398,0 334.487769,0 501.73011,0"
+       id="path9173"
+       inkscape:path-effect="#path-effect9175"
+       inkscape:original-d="m -249.23011,564 c 167.244398,10e-4 334.487769,10e-4 501.73011,0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:12.7368;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 4.5598365,1111.6971 c 0,14.3951 0,28.7898 0,43.184"
+       id="path10927"
+       inkscape:path-effect="#path-effect10931"
+       inkscape:original-d="m 4.5598365,1111.6971 c 10e-4,14.3951 10e-4,28.7898 0,43.184" />
+  </g>
+  <path
+     style="fill:#000000;stroke:#000000;stroke-width:6.81163;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleStart);marker-end:url(#marker10675);fill-opacity:1"
+     d="m 301.74864,599.22075 c 0,65.33979 0,130.67795 0,196.01692"
+     id="path10663"
+     inkscape:path-effect="#path-effect10665"
+     inkscape:original-d="m 301.74864,599.22075 c 10e-4,65.33979 0,196.01692 0,196.01692" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.94114;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+     d="m 494.1081,535.98627 c 32.43099,0 64.86102,0 90.84809,3.00773 25.98707,3.00774 45.53023,9.02261 59.22569,18.92408 13.69546,9.90146 21.54306,23.68809 31.36126,34.64729 9.8182,10.9592 21.60596,19.09084 30.45536,24.17808 8.8494,5.08724 14.75993,7.13022 20.66938,9.17283"
+     id="path10777"
+     inkscape:path-effect="#path-effect10779"
+     inkscape:original-d="m 494.1081,535.98627 c 32.43099,10e-4 64.86102,10e-4 97.29008,0 19.54488,6.01612 39.08804,12.03099 58.63062,18.04498 7.84881,13.78814 15.69648,27.57472 23.54319,41.36059 11.7892,8.13295 23.57696,16.26458 35.36395,24.39537 5.91176,2.04407 11.82229,4.08705 17.73194,6.12907" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker10675)"
+     d="m 494.00924,650.62147 c 76.20621,0.52507 152.41141,1.05014 228.6156,1.5752"
+     id="path10823"
+     inkscape:path-effect="#path-effect10825"
+     inkscape:original-d="m 494.00924,650.62147 c 76.2062,0.52606 152.4114,1.05113 228.6156,1.5752" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:2.95288;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+     d="m 492.08872,847.63801 c 32.70391,0 65.40686,0 91.61263,-3.0065 26.20577,-3.00651 45.91339,-9.01892 59.7241,-18.91634 13.81072,-9.89741 21.72436,-23.67839 31.62519,-34.6331 9.90082,-10.95472 21.78778,-19.08302 30.71166,-24.16819 8.92387,-5.08516 14.88413,-7.1273 20.84332,-9.16908"
+     id="path10873"
+     inkscape:path-effect="#path-effect10877"
+     inkscape:original-d="m 492.08872,847.63801 c 32.70391,-10e-4 65.40686,-10e-4 98.10884,0 19.70936,-6.01365 39.41698,-12.02607 59.12401,-18.0376 7.91487,-13.78249 15.82858,-27.56343 23.74133,-41.34365 11.88841,-8.12963 23.77537,-16.25793 35.66155,-24.38539 5.96152,-2.04324 11.92178,-4.08538 17.88117,-6.12657" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker10675)"
+     d="m 494.00924,730.62147 c 76.20621,0.52507 152.41141,1.05014 228.6156,1.5752"
+     id="path10899"
+     inkscape:path-effect="#path-effect10903"
+     inkscape:original-d="m 494.00924,730.62147 c 76.2062,0.52606 152.4114,1.05113 228.6156,1.5752" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker10675)"
+     d="m 494.00924,1058.6214 c 76.20621,0.5251 152.41141,1.0501 228.6156,1.5752"
+     id="path11165"
+     inkscape:path-effect="#path-effect11169"
+     inkscape:original-d="m 494.00924,1058.6214 c 76.2062,0.5261 152.4114,1.0511 228.6156,1.5752" />
+  <text
+     x="857.96783"
+     y="953.19672"
+     class="label"
+     id="text11309"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:33.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Bitstream</text>
+</svg>

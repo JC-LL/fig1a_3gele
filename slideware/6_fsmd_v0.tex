@@ -1,0 +1,286 @@
+
+\begin{frame}{Plan}
+  \tableofcontents
+\end{frame}
+
+%--------------------------------------------------------------
+\section{Le contr\^oleur et le chemin de donn\'ees}
+
+\begin{frame}{Le contr\^oleur seul\dots}
+  \begin{block}{Constat}
+    Seul, un contr\^oleur (machine \`a \'etats) ne fait pas grand-chose.
+  \end{block}
+  \begin{itemize}
+    \item Il r\'eagit \`a des valeurs issues de \emph{calculs internes} :
+    \begin{itemize}
+      \item conditions : \texttt{if (x > 2*y) \{...\}}
+      \item boucles : \texttt{while (counter > 0 \&\& !urgency) \{...\}}
+    \end{itemize}
+    \item \textbf{O\`u sont r\'ealis\'es ces calculs ?}
+    \item Il r\'eagit aussi \`a l'ext\'erieur :
+    \begin{itemize}
+      \item ordres de d\'emarrage : \texttt{start}, \texttt{go}
+      \item ordres d'interruption : \texttt{halt}, \texttt{reset}
+    \end{itemize}
+    \item Il peut \'emettre une information de terminaison : \texttt{end}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Notion de chemin de donn\'ees}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{Datapath} en anglais.
+      \begin{itemize}
+        \item Donn\'ees d'entr\'ee et de sortie
+        \item Op\'erateurs de calcul
+        \begin{itemize}
+          \item addition, soustraction, \dots
+          \item multiplexeurs
+        \end{itemize}
+        \item \'El\'ements de m\'emorisation
+        \begin{itemize}
+          \item registres (bascules D)
+          \item m\'emoires locales
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \node[draw, fill=red!10, rounded corners, minimum width=3.6cm, minimum height=0.8cm] (a) {routage};
+        \node[draw, fill=orange!40, rounded corners, minimum width=3.6cm, minimum height=0.8cm, below=0.25cm of a] (b) {registres};
+        \node[draw, fill=blue!10, rounded corners, minimum width=3.6cm, minimum height=0.8cm, below=0.25cm of b] (c) {routage};
+        \node[draw, fill=yellow!25, rounded corners, minimum width=3.6cm, minimum height=0.8cm, below=0.25cm of c] (d) {op\'erateurs};
+        \draw[->] (a)--(b); \draw[->] (b)--(c); \draw[->] (c)--(d);
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Chemin de donn\'ees g\'en\'erique}
+  \centering
+  % \begin{tikzpicture}[node distance=0.5cm]
+  %   % Entrees
+  %   \node (in) {Donn\'ees In};
+  %   \node[mux, below=0.5cm of in, xshift=-1.6cm] (m1) {mux};
+  %   \node[mux, right=0.3cm of m1] (m2) {mux};
+  %   \node[mux, right=0.3cm of m2] (m3) {mux};
+  %   \foreach \i in {m1,m2,m3} \draw[->] (in) -- (\i);
+  %   % Registres
+  %   \node[reg, below=0.5cm of m1] (r1) {reg};
+  %   \node[reg, below=0.5cm of m2] (r2) {reg};
+  %   \node[reg, below=0.5cm of m3] (r3) {reg};
+  %   \node[reg, right=0.3cm of r3] (r4) {reg};
+  %   \draw[->] (m1)--(r1); \draw[->] (m2)--(r2); \draw[->] (m3)--(r3);
+  %   % Routage
+  %   \node[mux2, below=0.6cm of r1, xshift=0.6cm] (s1) {mux};
+  %   \node[mux2, below=0.6cm of r3, xshift=0.6cm] (s2) {mux};
+  %   \draw[->] (r1)--(s1); \draw[->] (r2)--(s1);
+  %   \draw[->] (r3)--(s2); \draw[->] (r4)--(s2);
+  %   % Operateur
+  %   \node[op, below=0.6cm of $(s1)!0.5!(s2)$] (alu) {$+,-,*$};
+  %   \draw[->] (s1)--(alu); \draw[->] (s2)--(alu);
+  %   % Retour
+  %   \draw[->, dashed] (alu.east) -- ++(2.2,0) |- ($(m3.north east)+(0.3,0.25)$) -| (m3.north);
+  %   % Sortie
+  %   \node[right=1.2cm of r4] (out) {Donn\'ees Out};
+  %   \draw[->] (r4)--(out);
+  %   % Commande
+  %   \node[left=1.4cm of s1, align=center] (cmd) {Commande /\\contr\^ole};
+  %   \draw[->, red!70!black] (cmd)--(s1);
+  %   \draw[->, red!70!black] (cmd.north) |- (m1.west);
+  %   \draw[->, red!70!black] (cmd.south) |- (alu.west);
+  % \end{tikzpicture}
+
+  \vspace{2mm}
+  \begin{alertblock}{}
+    Il est possible de rajouter de telles ressources mat\'erielles pour augmenter les capacit\'es de calcul.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Chemin de donn\'ees g\'en\'erique : parall\'elisme}
+  \begin{itemize}
+    \item Plusieurs actions simultan\'ees sont possibles :
+    \begin{itemize}
+      \item plusieurs registres lus,
+      \item plusieurs op\'erations ex\'ecut\'ees,
+      \item plusieurs entr\'ees lues,
+      \item plusieurs sorties g\'en\'er\'ees.
+    \end{itemize}
+    \item \textbf{Simultan\'ees} $\Rightarrow$ dans le \emph{m\^eme cycle d'horloge}.
+  \end{itemize}
+  \begin{exampleblock}{Exemple}
+    Dans un m\^eme cycle : lire $R_1$ et $R_2$, calculer $R_1 + R_2$ et $R_1 > R_2$, puis \'ecrire $R_3$ \emph{au front d'horloge suivant}.
+  \end{exampleblock}
+\end{frame}
+
+%--------------------------------------------------------------
+\section{Micro-architecture c\^abl\'ee : FSMD}
+
+\begin{frame}{Micro-architecture c\^abl\'ee}
+  \centering
+  % \begin{tikzpicture}
+  %   % Controleur
+  %   \node[ctrl] (C) at (0,0) {};
+  %   \node at (0,2.1) {\textbf{Contr\^oleur}};
+  %   \node[state, fill=green!60!black!40, minimum size=0.5cm] (s0) at (-0.8,0.8) {};
+  %   \node[state, fill=green!60!black!40, minimum size=0.5cm] (s1) at (0.8,0.8) {};
+  %   \node[state, fill=green!60!black!40, minimum size=0.5cm] (s2) at (0,-0.6) {};
+  %   \draw[->] (s0) edge (s1);
+  %   \draw[->] (s1) edge (s2);
+  %   \draw[->] (s2) edge (s0);
+  %   \draw[->] (s1) edge[loop right] (s1);
+  %   % Datapath
+  %   \node[draw, fill=yellow!15, rounded corners, minimum width=3.4cm, minimum height=3.4cm] (D) at (6.2,0) {};
+  %   \node at (6.2,2.1) {\textbf{Chemin de donn\'ees}};
+  %   \node[reg] (rr) at (6.2,0.8) {registres};
+  %   \node[mux2] (mm) at (6.2,-0.1) {mux};
+  %   \node[op] (oo) at (6.2,-1) {$+,-,>$};
+  %   \draw[->] (rr)--(mm); \draw[->] (mm)--(oo);
+  %   % Signaux
+  %   \draw[->, green!40!black, thick] ($(C.east)+(0,0.8)$) -- node[above, font=\scriptsize] {commandes} ($(D.west)+(0,0.8)$);
+  %   \draw[->, red!70!black, thick] ($(D.west)+(0,-0.4)$) -- node[above, font=\scriptsize] {status} ($(C.east)+(0,-0.4)$);
+  %   % E/S
+  %   \draw[<-] ($(C.north)+(-0.7,0)$) -- ++(0,0.5) node[above] {start};
+  %   \draw[->] ($(C.north)+(0.7,0)$) -- ++(0,0.5) node[above] {end};
+  %   \draw[<-] ($(D.north)+(-0.7,0)$) -- ++(0,0.5) node[above] {Donn\'ees In};
+  %   \draw[->] ($(D.north)+(0.7,0)$) -- ++(0,0.5) node[above] {Donn\'ees Out};
+  % \end{tikzpicture}
+
+  \vspace{2mm}
+  \begin{itemize}
+    \item Le contr\^oleur envoie des \textbf{commandes} (s\'election des mux, \'ecriture des registres, choix d'op\'eration).
+    \item Le chemin de donn\'ees renvoie des \textbf{status} (comparaisons, drapeaux).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\og FSMD \fg{} : \emph{finite-state machine + datapath}}
+  \begin{itemize}
+    \item Le contr\^oleur est une machine \`a \'etats finis $K(C_1,\dots,C_n)$ : sa transition d\'epend de l'\'etat courant et des conditions $C_i$ (status).
+    \item \textbf{Attention aux boucles combinatoires !}
+    \begin{itemize}
+      \item Interdites \emph{dans} chaque composant\dots
+      \item \dots mais aussi \emph{entre} les composants (status $\to$ contr\^oleur $\to$ commande $\to$ datapath $\to$ status).
+    \end{itemize}
+    \item Il existe diff\'erentes techniques de r\'ealisation du contr\^oleur :
+    \begin{itemize}
+      \item portes logiques + bascules D,
+      \item ROM.
+    \end{itemize}
+  \end{itemize}
+  \begin{alertblock}{}
+    Si on remplace le contr\^oleur c\^abl\'e \og en dur \fg{} par une liste d'instructions\dots{} on obtient (presque) un microprocesseur !
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Exemple : PGCD en FSMD}
+  \begin{columns}[T]
+    \begin{column}{0.42\textwidth}
+\begin{block}{Algorithme}
+\small
+\texttt{while (a != b) \{}\\
+\texttt{~~if (a > b) a = a - b;}\\
+\texttt{~~else~~~~~~~~b = b - a;}\\
+\texttt{\}}
+\end{block}
+      \small
+      \textbf{Datapath} : registres $a$, $b$, soustracteur, comparateurs.\\[1mm]
+      \textbf{Status} : \texttt{eq} $=(a=b)$, \texttt{gt} $=(a>b)$.\\
+      \textbf{Commandes} : \texttt{ld}, \texttt{en\_a}, \texttt{en\_b}.
+    \end{column}
+    \begin{column}{0.56\textwidth}
+      \centering
+      % \begin{tikzpicture}[->, shorten >=1pt, auto, node distance=1.9cm, semithick,
+      %   every state/.style={fill=green!30, minimum size=0.9cm, font=\scriptsize}]
+      %   \node[initial, state] (I) {IDLE};
+      %   \node[state, right of=I] (T) {TEST};
+      %   \node[state, below of=T, xshift=-1cm] (A) {SUB\_A};
+      %   \node[state, below of=T, xshift=1cm] (B) {SUB\_B};
+      %   \node[state, accepting, right of=T] (F) {DONE};
+      %   \path (I) edge node {\tiny start/ld} (T)
+      %         (T) edge node {\tiny eq} (F)
+      %             edge[bend right] node[left] {\tiny gt} (A)
+      %             edge[bend left] node {\tiny $\overline{gt}$} (B)
+      %         (A) edge[bend right] (T)
+      %         (B) edge[bend left] (T)
+      %         (F) edge[bend left=60] node[above] {\tiny end} (I);
+      % \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Table des commandes (exemple PGCD)}
+  \centering
+  \begin{tabular}{lccc}
+    \toprule
+    \'Etat & \texttt{ld} & \texttt{en\_a} & \texttt{en\_b} \\
+    \midrule
+    IDLE  & 0 & 0 & 0 \\
+    TEST  & 0 & 0 & 0 \\
+    SUB\_A & 0 & 1 & 0 \\
+    SUB\_B & 0 & 0 & 1 \\
+    DONE  & 0 & 0 & 0 \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{3mm}
+  \begin{itemize}
+    \item \texttt{ld} est activ\'ee sur la transition IDLE $\to$ TEST (sortie de type Mealy).
+    \item Le calcul d'une soustraction et la mise \`a jour du registre se font en \textbf{un cycle}.
+  \end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------
+\section{Difficult\'es et protocoles}
+
+\begin{frame}{FSMD : difficult\'es notoires (mais pas r\'edhibitoires)}
+  \begin{itemize}
+    \item Un \textbf{protocole} est n\'ecessaire pour d\'eterminer :
+    \begin{itemize}
+      \item la pr\'esence d'une donn\'ee d'entr\'ee,
+      \item la disponibilit\'e d'une donn\'ee en sortie.
+    \end{itemize}
+    \item On rajoute pour cela des \textbf{bits de validit\'e} \`a la donn\'ee :
+    \begin{itemize}
+      \item \emph{data strobe} ou \emph{enable}.
+    \end{itemize}
+    \item Les datapaths poss\`edent g\'en\'eralement aussi des \textbf{m\'emoires} (non trait\'ees ici) :
+    \begin{itemize}
+      \item n\'ecessit\'e de g\'en\'erateurs d'adresses, \dots
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Protocole de validit\'e : chronogramme}
+  \centering
+  % \begin{tikzpicture}[x=0.8cm, y=0.8cm]
+  %   % Horloge
+  %   \node[left] at (0,3.5) {\small clk};
+  %   \foreach \i in {0,2,4,6,8}
+  %     \draw[thick] (\i,3) -- (\i,4) -- (\i+1,4) -- (\i+1,3) -- (\i+2,3);
+  %   % valid
+  %   \node[left] at (0,1.5) {\small valid};
+  %   \draw[thick] (0,1) -- (3,1) -- (3,2) -- (7,2) -- (7,1) -- (10,1);
+  %   % data
+  %   \node[left] at (0,0) {\small data};
+  %   \draw[thick] (0,-0.3) -- (10,-0.3);
+  %   \draw[thick] (0,0.3) -- (3,0.3) -- (3.3,-0.3);
+  %   \draw[thick] (3,-0.3) -- (3.3,0.3) -- (6.7,0.3) -- (7,-0.3);
+  %   \draw[thick] (6.7,-0.3) -- (7,0.3) -- (10,0.3);
+  %   \node at (5,0) {\small D$_0$};
+  %   \draw[dashed, red] (4,-0.6) -- (4,4.3);
+  %   \node[red, font=\scriptsize] at (4,-0.9) {capture};
+  % \end{tikzpicture}
+
+  \vspace{2mm}
+  La donn\'ee n'est prise en compte par le r\'ecepteur que lorsque \texttt{valid} est \`a 1 au front d'horloge.
+\end{frame}
+
+\begin{frame}{Conclusion}
+  \begin{itemize}
+    \item Micro-architecture = \textbf{contr\^oleur} (\'etats, s\'equencement) + \textbf{chemin de donn\'ees} (calcul, m\'emorisation).
+    \item Communication : \emph{commandes} (contr\^oleur $\to$ datapath) et \emph{status} (datapath $\to$ contr\^oleur).
+    \item Points d'attention : boucles combinatoires, protocoles de validit\'e, m\'emoires.
+    \item Contr\^oleur c\^abl\'e $\to$ contr\^oleur programmable $\Rightarrow$ \textbf{microprocesseur}.
+  \end{itemize}
+\end{frame}

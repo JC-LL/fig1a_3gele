@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 909.36548 810.6651"
+   font-family="Georgia, 'Times New Roman', serif"
+   version="1.1"
+   id="svg68"
+   sodipodi:docname="karnaugh_0.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   inkscape:export-filename="karnaugh_0.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   width="909.36548"
+   height="810.6651"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:c2pa="http://c2pa.org/manifest">
+  <sodipodi:namedview
+     id="namedview68"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.46642857"
+     inkscape:cx="532.77182"
+     inkscape:cy="638.8974"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg68"
+     showgrid="false" />
+  <metadata
+     id="metadata1">
+    <c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjYzM5ZDEyNS1jMmQxLTQ1ZDItYWMxNC1hMTgwZjNhMzAxOTIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaNmXgabCBlHrgfV+5XaKInUAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo5MDQxMTcxMC0yNzBiLTQ3MTctYjBiNi03YWYxMzhlNWVhMjJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo3r3s2bZA/+lfxPPfrJnY2AAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggEVThvMnLYCS+/CePaPPF/gVn1/KryPTe0FFSVI/oVRSkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaHViqv2Md3wk6SmObHGrzlQAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCB4RaEpumEWVFF+QH4QDxyZmxCNrmPlnDYQfDSarMtRJ2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiuZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmNjMzlkMTI1LWMyZDEtNDVkMi1hYzE0LWExODBmM2EzMDE5Mi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjc2OGMwNTUyLWJkMmMtNDY1Ny1hOGU2LTU1ZTllMDFiYTg2Y3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCARVOG8yctgJL78J49o88X+BWfX8qvI9N7QUVJUj+hVFKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg9AWMwyeNAixPAuAmfUsW6NGvxLSsiDBfrI+CxjOd/TaiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggCuhKRt4FZy3OK4QwQFqGJZ0gTAk5Osfi9FVHv03YIHx0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQN7X2HRbJRQRN7jtcKHvDBUBnGyQ0oW7PGY4fQHhwr7gSXO2RqJoRjEzSUackv6BmLOwc3/d5b6dLjzHnkQwVTI=</c2pa:manifest>
+  </metadata>
+  <!-- ============ Titles ============ -->
+  <text
+     x="83.941406"
+     y="109.02369"
+     font-size="26px"
+     fill="#000000"
+     font-family="Arial, sans-serif"
+     id="text1"
+     style="text-align:center;text-anchor:middle"><tspan
+       sodipodi:role="line"
+       id="tspan71"
+       x="83.941406"
+       y="109.02369">Table de vérité</tspan><tspan
+       sodipodi:role="line"
+       id="tspan72"
+       x="83.941406"
+       y="141.5237">initiale</tspan></text>
+  <text
+     x="85.640503"
+     y="403.29694"
+     font-size="26px"
+     fill="#000000"
+     font-family="Arial, sans-serif"
+     id="text2">Tableau de Karnaugh</text>
+  <text
+     x="141.83041"
+     y="443.51328"
+     font-size="26px"
+     fill="#000000"
+     font-family="Arial, sans-serif"
+     id="text3">À 2 entrées</text>
+  <text
+     x="617.50586"
+     y="112.27742"
+     font-size="24px"
+     fill="#000000"
+     font-family="Arial, sans-serif"
+     id="text4">Somme de produits</text>
+  <!-- ============ Truth table ============ -->
+  <rect
+     x="208.70041"
+     y="1.55"
+     width="260"
+     height="255"
+     id="rect4"
+     style="fill:none;stroke:#000000;stroke-width:3.1;stroke-dasharray:none" />
+  <line
+     x1="278.78427"
+     y1="41.493847"
+     x2="278.78427"
+     y2="256.54999"
+     id="line4"
+     style="fill:none;stroke:#000000;stroke-width:1.37752" />
+  <line
+     x1="348.70041"
+     y1="1.55"
+     x2="348.70041"
+     y2="256.54999"
+     stroke-width="2"
+     id="line5"
+     style="fill:none;stroke:#000000" />
+  <line
+     x1="208.70041"
+     y1="41.549999"
+     x2="468.70041"
+     y2="41.549999"
+     id="line6"
+     style="fill:none;stroke:#000000;stroke-width:1.5" />
+  <line
+     x1="208.70041"
+     y1="79.550003"
+     x2="468.70041"
+     y2="79.550003"
+     stroke-width="2"
+     id="line7"
+     style="fill:none;stroke:#000000" />
+  <line
+     x1="208.70041"
+     y1="123.55"
+     x2="468.70041"
+     y2="123.55"
+     id="line8"
+     style="fill:none;stroke:#000000;stroke-width:1.5" />
+  <line
+     x1="208.70041"
+     y1="167.55"
+     x2="468.70041"
+     y2="167.55"
+     id="line9"
+     style="fill:none;stroke:#000000;stroke-width:1.5" />
+  <line
+     x1="208.70041"
+     y1="211.55"
+     x2="468.70041"
+     y2="211.55"
+     id="line10"
+     style="fill:none;stroke:#000000;stroke-width:1.5" />
+  <g
+     font-size="20px"
+     text-anchor="middle"
+     font-family="Georgia, serif"
+     id="g26"
+     transform="translate(-261.29959,-18.45)">
+    <text
+       x="540"
+       y="48"
+       id="text10">Inputs</text>
+    <text
+       x="670"
+       y="48"
+       id="text11">Output</text>
+    <text
+       x="505"
+       y="86"
+       font-style="italic"
+       id="text12">A</text>
+    <text
+       x="575"
+       y="86"
+       font-style="italic"
+       id="text13">B</text>
+    <text
+       x="670"
+       y="86"
+       font-style="italic"
+       id="text14">Y</text>
+    <text
+       x="505"
+       y="126"
+       id="text15">0</text>
+    <text
+       x="575"
+       y="126"
+       id="text16">0</text>
+    <text
+       x="670"
+       y="126"
+       id="text17">0</text>
+    <text
+       x="505"
+       y="170"
+       id="text18">0</text>
+    <text
+       x="575"
+       y="170"
+       id="text19">1</text>
+    <text
+       x="670"
+       y="170"
+       id="text20">1</text>
+    <text
+       x="505"
+       y="214"
+       id="text21">1</text>
+    <text
+       x="575"
+       y="214"
+       id="text22">0</text>
+    <text
+       x="670"
+       y="214"
+       id="text23">1</text>
+    <text
+       x="505"
+       y="258"
+       id="text24">1</text>
+    <text
+       x="575"
+       y="258"
+       id="text25">1</text>
+    <text
+       x="670"
+       y="258"
+       id="text26">1</text>
+  </g>
+  <!-- ============ minterm labels with arrows ============ -->
+  <text
+     x="491.81412"
+     y="152.15321"
+     id="text27"
+     style="font-style:italic;font-size:20px;font-family:Georgia, serif"><tspan
+   text-decoration="overline"
+   id="tspan26"
+   style="text-decoration:overline;text-decoration-line:overline">A</tspan> · B</text>
+  <text
+     x="488.20212"
+     y="198.76852"
+     id="text28"
+     style="font-style:italic;font-size:20px;font-family:Georgia, serif">A · <tspan
+   text-decoration="overline"
+   id="tspan27"
+   style="text-decoration:overline;text-decoration-line:overline">B</tspan></text>
+  <text
+     x="487.47971"
+     y="240.32701"
+     id="text29"
+     style="font-style:italic;font-size:20px;font-family:Georgia, serif">A · B</text>
+  <!-- equation Y -->
+  <g
+     font-size="22px"
+     font-style="italic"
+     font-family="Georgia, serif"
+     id="g35"
+     transform="translate(-142.78998,59.19423)">
+    <text
+       x="805"
+       y="230"
+       id="text35">A · B + A · <tspan
+   text-decoration="overline"
+   id="tspan34"
+   style="text-decoration:overline;text-decoration-line:overline">B</tspan> + <tspan
+   text-decoration="overline"
+   id="tspan35"
+   style="text-decoration:overline;text-decoration-line:overline">A</tspan> · B = Y</text>
+  </g>
+  <!-- arrow from "Somme de produits" label -->
+  <!-- ============ First Karnaugh map ============ -->
+  <text
+     x="433.70041"
+     y="366.54999"
+     id="text40"
+     style="font-style:italic;font-size:20px;font-family:Georgia, serif;text-anchor:middle"><tspan
+       text-decoration="overline"
+       id="tspan39"
+       style="text-decoration:overline;text-decoration-line:overline" /></text>
+  <!-- arrows down from minterms into first K-map -->
+  <!-- ============ Second Karnaugh map (with grouping ellipses) ============ -->
+  <!-- ellipse grouping right column (eliminate A) -->
+  <!-- ellipse grouping bottom row (eliminate B) -->
+  <text
+     x="668.21741"
+     y="591.53473"
+     id="text57"
+     style="font-style:italic;font-size:19px;font-family:Georgia, serif">élimine A</text>
+  <text
+     x="588.7312"
+     y="714.22913"
+     id="text58"
+     style="font-style:italic;font-size:19px;font-family:Georgia, serif">élimine B</text>
+  <text
+     x="688.92969"
+     y="791.27905"
+     font-size="22px"
+     font-style="italic"
+     font-family="Georgia, serif"
+     id="text63">A + B = Y</text>
+  <!-- ============ bottom explanatory text ============ -->
+  <g
+     font-size="24px"
+     font-family="Arial, sans-serif"
+     id="g65"
+     transform="translate(-4.0875811,-83.283896)">
+    <text
+       x="120"
+       y="800"
+       id="text64">Cas simple, mais l'on voit pourquoi</text>
+    <text
+       x="20"
+       y="835"
+       id="text65">la simplification marche : B<tspan
+   text-decoration="overline"
+   id="tspan64"
+   style="text-decoration:overline;text-decoration-line:overline">A</tspan>+BA=B(<tspan
+   text-decoration="overline"
+   id="tspan65"
+   style="text-decoration:overline;text-decoration-line:overline">A</tspan>+A)=B</text>
+  </g>
+  <!-- ============ arrow marker defs ============ -->
+  <defs
+     id="defs68">
+    <marker
+       style="overflow:visible"
+       id="marker77"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path77" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker75"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path75" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       id="arrow"
+       markerWidth="10"
+       markerHeight="10"
+       refX="6"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 V 6 L 6,3 Z"
+         fill="#000000"
+         id="path65" />
+    </marker>
+    <marker
+       id="arrow2"
+       markerWidth="10"
+       markerHeight="10"
+       refX="6"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 V 6 L 6,3 Z"
+         fill="#000000"
+         id="path66" />
+    </marker>
+    <marker
+       id="arrow3"
+       markerWidth="10"
+       markerHeight="10"
+       refX="6"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 V 6 L 6,3 Z"
+         fill="#000000"
+         id="path67" />
+    </marker>
+    <marker
+       id="arrow4"
+       markerWidth="10"
+       markerHeight="10"
+       refX="6"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 V 6 L 6,3 Z"
+         fill="#000000"
+         id="path68" />
+    </marker>
+  </defs>
+  <text
+     x="573.48401"
+     y="356.39374"
+     id="text39"
+     style="font-style:italic;font-size:20px;font-family:Georgia, serif;text-anchor:middle">B</text>
+  <text
+     x="484.42313"
+     y="359.22952"
+     id="text39-7"
+     style="font-style:italic;font-size:20px;font-family:Georgia, serif;text-anchor:middle">B</text>
+  <text
+     x="563.80798"
+     y="394.992"
+     id="text42"
+     style="font-size:22px;font-family:Georgia, serif;text-anchor:middle">1</text>
+  <text
+     x="488.21005"
+     y="451.23401"
+     id="text43"
+     style="font-size:22px;font-family:Georgia, serif;text-anchor:middle">1</text>
+  <text
+     x="563.80798"
+     y="451.23401"
+     id="text44"
+     style="font-size:22px;font-family:Georgia, serif;text-anchor:middle">1</text>
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke:#040105;stroke-width:2.432;stroke-opacity:1"
+     id="rect68"
+     width="13.364489"
+     height="0.18060119"
+     x="478.52078"
+     y="338.89062" />
+  <g
+     id="g69"
+     transform="translate(-269.13714,-48.467924)">
+    <text
+       x="695"
+       y="440"
+       id="text41"
+       style="font-style:italic;font-size:20px;font-family:Georgia, serif;text-anchor:middle">A</text>
+    <text
+       x="692.37531"
+       y="498.00903"
+       id="text41-7"
+       style="font-style:italic;font-size:20px;font-family:Georgia, serif;text-anchor:middle">A</text>
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:#040105;stroke-width:2.432;stroke-opacity:1"
+       id="rect68-9"
+       width="13.364489"
+       height="0.18060119"
+       x="688.69794"
+       y="421.85104" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#040105;stroke-width:2.432;stroke-opacity:1"
+       id="rect69"
+       width="145.20335"
+       height="105.47109"
+       x="723.12714"
+       y="415.38275" />
+  </g>
+  <path
+     style="fill:none;fill-opacity:1;stroke:#040105;stroke-width:2.432;stroke-opacity:1"
+     d="m 454.35545,419.32043 145.07212,-0.51081 h -0.51082 l -1.53245,0.51081"
+     id="path69" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#040105;stroke-width:2.432;stroke-opacity:1"
+     d="m 523.31579,367.21707 -0.51082,105.22836"
+     id="path70" />
+  <g
+     id="g71-5"
+     transform="translate(-269.92135,224.42793)">
+    <g
+       id="g70-9">
+      <text
+         x="845"
+         y="335"
+         id="text39-9"
+         style="font-style:italic;font-size:20px;font-family:Georgia, serif;text-anchor:middle">B</text>
+      <text
+         x="755.93909"
+         y="337.83578"
+         id="text39-7-1"
+         style="font-style:italic;font-size:20px;font-family:Georgia, serif;text-anchor:middle">B</text>
+      <g
+         id="g68-6"
+         transform="translate(-3.6120238,-20.949738)">
+        <g
+           font-size="22px"
+           text-anchor="middle"
+           font-family="Georgia, serif"
+           id="g44-2">
+          <text
+             x="845"
+             y="390"
+             id="text42-1">1</text>
+          <text
+             x="755"
+             y="447"
+             id="text43-0">1</text>
+          <text
+             x="845"
+             y="447"
+             id="text44-5">1</text>
+        </g>
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:#040105;stroke-width:2.432;stroke-opacity:1"
+         id="rect68-3"
+         width="13.364489"
+         height="0.18060119"
+         x="750.03674"
+         y="317.49689" />
+      <g
+         id="g69-2"
+         transform="translate(2.3788018,-69.861674)">
+        <text
+           x="695"
+           y="440"
+           id="text41-1"
+           style="font-style:italic;font-size:20px;font-family:Georgia, serif;text-anchor:middle">A</text>
+        <text
+           x="692.37531"
+           y="498.00903"
+           id="text41-7-9"
+           style="font-style:italic;font-size:20px;font-family:Georgia, serif;text-anchor:middle">A</text>
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:#040105;stroke-width:2.432;stroke-opacity:1"
+           id="rect68-9-7"
+           width="13.364489"
+           height="0.18060119"
+           x="688.69794"
+           y="421.85104" />
+        <rect
+           style="fill:none;fill-opacity:1;stroke:#040105;stroke-width:2.432;stroke-opacity:1"
+           id="rect69-6"
+           width="145.20335"
+           height="105.47109"
+           x="723.12714"
+           y="415.38275" />
+      </g>
+      <path
+         style="fill:none;fill-opacity:1;stroke:#040105;stroke-width:2.432;stroke-opacity:1"
+         d="m 725.87139,397.92668 145.07212,-0.51081 h -0.51082 l -1.53245,0.51081"
+         id="path69-8" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#040105;stroke-width:2.432;stroke-opacity:1"
+         d="m 794.83173,345.82332 -0.51082,105.22836"
+         id="path70-2" />
+    </g>
+  </g>
+  <ellipse
+     style="fill:none;fill-opacity:1;stroke:#ff0105;stroke-width:2.11682;stroke-opacity:1"
+     id="path71"
+     cx="570.72119"
+     cy="622.40955"
+     rx="24.166004"
+     ry="44.598694" />
+  <ellipse
+     style="fill:none;fill-opacity:1;stroke:#0b01ff;stroke-width:2.63547;stroke-opacity:1"
+     id="path71-0"
+     cx="648.05103"
+     cy="530.28821"
+     rx="23.906681"
+     ry="69.880234"
+     transform="matrix(0,1,1,0,0,0)" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#0bbfde;stroke-width:3.1;stroke-dasharray:none;stroke-opacity:1"
+     d="m 544.30368,232.81014 135.27894,0.062 v 31.67067"
+     id="path72"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#0bbf00;stroke-width:3.1;stroke-dasharray:none;stroke-opacity:1"
+     d="m 546.90173,194.37259 206.02928,-1.00998 0.536,69.18982"
+     id="path72-4"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#fb7700;stroke-width:3.1;stroke-dasharray:none;stroke-opacity:1"
+     d="m 545.65135,148.18179 275.70766,-2.08196 v 114.74878"
+     id="path72-4-9"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#0bbfde;stroke-width:3.1;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="m 680.96687,305.2866 0.53598,138.28484 h -91.6539"
+     id="path73"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#0bbf00;stroke-width:3.1;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker75)"
+     d="m 755.17991,307.15248 0.758,186.46828 -266.05837,0.758 -0.31398,-30.19788"
+     id="path74"
+     sodipodi:nodetypes="cccc" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#fb7700;stroke-width:3.1;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker77)"
+     d="m 823.53961,308.50253 v 83.61409 H 588.77698"
+     id="path76" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#f60000;stroke-width:3.1;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="m 594.13686,608.65567 h 146.86065 l -1.072,141.50077"
+     id="path78"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#0920ce;stroke-width:3.1;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+     d="m 538.39413,671.90222 -0.379,54.33446 158.27337,0.88806 -0.31397,24.10367"
+     id="path79"
+     sodipodi:nodetypes="cccc" />
+  <rect
+     style="fill:none;fill-opacity:1;stroke:#0920ce;stroke-width:2.72219;stroke-dasharray:none;stroke-opacity:1"
+     id="rect79"
+     width="202.98117"
+     height="45.400772"
+     x="629.32324"
+     y="763.9032" />
+  <rect
+     style="fill:none;fill-opacity:1;stroke:#0920ce;stroke-width:2.72219;stroke-dasharray:none;stroke-opacity:1"
+     id="rect79-8"
+     width="267.29968"
+     height="39.504944"
+     x="640.70471"
+     y="264.323" />
+  <text
+     xml:space="preserve"
+     style="font-size:26.6667px;font-family:Arial, Helvetica, sans-serif;-inkscape-font-specification:'Arial, Helvetica, sans-serif';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000fff;fill-opacity:1;stroke:none;stroke-width:3.1;stroke-dasharray:none;stroke-opacity:1"
+     x="482.6514"
+     y="794.10742"
+     id="text79"><tspan
+       sodipodi:role="line"
+       id="tspan79"
+       x="482.6514"
+       y="794.10742">Formule simplifiée</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:26.6667px;font-family:Arial, Helvetica, sans-serif;-inkscape-font-specification:'Arial, Helvetica, sans-serif';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000fff;fill-opacity:1;stroke:none;stroke-width:3.1;stroke-dasharray:none;stroke-opacity:1"
+     x="478.36349"
+     y="296.71078"
+     id="text80"><tspan
+       sodipodi:role="line"
+       id="tspan80"
+       x="478.36349"
+       y="296.71078">Formule non-simplifée</tspan></text>
+</svg>

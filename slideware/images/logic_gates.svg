@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 900 700"
+   width="900"
+   height="700"
+   font-family="Helvetica, Arial, sans-serif"
+   version="1.1"
+   id="svg78"
+   sodipodi:docname="logic_gates.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   inkscape:export-filename="logic_gates.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview78"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.434641"
+     inkscape:cx="286.83133"
+     inkscape:cy="363.85409"
+     inkscape:window-width="1920"
+     inkscape:window-height="1172"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg78"
+     showgrid="true">
+    <inkscape:grid
+       id="grid3"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14902"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <!-- ===================== STYLES ===================== -->
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <style
+       id="style1">
+      .gate      { fill: #ffffff; stroke: #000000; stroke-width: 2.2; }
+      .wire      { stroke: #000000; stroke-width: 2; fill: none; }
+      .label     { font-size: 15px; fill: #000000; }
+      .title     { font-size: 17px; font-weight: bold; fill: #1a1a1a; }
+      .bubble    { fill: #ffffff; stroke: #000000; stroke-width: 2.2; }
+      .grid      { stroke: #e0e0e0; stroke-width: 0.5; }
+    </style>
+    <marker
+       style="overflow:visible"
+       id="Triangle-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-06" />
+    </marker>
+  </defs>
+  <!-- Fond -->
+  <!-- ======================================================
+       TITRE
+       ====================================================== -->
+  <!-- ======================================================
+       1) PORTE NON (NOT / INVERSEUR)   — forme triangulaire + bulle
+       ====================================================== -->
+  <g
+     id="g79"
+     transform="translate(-57.919931,-491.70763)">
+    <polygon
+       class="gate"
+       points="0,0 0,50 55,25 "
+       id="polygon2-5"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2"
+       transform="translate(151.20228,538.88056)" />
+    <circle
+       class="bubble"
+       cx="213.20229"
+       cy="563.88055"
+       r="6"
+       id="circle2-2"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <line
+       class="wire"
+       x1="111.20228"
+       y1="563.88055"
+       x2="151.20229"
+       y2="563.88055"
+       id="line2-5"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="219.20229"
+       y1="563.88055"
+       x2="256.20227"
+       y2="563.88055"
+       id="line3-7"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+  </g>
+  <!-- ======================================================
+       2) PORTE ET (AND)   — forme en D
+       ====================================================== -->
+  <g
+     id="g80"
+     transform="translate(83.744067,-336.63194)">
+    <g
+       id="g78">
+      <path
+         class="gate"
+         d="m 210.83191,386.0532 v 50 h 30 a 25,25 0 0 0 0,-50 z"
+         id="path5-0"
+         style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+      <line
+         class="wire"
+         x1="170.83191"
+         y1="398.05319"
+         x2="210.83191"
+         y2="398.05319"
+         id="line5-3"
+         style="fill:none;stroke:#000000;stroke-width:2" />
+      <line
+         class="wire"
+         x1="170.83191"
+         y1="424.05319"
+         x2="210.83191"
+         y2="424.05319"
+         id="line6-6"
+         style="fill:none;stroke:#000000;stroke-width:2" />
+      <line
+         class="wire"
+         x1="265.83191"
+         y1="411.05319"
+         x2="315.83191"
+         y2="411.05319"
+         id="line7-6"
+         style="fill:none;stroke:#000000;stroke-width:2" />
+    </g>
+  </g>
+  <!-- ======================================================
+       3) PORTE OU (OR)   — forme arrondie en ogive
+       ====================================================== -->
+  <g
+     id="g85"
+     transform="translate(-85.638651,-359.05123)">
+    <g
+       id="g81">
+      <path
+         class="gate"
+         d="m 390.95537,494.34969 q 20,25 0,50 35,0 55,-25 -20,-25 -55,-25 z"
+         id="path9-2"
+         style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+      <line
+         class="wire"
+         x1="350.95538"
+         y1="506.3497"
+         x2="395.95538"
+         y2="506.3497"
+         id="line9-9"
+         style="fill:none;stroke:#000000;stroke-width:2" />
+      <line
+         class="wire"
+         x1="350.95538"
+         y1="532.34967"
+         x2="395.95538"
+         y2="532.34967"
+         id="line10-3"
+         style="fill:none;stroke:#000000;stroke-width:2" />
+      <line
+         class="wire"
+         x1="445.95538"
+         y1="519.34967"
+         x2="495.95538"
+         y2="519.34967"
+         id="line11-4"
+         style="fill:none;stroke:#000000;stroke-width:2" />
+    </g>
+  </g>
+  <!-- ======================================================
+       4) PORTE OU EXCLUSIF (XOR)  — OR + double courbure
+       ====================================================== -->
+  <g
+     id="g82"
+     transform="translate(-100.86598,-368.01728)">
+    <path
+       class="gate"
+       d="m 579.63438,419.25191 q 20,25 0,50"
+       fill="none"
+       id="path13-5"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <path
+       class="gate"
+       d="m 587.63438,419.25191 q 20,25 0,50 35,0 55,-25 -20,-25 -55,-25 z"
+       id="path14-5"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <line
+       class="wire"
+       x1="542.44922"
+       y1="431.25192"
+       x2="583.6344"
+       y2="431.25192"
+       id="line14-4"
+       style="fill:none;stroke:#000000;stroke-width:2.13919" />
+    <line
+       class="wire"
+       x1="547.6344"
+       y1="457.25192"
+       x2="583.6344"
+       y2="457.25192"
+       id="line15-7"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="642.6344"
+       y1="444.25192"
+       x2="692.6344"
+       y2="444.25192"
+       id="line16-6"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+  </g>
+  <!-- ======================================================
+       5) PORTE NON-ET (NAND)  — AND + bulle
+       ====================================================== -->
+  <g
+     id="g84"
+     transform="translate(561.35654,-525.63776)">
+    <path
+       class="gate"
+       d="m 109.99241,566.41142 v 50 h 30 a 25,25 0 0 0 0,-50 z"
+       id="path18-7"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <circle
+       class="bubble"
+       cx="170.99242"
+       cy="591.41144"
+       r="6"
+       id="circle18-8"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <line
+       class="wire"
+       x1="69.992409"
+       y1="578.41144"
+       x2="109.99241"
+       y2="578.41144"
+       id="line18-6"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="69.992409"
+       y1="604.41144"
+       x2="109.99241"
+       y2="604.41144"
+       id="line19-8"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="176.99242"
+       y1="591.41144"
+       x2="214.99242"
+       y2="591.41144"
+       id="line20-3"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+  </g>
+  <!-- ======================================================
+       6) PORTE NON-OU (NOR)  — OR + bulle
+       ====================================================== -->
+  <g
+     id="g83"
+     transform="translate(60.75558,-426.35892)">
+    <path
+       class="gate"
+       d="m 618.14056,555.12747 q 20,25 0,50 35,0 55,-25 -20,-25 -55,-25 z"
+       id="path22-0"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <circle
+       class="bubble"
+       cx="680.14056"
+       cy="580.12744"
+       r="6"
+       id="circle22-6"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <line
+       class="wire"
+       x1="578.14056"
+       y1="567.12744"
+       x2="623.14056"
+       y2="567.12744"
+       id="line22-8"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="578.14056"
+       y1="593.12744"
+       x2="623.14056"
+       y2="593.12744"
+       id="line23-9"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="686.14056"
+       y1="580.12744"
+       x2="723.14056"
+       y2="580.12744"
+       id="line24-6"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+  </g>
+  <!-- ======================================================
+       7) PORTE NON-OU EXCLUSIF (XNOR)  — XOR + bulle
+       ====================================================== -->
+  <!-- ======================================================
+       8) BUFFER (TAMPON)  — triangle sans bulle
+       ====================================================== -->
+  <g
+     id="g87"
+     transform="translate(-623.19029,-340.50006)">
+    <polygon
+       class="gate"
+       points="0,0 0,50 55,25 "
+       id="polygon31-6"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2"
+       transform="translate(726.17759,480.71825)" />
+    <line
+       class="wire"
+       x1="686.17761"
+       y1="505.71826"
+       x2="726.17761"
+       y2="505.71826"
+       id="line31-1"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="781.17761"
+       y1="505.71826"
+       x2="831.17761"
+       y2="505.71826"
+       id="line32-9"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+  </g>
+  <!-- ======================================================
+       LÉGENDE / CONVENTIONS
+       ====================================================== -->
+  <!-- ======================================================
+       TABLE DE VÉRITÉ RÉCAPITULATIVE
+       ====================================================== -->
+  <g
+     id="g86"
+     transform="translate(170.97193,-460.85411)">
+    <path
+       class="gate"
+       d="m 313.585,597.325 q 20,25 0,50"
+       fill="none"
+       id="path26-4"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <path
+       class="gate"
+       d="m 321.585,597.325 q 20,25 0,50 35,0 55,-25 -20,-25 -55,-25 z"
+       id="path27-8"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <circle
+       class="bubble"
+       cx="383.58499"
+       cy="622.32501"
+       r="6"
+       id="circle27-7"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <line
+       class="wire"
+       x1="281.58499"
+       y1="609.32501"
+       x2="317.58499"
+       y2="609.32501"
+       id="line27-1"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="281.58499"
+       y1="635.32501"
+       x2="317.58499"
+       y2="635.32501"
+       id="line28-7"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="389.58499"
+       y1="622.32501"
+       x2="426.58499"
+       y2="622.32501"
+       id="line29-2"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+  </g>
+  <g
+     id="g1">
+    <rect
+       x="273.95044"
+       y="220.27841"
+       width="88.000404"
+       height="122.75135"
+       fill="#dbe9f6"
+       stroke="#2f5f8f"
+       stroke-width="2.2633"
+       id="rect3"
+       style="fill:#ffffff;stroke:#000100;stroke-width:2;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1" />
+    <text
+       x="284.05087"
+       y="256.02863"
+       font-size="20px"
+       font-weight="bold"
+       fill="#111111"
+       id="text5"
+       style="font-size:26.415px;stroke-width:1.93388;stroke-dasharray:none"
+       transform="scale(1.0033911,0.99662036)"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Helvetica, Arial, sans-serif;-inkscape-font-specification:'Helvetica, Arial, sans-serif';stroke-width:1.93388;stroke-dasharray:none"
+         id="tspan2">D</tspan></text>
+    <text
+       x="329.08026"
+       y="255.89687"
+       font-size="20px"
+       font-weight="bold"
+       fill="#111111"
+       id="text6"
+       style="font-size:26.415px;stroke-width:1.93388;stroke-dasharray:none"
+       transform="scale(1.0033911,0.99662036)"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.415px;font-family:Helvetica, Arial, sans-serif;-inkscape-font-specification:'Helvetica, Arial, sans-serif';stroke-width:1.93388;stroke-dasharray:none"
+         id="tspan1">Q</tspan></text>
+    <polygon
+       points="280,210 305,225 280,240 "
+       fill="#ffffff"
+       stroke="#2f5f8f"
+       stroke-width="3"
+       id="polygon8"
+       transform="matrix(0.82826837,0,0,0.82267934,42.144959,126.07626)"
+       style="stroke:#000000;stroke-width:2.34277;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       x="302.34979"
+       y="320.48074"
+       font-size="20px"
+       fill="#111111"
+       id="text9"
+       style="font-size:22.0125px;stroke-width:1.93388;stroke-dasharray:none"
+       transform="scale(1.0033911,0.99662036)">Clk</text>
+  </g>
+  <g
+     id="g8"
+     transform="translate(-216.22596,-284.375)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       d="m 710.68594,505.21032 55.5712,25.34895 v 79.61619 l -55.53863,25.33493 z"
+       id="path3"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="m 664.18269,534.48077 c 3.46154,0 38.94231,-0.4327 38.94231,-0.4327"
+       id="path4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-5)"
+       d="m 664.64423,611.86169 c 3.46154,0 38.94231,-0.4327 38.94231,-0.4327"
+       id="path4-3" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-1)"
+       d="m 766.96154,569.19823 c 3.46154,0 38.94231,-0.4327 38.94231,-0.4327"
+       id="path4-32" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-5)"
+       d="m 665.04808,664.61538 h 76.58654 l -0.4327,-33.53365"
+       id="path5"
+       sodipodi:nodetypes="ccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;font-family:Helvetica, Arial, sans-serif;-inkscape-font-specification:'Helvetica, Arial, sans-serif';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="739.03845"
+       y="550.38464"
+       id="text7"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         x="739.03845"
+         y="550.38464"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1">0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;font-family:Helvetica, Arial, sans-serif;-inkscape-font-specification:'Helvetica, Arial, sans-serif';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="739.84076"
+       y="603.43311"
+       id="text7-4"><tspan
+         sodipodi:role="line"
+         id="tspan5-7"
+         x="739.84076"
+         y="603.43311"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1">1</tspan></text>
+  </g>
+  <path
+     style="fill:#ffffff;stroke-width:1.8"
+     d="m 54.76678,665.46227 v -25.08869 l 44.976071,-0.61192 15.297979,14.99202 -14.99202,14.99203 -45.58799,0.30596 z"
+     id="path1" />
+  <path
+     style="fill:#ffffff;stroke:#000000;stroke-width:1.8;stroke-miterlimit:4.1;stroke-opacity:1"
+     d="m 113.94407,238.53816 49.4898,0.53539 14.3801,14.99203 -14.99202,15.29798 H 114.1735 Z"
+     id="path2"
+     sodipodi:nodetypes="cccccc" />
+  <g
+     id="g11"
+     transform="translate(-58.302314,5.9492157)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976;stroke-miterlimit:4.1;stroke-opacity:1"
+       d="m 304.98798,410.36659 69.83173,39.7536 -0.21033,49.84976 -69.41106,40.17428 V 489.8738 l 18.93029,-14.72356 -19.14063,-15.14423 z"
+       id="path6"
+       sodipodi:nodetypes="cccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-family:Helvetica, Arial, sans-serif;-inkscape-font-specification:'Helvetica, Arial, sans-serif';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-miterlimit:4.1;stroke-opacity:1"
+       x="345.16223"
+       y="486.08774"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         x="345.16223"
+         y="486.08774"
+         style="font-size:48px;fill:#000000;fill-opacity:1;stroke:none">+</tspan></text>
+  </g>
+  <g
+     id="g12"
+     transform="translate(-42.834353)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976;stroke-miterlimit:4.1;stroke-opacity:1"
+       d="m 414.03142,412.28862 69.83173,39.7536 -0.21033,49.84976 -69.41106,40.17428 v -50.27043 l 18.93029,-14.72356 -19.14063,-15.14423 z"
+       id="path6-7"
+       sodipodi:nodetypes="cccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:59.0913px;font-family:Helvetica, Arial, sans-serif;-inkscape-font-specification:'Helvetica, Arial, sans-serif';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.32642;stroke-miterlimit:4.1;stroke-opacity:1"
+       x="368.76895"
+       y="604.14954"
+       id="text8-9"
+       transform="scale(1.2310689,0.8123022)"><tspan
+         sodipodi:role="line"
+         id="tspan6-2"
+         x="368.76895"
+         y="604.14954"
+         style="font-size:59.0913px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.32642">-</tspan></text>
+  </g>
+  <g
+     id="g12-3"
+     transform="translate(75.568869,-2.5485974)">
+    <g
+       id="g13">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.88976;stroke-miterlimit:4.1;stroke-opacity:1"
+         d="m 414.03142,412.28862 69.83173,39.7536 -0.21033,49.84976 -69.41106,40.17428 v -50.27043 l 18.93029,-14.72356 -19.14063,-15.14423 z"
+         id="path6-7-1"
+         sodipodi:nodetypes="cccccccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:48px;font-family:Helvetica, Arial, sans-serif;-inkscape-font-specification:'Helvetica, Arial, sans-serif';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-miterlimit:4.1;stroke-opacity:1"
+         x="456.29102"
+         y="489.19443"
+         id="text12"><tspan
+           sodipodi:role="line"
+           id="tspan12"
+           x="456.29102"
+           y="489.19443">=</tspan></text>
+    </g>
+  </g>
+  <g
+     id="g10"
+     transform="translate(-83.28902,3.5695294)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.88976;stroke-miterlimit:4.1;stroke-opacity:1"
+       d="m 202.66363,410.62035 69.83173,39.7536 -0.21033,49.84976 -69.41106,40.17428 V 490.12756 L 221.80426,475.404 202.66363,460.25977 Z"
+       id="path6-7-3"
+       sodipodi:nodetypes="cccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:34.1337px;font-family:Helvetica, Arial, sans-serif;-inkscape-font-specification:'Helvetica, Arial, sans-serif';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.34384;stroke-miterlimit:4.1;stroke-opacity:1"
+       x="220.42471"
+       y="531.82965"
+       id="text10"
+       transform="scale(1.0917401,0.9159689)"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         x="220.42471"
+         y="531.82965"
+         style="stroke-width:1.34384">X</tspan></text>
+  </g>
+  <g
+     id="g9-0"
+     transform="translate(254.09169,-240.52171)">
+    <g
+       id="g80-9-7-8"
+       transform="translate(170.4514,382.85697)">
+      <g
+         id="g78-5-6-8">
+        <path
+           class="gate"
+           d="m 210.83191,386.0532 v 50 h 30 a 25,25 0 0 0 0,-50 z"
+           id="path5-0-0-7-5"
+           style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+        <line
+           class="wire"
+           x1="170.83191"
+           y1="398.05319"
+           x2="210.83191"
+           y2="398.05319"
+           id="line5-3-48-3-0"
+           style="fill:none;stroke:#000000;stroke-width:2" />
+        <line
+           class="wire"
+           x1="170.83191"
+           y1="424.05319"
+           x2="210.83191"
+           y2="424.05319"
+           id="line6-6-7-6-9"
+           style="fill:none;stroke:#000000;stroke-width:2" />
+        <line
+           class="wire"
+           x1="265.83191"
+           y1="411.05319"
+           x2="315.83191"
+           y2="411.05319"
+           id="line7-6-1-5-6"
+           style="fill:none;stroke:#000000;stroke-width:2" />
+      </g>
+    </g>
+    <g
+       id="g80-2-6-3"
+       transform="translate(171.88717,470.13892)">
+      <g
+         id="g78-7-3-8">
+        <path
+           class="gate"
+           d="m 210.83191,386.0532 v 50 h 30 a 25,25 0 0 0 0,-50 z"
+           id="path5-0-2-9-5"
+           style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+        <line
+           class="wire"
+           x1="170.83191"
+           y1="398.05319"
+           x2="210.83191"
+           y2="398.05319"
+           id="line5-3-26-4-6"
+           style="fill:none;stroke:#000000;stroke-width:2" />
+        <line
+           class="wire"
+           x1="170.83191"
+           y1="424.05319"
+           x2="210.83191"
+           y2="424.05319"
+           id="line6-6-1-8-1"
+           style="fill:none;stroke:#000000;stroke-width:2" />
+        <line
+           class="wire"
+           x1="265.83191"
+           y1="411.05319"
+           x2="315.83191"
+           y2="411.05319"
+           id="line7-6-0-1-1"
+           style="fill:none;stroke:#000000;stroke-width:2" />
+      </g>
+    </g>
+    <g
+       id="g85-5-5"
+       transform="translate(135.05313,318.12655)">
+      <g
+         id="g81-2-9">
+        <path
+           class="gate"
+           d="m 390.95537,494.34969 q 20,25 0,50 35,0 55,-25 -20,-25 -55,-25 z"
+           id="path9-2-5-8"
+           style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+        <line
+           class="wire"
+           x1="350.95538"
+           y1="506.3497"
+           x2="395.95538"
+           y2="506.3497"
+           id="line9-9-4-4"
+           style="fill:none;stroke:#000000;stroke-width:2" />
+        <line
+           class="wire"
+           x1="350.95538"
+           y1="532.34967"
+           x2="395.95538"
+           y2="532.34967"
+           id="line10-3-7-8"
+           style="fill:none;stroke:#000000;stroke-width:2" />
+        <line
+           class="wire"
+           x1="445.95538"
+           y1="519.34967"
+           x2="495.95538"
+           y2="519.34967"
+           id="line11-4-4-1"
+           style="fill:none;stroke:#000000;stroke-width:2" />
+      </g>
+    </g>
+    <path
+       style="fill:#000000;stroke-width:2.64567;stroke-miterlimit:4.1"
+       d="m 485.66707,794.23077 -0.63101,30.28846"
+       id="path7-0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.51657;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1"
+       d="m 485.30727,793.17919 v 32.27449"
+       id="path8-30" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.51657;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1"
+       d="m 486.94098,849.59135 v 32.27449"
+       id="path8-3-4" />
+  </g>
+</svg>

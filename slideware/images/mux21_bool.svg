@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 900 700"
+   width="900"
+   height="700"
+   font-family="Helvetica, Arial, sans-serif"
+   version="1.1"
+   id="svg78"
+   sodipodi:docname="mux21_bool.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview78"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1571429"
+     inkscape:cx="449.8148"
+     inkscape:cy="488.27159"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg78" />
+  <!-- ===================== STYLES ===================== -->
+  <defs
+     id="defs1">
+    <style
+       id="style1">
+      .gate      { fill: #ffffff; stroke: #000000; stroke-width: 2.2; }
+      .wire      { stroke: #000000; stroke-width: 2; fill: none; }
+      .label     { font-size: 15px; fill: #000000; }
+      .title     { font-size: 17px; font-weight: bold; fill: #1a1a1a; }
+      .bubble    { fill: #ffffff; stroke: #000000; stroke-width: 2.2; }
+      .grid      { stroke: #e0e0e0; stroke-width: 0.5; }
+    </style>
+  </defs>
+  <!-- Fond -->
+  <!-- ======================================================
+       TITRE
+       ====================================================== -->
+  <!-- ======================================================
+       1) PORTE NON (NOT / INVERSEUR)   — forme triangulaire + bulle
+       ====================================================== -->
+  <g
+     id="g79"
+     transform="translate(-26.790123,-331.85186)">
+    <polygon
+       class="gate"
+       points="55,25 0,0 0,50 "
+       id="polygon2-5"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2"
+       transform="translate(151.20228,538.88056)" />
+    <circle
+       class="bubble"
+       cx="213.20229"
+       cy="563.88055"
+       r="6"
+       id="circle2-2"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <line
+       class="wire"
+       x1="111.20228"
+       y1="563.88055"
+       x2="151.20229"
+       y2="563.88055"
+       id="line2-5"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="219.20229"
+       y1="563.88055"
+       x2="256.20227"
+       y2="563.88055"
+       id="line3-7"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+  </g>
+  <!-- ======================================================
+       2) PORTE ET (AND)   — forme en D
+       ====================================================== -->
+  <g
+     id="g80"
+     transform="translate(144.32099,-194.44444)">
+    <g
+       id="g78">
+      <path
+         class="gate"
+         d="m 210.83191,386.0532 v 50 h 30 a 25,25 0 0 0 0,-50 z"
+         id="path5-0"
+         style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+      <line
+         class="wire"
+         x1="170.83191"
+         y1="398.05319"
+         x2="210.83191"
+         y2="398.05319"
+         id="line5-3"
+         style="fill:none;stroke:#000000;stroke-width:2" />
+      <line
+         class="wire"
+         x1="170.83191"
+         y1="424.05319"
+         x2="210.83191"
+         y2="424.05319"
+         id="line6-6"
+         style="fill:none;stroke:#000000;stroke-width:2" />
+      <line
+         class="wire"
+         x1="265.83191"
+         y1="411.05319"
+         x2="315.83191"
+         y2="411.05319"
+         id="line7-6"
+         style="fill:none;stroke:#000000;stroke-width:2" />
+    </g>
+  </g>
+  <!-- ======================================================
+       3) PORTE OU (OR)   — forme arrondie en ogive
+       ====================================================== -->
+  <g
+     id="g85"
+     transform="translate(-25.061728,-183.20988)">
+    <g
+       id="g81">
+      <path
+         class="gate"
+         d="m 390.95537,494.34969 q 20,25 0,50 35,0 55,-25 -20,-25 -55,-25 z"
+         id="path9-2"
+         style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+      <line
+         class="wire"
+         x1="350.95538"
+         y1="506.3497"
+         x2="395.95538"
+         y2="506.3497"
+         id="line9-9"
+         style="fill:none;stroke:#000000;stroke-width:2" />
+      <line
+         class="wire"
+         x1="350.95538"
+         y1="532.34967"
+         x2="395.95538"
+         y2="532.34967"
+         id="line10-3"
+         style="fill:none;stroke:#000000;stroke-width:2" />
+      <line
+         class="wire"
+         x1="445.95538"
+         y1="519.34967"
+         x2="495.95538"
+         y2="519.34967"
+         id="line11-4"
+         style="fill:none;stroke:#000000;stroke-width:2" />
+    </g>
+  </g>
+  <!-- ======================================================
+       4) PORTE OU EXCLUSIF (XOR)  — OR + double courbure
+       ====================================================== -->
+  <g
+     id="g82"
+     transform="translate(35.432099,-235.92593)">
+    <path
+       class="gate"
+       d="m 579.63438,419.25191 q 20,25 0,50"
+       fill="none"
+       id="path13-5"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <path
+       class="gate"
+       d="m 587.63438,419.25191 q 20,25 0,50 35,0 55,-25 -20,-25 -55,-25 z"
+       id="path14-5"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <line
+       class="wire"
+       x1="542.44922"
+       y1="431.25192"
+       x2="583.6344"
+       y2="431.25192"
+       id="line14-4"
+       style="fill:none;stroke:#000000;stroke-width:2.13919" />
+    <line
+       class="wire"
+       x1="547.6344"
+       y1="457.25192"
+       x2="583.6344"
+       y2="457.25192"
+       id="line15-7"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="642.6344"
+       y1="444.25192"
+       x2="692.6344"
+       y2="444.25192"
+       id="line16-6"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+  </g>
+  <!-- ======================================================
+       5) PORTE NON-ET (NAND)  — AND + bulle
+       ====================================================== -->
+  <g
+     id="g84"
+     transform="translate(-25.061728,-183.20988)">
+    <path
+       class="gate"
+       d="m 109.99241,566.41142 v 50 h 30 a 25,25 0 0 0 0,-50 z"
+       id="path18-7"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <circle
+       class="bubble"
+       cx="170.99242"
+       cy="591.41144"
+       r="6"
+       id="circle18-8"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <line
+       class="wire"
+       x1="69.992409"
+       y1="578.41144"
+       x2="109.99241"
+       y2="578.41144"
+       id="line18-6"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="69.992409"
+       y1="604.41144"
+       x2="109.99241"
+       y2="604.41144"
+       id="line19-8"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="176.99242"
+       y1="591.41144"
+       x2="214.99242"
+       y2="591.41144"
+       id="line20-3"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+  </g>
+  <!-- ======================================================
+       6) PORTE NON-OU (NOR)  — OR + bulle
+       ====================================================== -->
+  <g
+     id="g83"
+     transform="translate(-25.061728,-183.20988)">
+    <path
+       class="gate"
+       d="m 618.14056,555.12747 q 20,25 0,50 35,0 55,-25 -20,-25 -55,-25 z"
+       id="path22-0"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <circle
+       class="bubble"
+       cx="680.14056"
+       cy="580.12744"
+       r="6"
+       id="circle22-6"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <line
+       class="wire"
+       x1="578.14056"
+       y1="567.12744"
+       x2="623.14056"
+       y2="567.12744"
+       id="line22-8"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="578.14056"
+       y1="593.12744"
+       x2="623.14056"
+       y2="593.12744"
+       id="line23-9"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="686.14056"
+       y1="580.12744"
+       x2="723.14056"
+       y2="580.12744"
+       id="line24-6"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+  </g>
+  <!-- ======================================================
+       7) PORTE NON-OU EXCLUSIF (XNOR)  — XOR + bulle
+       ====================================================== -->
+  <!-- ======================================================
+       8) BUFFER (TAMPON)  — triangle sans bulle
+       ====================================================== -->
+  <g
+     id="g87"
+     transform="translate(-22.469136,-213.45679)">
+    <polygon
+       class="gate"
+       points="55,25 0,0 0,50 "
+       id="polygon31-6"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2"
+       transform="translate(726.17759,480.71825)" />
+    <line
+       class="wire"
+       x1="686.17761"
+       y1="505.71826"
+       x2="726.17761"
+       y2="505.71826"
+       id="line31-1"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="781.17761"
+       y1="505.71826"
+       x2="831.17761"
+       y2="505.71826"
+       id="line32-9"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+  </g>
+  <!-- ======================================================
+       LÉGENDE / CONVENTIONS
+       ====================================================== -->
+  <!-- ======================================================
+       TABLE DE VÉRITÉ RÉCAPITULATIVE
+       ====================================================== -->
+  <g
+     id="g86"
+     transform="translate(-25.061728,-183.20988)">
+    <path
+       class="gate"
+       d="m 313.585,597.325 q 20,25 0,50"
+       fill="none"
+       id="path26-4"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <path
+       class="gate"
+       d="m 321.585,597.325 q 20,25 0,50 35,0 55,-25 -20,-25 -55,-25 z"
+       id="path27-8"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <circle
+       class="bubble"
+       cx="383.58499"
+       cy="622.32501"
+       r="6"
+       id="circle27-7"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.2" />
+    <line
+       class="wire"
+       x1="281.58499"
+       y1="609.32501"
+       x2="317.58499"
+       y2="609.32501"
+       id="line27-1"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="281.58499"
+       y1="635.32501"
+       x2="317.58499"
+       y2="635.32501"
+       id="line28-7"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+    <line
+       class="wire"
+       x1="389.58499"
+       y1="622.32501"
+       x2="426.58499"
+       y2="622.32501"
+       id="line29-2"
+       style="fill:none;stroke:#000000;stroke-width:2" />
+  </g>
+</svg>

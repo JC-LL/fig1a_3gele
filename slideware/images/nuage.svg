@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="300"
+   height="180"
+   viewBox="0 0 300 180"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="nuage.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.6222222"
+     inkscape:cx="149.92788"
+     inkscape:cy="90"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <!-- Ombre légère sous le nuage -->
+  <!-- Corps du nuage : superposition de cercles pour un contour organique -->
+  <path
+     id="circle1"
+     style="fill:#e6f1fb;stroke:#378add;stroke-width:2;stroke-linejoin:round;fill-opacity:0.21673429"
+     d="M 175 32 A 38 38 0 0 0 152.46094 39.525391 A 42 42 0 0 0 130 33 A 42 42 0 0 0 89.291016 65.050781 A 35 35 0 0 0 55 100 A 35 35 0 0 0 87.064453 134.79102 C 90.749931 138.04061 95.581944 140.02344 100.9043 140.02344 L 121.19922 140.02344 A 45.072021 38.689808 0 0 0 150 149.01367 A 45.072021 38.689808 0 0 0 178.80078 140.02344 L 201.74023 140.02344 C 211.95458 140.02344 220.40631 132.7771 222.27539 123.125 A 34 34 0 0 0 249 90 A 34 34 0 0 0 215 56 A 34 34 0 0 0 210.44336 56.326172 A 38 38 0 0 0 175 32 z " />
+  <!-- Petits reflets pour donner du volume -->
+</svg>
